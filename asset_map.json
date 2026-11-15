@@ -1,9 +1,23 @@
 {
- "generated": "2026-11-14",
+ "generated": "2026-11-15",
  "stats": {
   "name": 57,
   "card": 165,
-  "unmapped": 129
+  "override": 6,
+  "unmapped": 157
+ },
+ "coverage": {
+  "total": 385,
+  "mapped": 228,
+  "unmapped": 157
+ },
+ "unmapped_family_counts": {
+  "run-artifact-store": 8,
+  "other": 75,
+  "laptop-lora-training": 20,
+  "candidate-eval-20261104": 31,
+  "marketing-surface": 4,
+  "corpus-benchmark": 19
  },
  "assets": [
   {
@@ -18,7 +32,7 @@
    "id": "SZLHOLDINGS/szl-khipu-kernels",
    "type": "models",
    "private": true,
-   "source_repo": "szl-atelier",
+   "source_repo": "szl-khipu",
    "method": "card",
    "family": "other"
   },
@@ -26,7 +40,7 @@
    "id": "SZLHOLDINGS/MiniEmbed-Nano",
    "type": "models",
    "private": false,
-   "source_repo": "szl-atelier",
+   "source_repo": "szl-khipu",
    "method": "card",
    "family": "other"
   },
@@ -186,7 +200,7 @@
    "id": "SZLHOLDINGS/SZL-Khipu-1.5B-GGUF",
    "type": "models",
    "private": false,
-   "source_repo": "szl-atelier",
+   "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
   },
@@ -210,7 +224,7 @@
    "id": "SZLHOLDINGS/KHIPU-R2",
    "type": "models",
    "private": false,
-   "source_repo": "szl-atelier",
+   "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
   },
@@ -242,7 +256,7 @@
    "id": "SZLHOLDINGS/chaski",
    "type": "models",
    "private": false,
-   "source_repo": "szl-atelier",
+   "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
   },
@@ -314,7 +328,7 @@
    "id": "SZLHOLDINGS/chaski-5050",
    "type": "models",
    "private": false,
-   "source_repo": "szl-atelier",
+   "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
   },
@@ -322,7 +336,7 @@
    "id": "SZLHOLDINGS/chaski-r2",
    "type": "models",
    "private": false,
-   "source_repo": "szl-atelier",
+   "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
   },
@@ -346,7 +360,7 @@
    "id": "SZLHOLDINGS/TinyKhipu-Nano",
    "type": "models",
    "private": false,
-   "source_repo": "szl-atelier",
+   "source_repo": "szl-khipu",
    "method": "card",
    "family": "other"
   },
@@ -354,7 +368,7 @@
    "id": "SZLHOLDINGS/ReceiptAgent-Nano",
    "type": "models",
    "private": false,
-   "source_repo": "szl-atelier",
+   "source_repo": "szl-khipu",
    "method": "card",
    "family": "run-artifact-store"
   },
@@ -362,7 +376,7 @@
    "id": "SZLHOLDINGS/Moons-Nano",
    "type": "models",
    "private": false,
-   "source_repo": "szl-atelier",
+   "source_repo": "szl-khipu",
    "method": "card",
    "family": "other"
   },
@@ -410,14 +424,14 @@
    "id": "SZLHOLDINGS/oac-system-health-v1",
    "type": "models",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "szl-forge",
+   "method": "card",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v2-merged",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "run-artifact-store"
@@ -425,7 +439,7 @@
   {
    "id": "SZLHOLDINGS/szl-triage-qwen3.5-0.8b-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-typesafe-triage",
    "method": "card",
    "family": "laptop-lora-training"
@@ -481,7 +495,7 @@
   {
    "id": "SZLHOLDINGS/qwen2.5-0.5b-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -489,7 +503,7 @@
   {
    "id": "SZLHOLDINGS/receiptagent-v3-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -497,7 +511,7 @@
   {
    "id": "SZLHOLDINGS/brain-navigator-r2-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -505,7 +519,7 @@
   {
    "id": "SZLHOLDINGS/chaski-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -513,7 +527,7 @@
   {
    "id": "SZLHOLDINGS/chaski-5050-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -521,7 +535,7 @@
   {
    "id": "SZLHOLDINGS/chaski-r2-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -529,7 +543,7 @@
   {
    "id": "SZLHOLDINGS/chaski-r4-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -537,7 +551,7 @@
   {
    "id": "SZLHOLDINGS/khipu-r3-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -545,7 +559,7 @@
   {
    "id": "SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -553,7 +567,7 @@
   {
    "id": "SZLHOLDINGS/SZL-Khipu-1.5B-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -561,7 +575,7 @@
   {
    "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v2-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -569,7 +583,7 @@
   {
    "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v2-merged-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -577,7 +591,7 @@
   {
    "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v3-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -585,7 +599,7 @@
   {
    "id": "SZLHOLDINGS/szl-triage-qwen3.5-0.8b-lora-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -593,7 +607,7 @@
   {
    "id": "SZLHOLDINGS/szl-triage-qwen3.5-0.8b-lora-study5-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -601,7 +615,7 @@
   {
    "id": "SZLHOLDINGS/WILLAY-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -609,7 +623,7 @@
   {
    "id": "SZLHOLDINGS/SZL-Khipu-1.5B-abstain-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -625,7 +639,7 @@
   {
    "id": "SZLHOLDINGS/KHIPU-R2-laptop-lora",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "laptop-lora-training"
@@ -641,7 +655,7 @@
   {
    "id": "SZLHOLDINGS/forge-v3",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
@@ -657,7 +671,7 @@
   {
    "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v3-candidate",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "candidate-eval-20261104"
@@ -793,7 +807,7 @@
   {
    "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-sft-v3",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "run-artifact-store"
@@ -801,7 +815,7 @@
   {
    "id": "SZLHOLDINGS/SZL-Khipu-1.5B-sft-v2",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
@@ -817,7 +831,7 @@
   {
    "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-dpo-v1",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "run-artifact-store"
@@ -825,7 +839,7 @@
   {
    "id": "SZLHOLDINGS/SZL-Khipu-1.5B-estate-sft-v1",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
@@ -833,7 +847,7 @@
   {
    "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-dpo-v2",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "run-artifact-store"
@@ -841,7 +855,7 @@
   {
    "id": "SZLHOLDINGS/KHIPU-R2-estate-sft-v1",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
@@ -849,7 +863,7 @@
   {
    "id": "SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent-estate-sft-v1",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "run-artifact-store"
@@ -857,7 +871,7 @@
   {
    "id": "SZLHOLDINGS/chaski-estate-sft-v1",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
@@ -865,7 +879,7 @@
   {
    "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v2m-estate-sft-v1",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "run-artifact-store"
@@ -873,7 +887,7 @@
   {
    "id": "SZLHOLDINGS/chaski-5050-estate-sft-v1",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
@@ -881,7 +895,7 @@
   {
    "id": "SZLHOLDINGS/chaski-r2-estate-sft-v1",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
@@ -889,7 +903,7 @@
   {
    "id": "SZLHOLDINGS/brain-navigator-r2-estate-sft-v1",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
@@ -897,7 +911,7 @@
   {
    "id": "SZLHOLDINGS/WILLAY-estate-sft-v1",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
@@ -905,7 +919,7 @@
   {
    "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v3-estate-sft-v1",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "run-artifact-store"
@@ -913,7 +927,7 @@
   {
    "id": "SZLHOLDINGS/khipu-r3-estate-sft-v1",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
@@ -921,7 +935,7 @@
   {
    "id": "SZLHOLDINGS/szl1-experimental-estate-sft-v1",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
@@ -1535,6 +1549,158 @@
    "family": "other"
   },
   {
+   "id": "SZLHOLDINGS/doctrine-math-r1-candidate",
+   "type": "models",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/abstention-doctrine-r1-candidate",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/doctrine-corpus-r1-candidate",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-prime-principle-r1",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-formula-proving-ground-r1",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "corpus-benchmark"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-lean-invariants-r1",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "corpus-benchmark"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-lean-math-r1",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "corpus-benchmark"
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-grpo-r1-candidate",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-verticals-r1",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-papers-r1",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-puzzles-r1",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-frontier-v4-r1",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-frontier-qwen-r1",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-kamachikuna-r1",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-anatomy-r1",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-secondbrain-r1",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/doctrine-math-r2-pilot",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "corpus-benchmark"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-flagship54-v1",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-grpo-r2-candidate",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "candidate-eval-20261104"
+  },
+  {
    "id": "SZLHOLDINGS/thesis-v18-formal-verification",
    "type": "datasets",
    "private": false,
@@ -2138,8 +2304,8 @@
    "id": "SZLHOLDINGS/frontier-54-runs",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
    "family": "other"
   },
   {
@@ -2287,6 +2453,94 @@
    "family": "other"
   },
   {
+   "id": "SZLHOLDINGS/szl-frontier-sft-mix-v4",
+   "type": "datasets",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/lean-proof-corpus-v1",
+   "type": "datasets",
+   "private": false,
+   "source_repo": "lutar-lean",
+   "method": "card",
+   "family": "corpus-benchmark"
+  },
+  {
+   "id": "SZLHOLDINGS/sorry-discharge-challenges-v1",
+   "type": "datasets",
+   "private": true,
+   "source_repo": "lutar-lean",
+   "method": "card",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/clinical-abstention-corpus-v1",
+   "type": "datasets",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "corpus-benchmark"
+  },
+  {
+   "id": "SZLHOLDINGS/receipt-of-doubt-math-unanswerables-v1",
+   "type": "datasets",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "run-artifact-store"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-x402-seller-card",
+   "type": "datasets",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/lean-math-sft-v1",
+   "type": "datasets",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "corpus-benchmark"
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-reward-squad2-v1",
+   "type": "datasets",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-mix-v5-all-estates",
+   "type": "datasets",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/provenance-native-corpus-v1",
+   "type": "datasets",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "corpus-benchmark"
+  },
+  {
+   "id": "SZLHOLDINGS/x402-protocol-sft-v1",
+   "type": "datasets",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
    "id": "SZLHOLDINGS/README",
    "type": "spaces",
    "private": false,
@@ -2329,7 +2583,7 @@
   {
    "id": "SZLHOLDINGS/sentra",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": "a11oy",
    "method": "card",
    "family": "other"
@@ -2353,7 +2607,7 @@
   {
    "id": "SZLHOLDINGS/vertical-services",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": "vertical-services",
    "method": "name",
    "family": "other"
@@ -2369,7 +2623,7 @@
   {
    "id": "SZLHOLDINGS/szl-command-lab",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": "szl-command-lab",
    "method": "name",
    "family": "other"
@@ -2385,7 +2639,7 @@
   {
    "id": "SZLHOLDINGS/szl-constellation",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": "szl-constellation",
    "method": "name",
    "family": "other"
@@ -2417,7 +2671,7 @@
   {
    "id": "SZLHOLDINGS/szl-frontier",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": "szl-frontier",
    "method": "name",
    "family": "other"
@@ -2425,7 +2679,7 @@
   {
    "id": "SZLHOLDINGS/szl-model-inference-lab",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
@@ -2449,7 +2703,7 @@
   {
    "id": "SZLHOLDINGS/ayllu",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": "ayllu",
    "method": "name",
    "family": "other"
@@ -2529,7 +2783,7 @@
   {
    "id": "SZLHOLDINGS/szl-forge-lab",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "name",
    "family": "other"
@@ -2537,7 +2791,7 @@
   {
    "id": "SZLHOLDINGS/oac-system-health-lab",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
@@ -2569,7 +2823,7 @@
   {
    "id": "SZLHOLDINGS/szl-marketing-1-1",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": "szl-brand",
    "method": "card",
    "family": "marketing-surface"
@@ -2737,31 +2991,31 @@
   {
    "id": "SZLHOLDINGS/eternal-auditor",
    "type": "spaces",
-   "private": true,
-   "source_repo": null,
-   "method": "unmapped",
+   "private": false,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/estate-gardener",
    "type": "spaces",
-   "private": true,
-   "source_repo": null,
-   "method": "unmapped",
+   "private": false,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/szl-chief-engineer",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": "szl-gpu-bridge",
-   "method": "card",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/szl-infra-warden",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "other"
@@ -2769,15 +3023,15 @@
   {
    "id": "SZLHOLDINGS/szl-cyber-shield",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": "szl-gpu-bridge",
-   "method": "card",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/szl-research-council",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": null,
    "method": "unmapped",
    "family": "other"
@@ -2785,9 +3039,9 @@
   {
    "id": "SZLHOLDINGS/szl-dream-architect",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": "szl-gpu-bridge",
-   "method": "card",
+   "method": "override",
    "family": "other"
   },
   {
@@ -2809,23 +3063,42 @@
   {
    "id": "SZLHOLDINGS/szl-marketing",
    "type": "spaces",
-   "private": true,
+   "private": false,
    "source_repo": "szl-brand",
    "method": "card",
    "family": "marketing-surface"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-hologram",
+   "type": "spaces",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-energy-ledger",
+   "type": "spaces",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-provenance-pitch",
+   "type": "spaces",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/estate-holo",
+   "type": "spaces",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
   }
- ],
- "unmapped_family_counts": {
-  "run-artifact-store": 7,
-  "other": 60,
-  "laptop-lora-training": 20,
-  "candidate-eval-20261104": 26,
-  "marketing-surface": 4,
-  "corpus-benchmark": 12
- },
- "coverage": {
-  "total": 351,
-  "mapped": 222,
-  "unmapped": 129
- }
+ ]
 }
