@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
-"""Build the HF asset -> GitHub source repo map. Fail-closed: unmapped stays unmapped."""
-import argparse, json, re, sys
+"""Build the HF asset -> GitHub source repo map. Fail-closed: unmapped stays unmapped.
+
+Mapping precedence: overrides.json (curated, evidence-cited) > name match > README card match.
+"""
+import argparse, datetime, json, os, re, sys
 import requests
 GH = re.compile(r"github\.com/szl-holdings/([A-Za-z0-9._\-]+)")
 def norm(s):
@@ -19,12 +22,20 @@ def fam(rid):
     if any(k in lb for k in ["marketing", "brand", "showcase", "why-we-lead", "front-page"]):
         return "marketing-surface"
     return "other"
+def load_overrides(path):
+    """Load curated overrides.json; keys starting with '_' are documentation."""
+    if not path or not os.path.isfile(path):
+        return {}
+    with open(path, encoding="utf-8") as f:
+        raw = json.load(f)
+    return {k: v for k, v in raw.items() if not k.startswith("_") and isinstance(v, str)}
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--audit", required=True, help="org_audit.json (GitHub census)")
     ap.add_argument("--census", required=True, help="hf_census.json (Hub census)")
     ap.add_argument("--out", required=True)
     ap.add_argument("--token", default=None, help="HF token (or HF_TOKEN env)")
+    ap.add_argument("--overrides", default=None, help="overrides.json (default: alongside this script's repo root)")
     args = ap.parse_args()
     import os
     tok = args.token or os.environ.get("HF_TOKEN")
@@ -32,6 +43,7 @@ def main():
     census = json.load(open(args.census, encoding="utf-8"))
     repos = {a["name"] for a in audit}
     repo_norm = {norm(r): r for r in repos}
+    ov = load_overrides(args.overrides or os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "overrides.json"))
     H = {}
     if tok:
         H["Authorization"] = "Bearer " + tok
@@ -58,32 +70,37 @@ def main():
         except Exception:
             pass
         return ""
-    out, stats = [], {"name": 0, "card": 0, "unmapped": 0}
+    out, stats = [], {"name": 0, "card": 0, "override": 0, "unmapped": 0}
     for kind in ("models", "datasets", "spaces"):
         for meta in census[kind]:
             rid = meta["id"]
             base = rid.split("/", 1)[1] if "/" in rid else rid
             rec = {"id": rid, "type": kind, "private": meta.get("private", False), "source_repo": None, "method": "unmapped"}
-            r = name_match(base)
+            r, method = None, "unmapped"
+            if rid in ov and ov[rid] in repos:
+                r, method = ov[rid], "override"
+            if not r:
+                nm = name_match(base)
+                if nm:
+                    r, method = nm, "name"
             if not r:
                 hits = [h for h in GH.findall(card_fetch(kind, rid)) if h in repos]
                 if hits:
                     from collections import Counter
-                    r = Counter(hits).most_common(1)[0][0]
+                    r, method = Counter(hits).most_common(1)[0][0], "card"
             if r:
                 rec["source_repo"] = r
-                rec["method"] = "name" if name_match(base) == r else "card"
-                stats["name" if rec["method"] == "name" else "card"] += 1
-            else:
-                stats["unmapped"] += 1
+                rec["method"] = method
+            stats[method if method != "override" else "override"] += 1
             rec["family"] = fam(rid)
             out.append(rec)
     famcounts = {}
     for a in out:
         if a["method"] == "unmapped":
             famcounts[a["family"]] = famcounts.get(a["family"], 0) + 1
-    doc = {"generated": "2026-11-14", "stats": stats, "coverage": {"total": len(out), "mapped": stats["name"] + stats["card"], "unmapped": stats["unmapped"]}, "unmapped_family_counts": famcounts, "assets": out}
+    mapped = stats["name"] + stats["card"] + stats["override"]
+    doc = {"generated": datetime.date.today().isoformat(), "stats": stats, "coverage": {"total": len(out), "mapped": mapped, "unmapped": stats["unmapped"]}, "unmapped_family_counts": famcounts, "assets": out}
     json.dump(doc, open(args.out, "w", encoding="utf-8"), indent=1)
-    print("mapped=%d unmapped=%d" % (doc["coverage"]["mapped"], doc["coverage"]["unmapped"]))
+    print("mapped=%d (name=%d card=%d override=%d) unmapped=%d" % (mapped, stats["name"], stats["card"], stats["override"], stats["unmapped"]))
 if __name__ == "__main__":
     main()

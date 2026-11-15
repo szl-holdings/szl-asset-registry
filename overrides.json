@@ -1,0 +1,17 @@
+{
+  "_comment": "Curated asset -> source-repo overrides. Applied by tools/build_asset_map.py AFTER name/card matching (override wins). Every entry must carry _evidence citing a file path in the org before it is added.",
+  "_evidence": {
+    "SZLHOLDINGS/frontier-54-runs": "pushed by szl-gpu-bridge tools/hf_cards/card_factory.py (estate receipts chain)",
+    "SZLHOLDINGS/eternal-auditor": "szl-gpu-bridge/hf-spaces/eternal-auditor/app.py",
+    "SZLHOLDINGS/estate-gardener": "szl-gpu-bridge/hf-spaces/estate-gardener/",
+    "SZLHOLDINGS/szl-chief-engineer": "szl-gpu-bridge/hf-spaces/szl-chief-engineer/README.md",
+    "SZLHOLDINGS/szl-cyber-shield": "szl-gpu-bridge/hf-spaces/szl-cyber-shield/README.md",
+    "SZLHOLDINGS/szl-dream-architect": "szl-gpu-bridge/hf-spaces/szl-dream-architect/README.md"
+  },
+  "SZLHOLDINGS/frontier-54-runs": "szl-gpu-bridge",
+  "SZLHOLDINGS/eternal-auditor": "szl-gpu-bridge",
+  "SZLHOLDINGS/estate-gardener": "szl-gpu-bridge",
+  "SZLHOLDINGS/szl-chief-engineer": "szl-gpu-bridge",
+  "SZLHOLDINGS/szl-cyber-shield": "szl-gpu-bridge",
+  "SZLHOLDINGS/szl-dream-architect": "szl-gpu-bridge"
+}
