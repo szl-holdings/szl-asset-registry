@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please credit SZL Holdings."
+title: "szl-asset-registry - Canonical HF-asset -> GitHub source-repo map (fail-closed; 351 assets, 222 evidence-mapped, 129 honest-unmapped) (SZL Holdings governed-AI estate)"
+authors:
+  - name: SZL Holdings
+type: software
+license: Apache-2.0
+repository-code: "https://github.com/szl-holdings/szl-asset-registry"
+keywords:
+  - governed-ai
+  - provenance
+  - szl-holdings
