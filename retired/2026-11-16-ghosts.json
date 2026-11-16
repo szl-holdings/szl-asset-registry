@@ -1,0 +1,112 @@
+{
+ "schema": "szl.estate-asset-registry/retired/v1",
+ "retired_on": "2026-11-16",
+ "reason": "missing_on_hub_404",
+ "evidence": "per-repo HF API existence check, 2026-11-16 (reconcile.json, sha256 recorded in PR)",
+ "ghosts": [
+  {
+   "id": "SZLHOLDINGS/khipu-candidate_enterprise_20261104",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/chaski-candidate_enterprise_20261104",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/willay-candidate_enterprise_20261104",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/triage-candidate_enterprise_20261104",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/miniembed-nano-r1-candidate",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/willay-r1-candidate",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "card",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/willay-r2-candidate",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "card",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/abstain-doctrine-r1",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "card",
+   "family": "corpus-benchmark"
+  },
+  {
+   "id": "SZLHOLDINGS/doctrine1-r1-candidate",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "card",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/freeenergy-r1-candidate",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "card",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/ouroboros-r2-candidate",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "card",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/doctrine-v2-r2-candidate",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "card",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-worker-smoke",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  }
+ ]
+}
