@@ -57,6 +57,39 @@ class HygieneTest(unittest.TestCase):
         self.assertIn("NO_RECOGNIZED_TENSOR_WEIGHT_FILE", row["flags"])
         self.assertNotIn("EXPLICIT_SOFTWARE_OR_FIXTURE_IN_MODEL_NAMESPACE", row["flags"])
 
+    def test_card_and_license_observation_is_not_release_qualification(self):
+        observed = self.report(model("public", [
+            "README.md", "model.safetensors", "receipts/eval.json",
+        ], ["license:apache-2.0", "text-generation"], task="text-generation"))
+        row = observed["models"][0]
+        self.assertTrue(row["model_card_readme_present"])
+        self.assertTrue(row["license_metadata_present_not_rights_verified"])
+        self.assertEqual(observed["counts"]["model_card_readme_missing"], 0)
+        self.assertEqual(observed["counts"]["license_metadata_not_observed"], 0)
+        self.assertFalse(row["training_verified"])
+        self.assertFalse(row["quality_verified"])
+        self.assertFalse(row["promotion_authorized"])
+
+    def test_missing_readme_and_license_are_distinct_fail_closed_metadata(self):
+        observed = self.report(model("missing", [
+            "README.txt", "adapter_model.safetensors",
+        ], ["license:unknown"], task="text-generation"))
+        row = observed["models"][0]
+        self.assertIn("MODEL_CARD_README_MISSING", row["flags"])
+        self.assertIn("LICENSE_METADATA_NOT_OBSERVED", row["flags"])
+        self.assertFalse(row["model_card_readme_present"])
+        self.assertFalse(row["license_metadata_present_not_rights_verified"])
+        self.assertEqual(observed["counts"]["model_card_readme_missing"], 1)
+        self.assertEqual(observed["counts"]["license_metadata_not_observed"], 1)
+
+    def test_license_other_is_observed_but_never_certified(self):
+        row = self.report(model("custom-licensed", [
+            "README.md", "weights.gguf",
+        ], ["license:other"]))["models"][0]
+        self.assertTrue(row["license_metadata_present_not_rights_verified"])
+        self.assertFalse(row["promotion_authorized"])
+
+
     def test_duplicate_and_wrong_org_rejected(self):
         item = model("x", ["README.md"])
         with self.assertRaises(ValueError):
