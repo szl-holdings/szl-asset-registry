@@ -54,8 +54,20 @@ def audit(models: list[dict], *, observed_at: str) -> dict:
             if name.lower().endswith(WEIGHT_SUFFIXES)
         ]
         tags = set(t.lower() for t in obj.get("tags", []) if isinstance(t, str))
+        # Presence of README/card and a declared license tag is observable
+        # metadata, not an audit of the card's truth, rights, or quality.
+        model_card_readme_present = "README.md" in filenames
+        license_metadata_present = any(
+            tag.startswith("license:") and len(tag) > len("license:")
+            and tag not in {"license:unknown", "license:none", "license:unlicense"}
+            for tag in tags
+        )
         base = repo.split("/", 1)[1].lower()
         flags = []
+        if not model_card_readme_present:
+            flags.append("MODEL_CARD_README_MISSING")
+        if not license_metadata_present:
+            flags.append("LICENSE_METADATA_NOT_OBSERVED")
         if not weight_paths:
             flags.append("NO_RECOGNIZED_TENSOR_WEIGHT_FILE")
         if not weight_paths and tags.intersection(SOFTWARE_TAGS):
@@ -82,6 +94,8 @@ def audit(models: list[dict], *, observed_at: str) -> dict:
             "public_api_private_field": obj.get("private"),
             "weight_file_count": len(weight_paths),
             "weight_file_paths": weight_paths,
+            "model_card_readme_present": model_card_readme_present,
+            "license_metadata_present_not_rights_verified": license_metadata_present,
             "receipt_or_eval_json_names": receipt_artifacts,
             "flags": sorted(flags),
             "training_verified": False,
@@ -97,6 +111,8 @@ def audit(models: list[dict], *, observed_at: str) -> dict:
         "scope": "PUBLIC_API_ONLY",
         "coverage": {"status": "COMPLETE_FOR_RETURNED_PUBLIC_LIST_BELOW_API_CAP", "models": len(rows)},
         "counts": {
+            "model_card_readme_missing": counts["MODEL_CARD_README_MISSING"],
+            "license_metadata_not_observed": counts["LICENSE_METADATA_NOT_OBSERVED"],
             "no_recognized_tensor_weight_file": counts["NO_RECOGNIZED_TENSOR_WEIGHT_FILE"],
             "explicit_software_or_fixture": counts["EXPLICIT_SOFTWARE_OR_FIXTURE_IN_MODEL_NAMESPACE"],
             "laptop_lora_variants": counts["LAPTOP_LORA_VARIANT"],
@@ -108,6 +124,7 @@ def audit(models: list[dict], *, observed_at: str) -> dict:
             "Private or inaccessible repositories are not included.",
             "Non-tensor trained models (e.g. JSON/NumPy) may be valid despite absence of listed tensor files.",
             "Checkpoint filename and receipt-artifact presence do not prove training, weights identity, evaluations, runtime, or release.",
+            "README presence and a declared license tag are only metadata; neither validates usage rights, documentation accuracy, training provenance or card quality.",
             "No file contents or cryptographic weight-to-receipt bindings were independently verified.",
         ],
         "mutation_performed": False,
