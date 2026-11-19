@@ -43,6 +43,8 @@ Then commit. CI validates on every push.
 
 ## Public model namespace hygiene — November 19, 2026
 
+The [frozen 184-row public model triage snapshot](data/hf_public_model_hygiene_20261119.json) preserves observed Hub commit SHA, weight-file count, flags and receipt-file count for every listed repository. This snapshot is not a release list.
+
 A read-only, timestamped public Hub model census is available with:
 `python tools/audit_model_hygiene.py --live --output hf-model-hygiene-$(date -u +%Y%m%dT%H%M%SZ).json`.
 For offline replay, pass `--snapshot <public-full-models-response.json>` instead of `--live`.
