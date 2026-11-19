@@ -56,6 +56,16 @@ kernel or fixture without such files**, **20 were laptop-LoRA variants**, and **
 markers**. These classifications overlap; none is an automatic deletion order or an assertion that
 a non-tensor statistical model is untrained. Private/inaccessible coverage is unavailable.
 
+**Card metadata census, additive only.** The same source-owned read-only
+tool now flags missing standard `README.md` model cards and missing declared
+`license:` Hub tags separately from checkpoint/adapter hygiene. It records
+`model_card_readme_present` and
+`license_metadata_present_not_rights_verified` as observations—not claims that
+a card is accurate, a license grants training rights, or a model has passed
+quality/release gates. Offline tests check both missing and present metadata.
+Use a fresh `--live` observation before acting on historical snapshots;
+never mass-delete or auto-publish cards from filename heuristics alone.
+
 **Critical distinction:** model names ending in `-trained`, checkpoint-looking filenames,
 eval JSON, and repository-bound battery receipts do **not** establish independently verified
 training, exact checkpoint identity, released quality, or runtime admission. The tool forces
