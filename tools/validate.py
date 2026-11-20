@@ -1,4 +1,5 @@
-import json, sys
+import json
+from lineage_boundaries import assess as assess_lineage_boundaries
 m = json.load(open("asset_map.json", encoding="utf-8"))
 assets = m["assets"]
 mapped = [a for a in assets if a["method"] in ("name", "card", "override")]
@@ -19,3 +20,6 @@ assert famsum == len(unmapped), (famsum, len(unmapped))
 stats = m["stats"]
 assert stats["name"] + stats["card"] + stats["override"] == len(mapped), "stats mapped mismatch"
 print("VALIDATE OK assets=%d mapped=%d unmapped=%d" % (len(assets), len(mapped), len(unmapped)))
+lineage = assess_lineage_boundaries(m)
+print("LINEAGE SCOPE card-generator-only=%d source-producer-verified=%d release=%s" % (
+    lineage["card_generator_only"], lineage["source_producer_verified"], lineage["release_admission"]))

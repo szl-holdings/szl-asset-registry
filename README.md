@@ -1,12 +1,13 @@
 # szl-asset-registry
 
-Canonical machine-readable map of every Hugging Face asset in the SZLHOLDINGS org to the GitHub repository that codes and produces it ("GitHub is source" doctrine).
+Machine-readable registry of Hugging Face asset-to-GitHub **references** ("GitHub is source" doctrine). A README hyperlink or asset-name match does not prove which repository produced model weights, training data, model evaluations, or a deployed runtime.
 
 ## Status (generated 2026-11-20, evidence sweep lap 2)
 
 - 666 HF assets censused (414 models, 173 datasets, 79 spaces; includes private)
-- 648 mapped to a source repo with evidence (66 by repo-name match, 513 by GitHub link/card evidence, 69 by curated override)
-- 18 UNMAPPED - declared honestly, never guessed; queue with reasons in data/unresolved_assets.json
+- 648 assets have a GitHub **reference** (66 by repo-name match, 513 by GitHub link/card reference, 69 by curated override), not 648 verified model producers
+- 18 UNMAPPED in the committed 666-asset snapshot; never guess. Some newer or private Hub assets may not yet be in this historical snapshot.
+- **491 references point to `estate-cards`, a card/documentation generator — NOT verified training/inference source.** The source producer, checkpoint hashes, evaluation, and deployment evidence remain independently gated. The additive `tools/lineage_boundaries.py` validator enforces the distinction.
 - 2026-11-20 evidence sweep: 73 backlog assets re-audited against their README cards; 63 case-cards carry an explicit canonical generator URL (github.com/szl-holdings/estate-cards weaver v0.1.0) and were mapped via evidence-cited overrides; 10 remain fail-closed (no unique canonical source URL).
 
 ## Method (fail-closed)
@@ -15,7 +16,9 @@ Canonical machine-readable map of every Hugging Face asset in the SZLHOLDINGS or
 2. Card evidence: the asset's own README.md on the Hub is fetched and scanned for github.com/szl-holdings/ links; a link to an existing repo is accepted.
 3. Otherwise the asset is recorded UNMAPPED with a family tag. No mapping is ever fabricated.
 
-## Unmapped gap ledger (129)
+## Unmapped gap ledger: 18 current, 129 historical
+
+Current committed `asset_map.json` lists 17 `other` and one `run-artifact-store` unmapped asset. The 129-row family breakdown below is a **historical earlier snapshot**, not the present denominator. It must not be added to the 18 or quoted as current evidence.
 
 | Family | Count | Meaning |
 | --- | --- | --- |
@@ -26,7 +29,7 @@ Canonical machine-readable map of every Hugging Face asset in the SZLHOLDINGS or
 | run-artifact-store | 7 | run/eval artifact stores |
 | marketing-surface | 4 | marketing surfaces |
 
-Closing each bucket means either mapping it to the producing repo once that repo exists, or creating the missing source repo. Buckets are the build queue for the alignment loop.
+Closing a bucket requires independent code/data lineage, an exact source revision, and governed runtime readback. Creating another repository or adding a card-weaver hyperlink is **not** by itself proof of source ownership or release readiness.
 
 ## Files
 
