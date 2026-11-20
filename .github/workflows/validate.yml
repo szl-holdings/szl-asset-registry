@@ -6,7 +6,10 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
+      # Receipt verification checks out receipt-pinned revisions, so full git history is required.
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
           python-version: "3.12"
@@ -15,6 +18,7 @@ jobs:
       - run: python -m unittest discover -s tests -p 'test_drift_gate.py' -v
       - run: python -m unittest discover -s tests -p 'test_coverage_check.py' -v
       - run: python -m unittest discover -s tests -p 'test_build_catalog.py' -v
+      - run: python -m unittest discover -s tests -p 'test_verify_receipt.py' -v
       - run: python tools/test_unmapped_reasons.py
       # The drift gate ALWAYS runs (consult v480, S3): an absent pins file
       # is a reported unseeded state (green zero-pin verdict), never a skip.
@@ -25,3 +29,5 @@ jobs:
         run: |
           python tools/build_catalog.py .
           git diff --exit-code -- data/
+      # Receipt verification: clean-room re-derivation at each pinned revision (unsigned evidence, never grants publication).
+      - run: python tools/verify_receipt.py
