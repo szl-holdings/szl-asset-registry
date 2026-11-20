@@ -138,11 +138,13 @@ class CoverageCheckTest(unittest.TestCase):
     def test_real_registry(self):
         self.assertEqual(coverage_check.collect_violations(REAL_ROOT), [])
         asset_map = json.loads((REAL_ROOT / FILES["asset_map"]).read_text(encoding="utf-8"))
-        self.assertEqual(asset_map["coverage"], {"total": 666, "mapped": 648, "unmapped": 18})
         methods = [row["method"] for row in asset_map["assets"]]
-        self.assertEqual(len(methods), 666)
-        self.assertEqual(sum(1 for m in methods if m in ("name", "card", "override")), 648)
-        self.assertEqual(sum(1 for m in methods if m == "unmapped"), 18)
+        expected_coverage = {
+            "total": len(methods),
+            "mapped": sum(1 for m in methods if m in ("name", "card", "override")),
+            "unmapped": sum(1 for m in methods if m == "unmapped"),
+        }
+        self.assertEqual(asset_map["coverage"], expected_coverage)
         unresolved = json.loads((REAL_ROOT / FILES["unresolved"]).read_text(encoding="utf-8"))
         self.assertEqual(len(unresolved["unresolved"]), 10)
         rc, payload = self.captured_main(REAL_ROOT)

@@ -3,17 +3,17 @@
  "stats": {
   "name": 66,
   "card": 513,
-  "override": 69,
-  "unmapped": 18
+  "override": 72,
+  "unmapped": 15
  },
  "coverage": {
   "total": 666,
-  "mapped": 648,
-  "unmapped": 18
+  "mapped": 651,
+  "unmapped": 15
  },
  "unmapped_family_counts": {
   "run-artifact-store": 1,
-  "other": 17
+  "other": 14
  },
  "assets": [
   {
@@ -1772,16 +1772,16 @@
    "id": "SZLHOLDINGS/salad-ring-v1",
    "type": "models",
    "private": true,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "a11oy",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/salad-ring-v1b",
    "type": "models",
    "private": true,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "a11oy",
+   "method": "override",
    "family": "other"
   },
   {
@@ -3700,8 +3700,8 @@
    "id": "SZLHOLDINGS/a11oy-state",
    "type": "datasets",
    "private": true,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "a11oy",
+   "method": "override",
    "family": "other"
   },
   {

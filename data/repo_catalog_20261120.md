@@ -4,7 +4,7 @@
 | ChaskaLLM | public | false | 1 | 0 | full |
 | YARQA-ATTN | public | false | 1 | 0 | full |
 | a-11-oy.github.io | public | true | 0 | 0 | none |
-| a11oy | public | false | 9 | 0 | full |
+| a11oy | public | false | 12 | 0 | full |
 | a11oy-factory | public | false | 1 | 0 | full |
 | a11oy-ghsa-hch6-g4gg-wvv2 | private | false | 0 | 0 | none |
 | a11oy-net | public | false | 0 | 0 | none |
