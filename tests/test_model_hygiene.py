@@ -4,6 +4,10 @@ import importlib.util
 from pathlib import Path
 import unittest
 
+# The existing protected CI targets this module by filename. Re-export the
+# additive source-provenance tests without modifying workflow permissions.
+from test_producer_provenance import EvidenceTest as ProducerEvidenceTest
+
 SPEC = importlib.util.spec_from_file_location(
     "audit_model_hygiene",
     Path(__file__).resolve().parents[1] / "tools" / "audit_model_hygiene.py",
