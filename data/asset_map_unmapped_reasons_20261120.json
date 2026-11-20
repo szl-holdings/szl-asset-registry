@@ -2,8 +2,25 @@
  "_comment": "Fail-closed reason codes for unmapped assets. Identity-only evidence; identity_verified is false by design (never 'verified'). Card-issuer links (estate-cards provenance) are explicitly NOT source-identity evidence.",
  "_contract": "KIMI_K3.1_CONDITIONAL_GO / MISTRAL_LARGE4_3ACTION_PLAN, hands-on consult 2026-11-20, receipts in estate-cards workdir",
  "class": "MEASURED",
- "generated_utc": "2026-11-20T07:34:00Z",
+ "generated_utc": "2026-11-20T10:58:53Z",
  "reasons": {
+  "SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent": {
+   "candidates": {
+    "szl-holdings/a11oy": "model_release/hf-promotion/README.md; payloads/hf_align.py (marked STALE, weights not source of truth)",
+    "szl-holdings/szl-forge": "forge-receiptagent.ps1; receiptagent/card/; szl-forge README publishing/model-source-bindings.json"
+   },
+   "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 2 competing source claims found in org code index (szl-forge forge/card provenance vs a11oy promotion-and-STALE marking); unique canonical source not adjudicated fail-closed",
+   "identity_verified": false,
+   "reason_code": "AMBIGUOUS"
+  },
+  "SZLHOLDINGS/a11oy-state": {
+   "candidates": {
+    "szl-holdings/a11oy": "docs/adr/ADR-0001-a11oy-state-store.md (dedicated private dataset); a11oy_state_store.py; AGENTS.md"
+   },
+   "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 1 candidate source repo found in org code index (a11oy ADR-0001 state store, governance state dataset); override adjudication pending",
+   "identity_verified": false,
+   "reason_code": "EXACT"
+  },
   "SZLHOLDINGS/absrl-doubt-claude-v1": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
@@ -226,6 +243,17 @@
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
+  "SZLHOLDINGS/salad-flagship54-v2": {
+   "candidates": {
+    "szl-holdings/estate-cards": "weaver/policy.py (GH + /szl-frontier mapping note); weaver/build_queue.py heldout battery HELD verdict; data/rollout_receipts.jsonl",
+    "szl-holdings/szl-gpu-bridge": "tests/test_training_safety_controllers.py (hub metadata census)",
+    "szl-holdings/szl-openshell-receipts": "kimi-ops/20261120/charter_charter_v1.json (owner-countersigned heldout v2.1 admissible receipt)",
+    "szl-holdings/szl-showcase": "README.md flagship-54 table"
+   },
+   "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); multiple competing provenance claims found in org code index; unique canonical source not adjudicated fail-closed",
+   "identity_verified": false,
+   "reason_code": "AMBIGUOUS"
+  },
   "SZLHOLDINGS/salad-flagship55-v1": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
@@ -279,6 +307,40 @@
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
    "identity_verified": false,
    "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/salad-ring-serve-gemma1": {
+   "candidates": {},
+   "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index (only estate-cards weaver/audit references)",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/salad-ring-serve-llama1": {
+   "candidates": {},
+   "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index (only estate-cards weaver/audit references)",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/salad-ring-serve-mistral1": {
+   "candidates": {},
+   "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index (only estate-cards weaver/audit references)",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/salad-ring-v1": {
+   "candidates": {
+    "szl-holdings/a11oy": "mesh/MESH_RING_SPEC.md (lap 1 first attempt fail-closed crash); mesh/curriculum_registry.json (adapter_out note)"
+   },
+   "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 1 candidate source repo found in org code index (a11oy mesh lane, ring-v1 broken-attempt record); override adjudication pending",
+   "identity_verified": false,
+   "reason_code": "EXACT"
+  },
+  "SZLHOLDINGS/salad-ring-v1b": {
+   "candidates": {
+    "szl-holdings/a11oy": "mesh/MESH_RING_SPEC.md (trained 200/200, adapter published, ring-v1-lap-1-receipt.json); mesh/curriculum_registry.json"
+   },
+   "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 1 candidate source repo found in org code index (a11oy mesh lane, genesis ring receipts); override adjudication pending",
+   "identity_verified": false,
+   "reason_code": "EXACT"
   },
   "SZLHOLDINGS/szl-agentic-reflex-v1": {
    "candidates": {},
@@ -444,9 +506,9 @@
   }
  },
  "sweep_counts": {
-  "ambiguous": 0,
-  "exact": 0,
-  "nomatch": 73,
-  "total": 73
+  "ambiguous": 2,
+  "exact": 3,
+  "nomatch": 76,
+  "total": 81
  }
 }
