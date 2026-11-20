@@ -110,7 +110,7 @@
 | szl-forge | public | false | 10 | 0 | full |
 | szl-formula-ledger | public | true | 0 | 0 | none |
 | szl-formulas | public | false | 1 | 0 | full |
-| szl-frontier | public | false | 8 | 0 | full |
+| szl-frontier | public | false | 9 | 0 | full |
 | szl-gov | public | false | 0 | 0 | none |
 | szl-governed-norm | public | true | 1 | 0 | full |
 | szl-govsign | public | false | 1 | 0 | full |
