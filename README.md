@@ -1,21 +1,31 @@
 # szl-asset-registry
 
-Canonical machine-readable map of every Hugging Face asset in the SZLHOLDINGS org to the GitHub repository that codes and produces it ("GitHub is source" doctrine).
+Machine-readable **legacy source-hint** map for Hugging Face assets in the SZLHOLDINGS org. A matching repo name, shared README URL, or curated override is discovery metadata; it does **not** independently establish the GitHub checkout that produced an asset's model weights, dataset, or deployed Space. Source binding requires independently verified immutable revisions and artifact digests.
 
 ## Status (generated 2026-11-20, evidence sweep lap 2)
 
 - 666 HF assets censused (414 models, 173 datasets, 79 spaces; includes private)
-- 648 mapped to a source repo with evidence (66 by repo-name match, 513 by GitHub link/card evidence, 69 by curated override)
+- 648 legacy source **hints** (66 by name heuristic, 513 by card URL, 69 by curated override), not 648 independently producer-attested mappings
 - 18 UNMAPPED - declared honestly, never guessed; queue with reasons in data/unresolved_assets.json
 - 2026-11-20 evidence sweep: 73 backlog assets re-audited against their README cards; 63 case-cards carry an explicit canonical generator URL (github.com/szl-holdings/estate-cards weaver v0.1.0) and were mapped via evidence-cited overrides; 10 remain fail-closed (no unique canonical source URL).
 
-## Method (fail-closed)
+## Source-binding evidence qualification (2026-11-20)
+
+The checked-in v1 map reports a plausible source-repo hint for 648 of 666 assets but carries no verified producer-source checkout and model/dataset artifact digest pair. The reproducible, network-free audit in `tools/source_binding_audit.py` classified **428 card-link hints to `estate-cards`** as `SHOWCASE_LINK_NOT_PRODUCER_PROOF`; it can identify those links without assuming the showcase repo trained 428 models. **Producer bindings proven by this input: 0** (missing proof fields, not proof no training occurred). The audit SHA-256-binds its input, rejects duplicate asset identities and unsupported self-asserted verification, and publishes no tokens. This is an honesty overlay; changing a source hint into an authenticated producer link requires a separately reviewed, asset-specific attestation and migration.
+
+```bash
+python tools/source_binding_audit.py --input asset_map.json --output source-binding-shadow-20261120.json
+```
+
+The output is exclusive-create and should be retained with the source map commit. `coverage.mapped` is a historical count of hints, not a release gate, trained-model count, or operational-source-bound count.
+
+## Legacy mapping heuristic (not producer provenance)
 
 1. Name match: normalized asset name == normalized repo name (with version-suffix stripping).
 2. Card evidence: the asset's own README.md on the Hub is fetched and scanned for github.com/szl-holdings/ links; a link to an existing repo is accepted.
-3. Otherwise the asset is recorded UNMAPPED with a family tag. No mapping is ever fabricated.
+3. Otherwise the asset is recorded UNMAPPED with a family tag. This prevents unsupported hint generation; it does not certify a found link as the actual producer.
 
-## Unmapped gap ledger (129)
+## Historical unmapped gap ledger (129 before the November 20 evidence sweeps)
 
 | Family | Count | Meaning |
 | --- | --- | --- |
