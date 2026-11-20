@@ -1,11 +1,11 @@
 # szl-asset-registry
 
-Canonical machine-readable map of every Hugging Face asset in the SZLHOLDINGS org to the GitHub repository that codes and produces it ("GitHub is source" doctrine).
+Legacy machine-readable map of observed Hugging Face asset-to-GitHub repository links. **A name or README/card link is not independent evidence that the linked repository produced model weights, datasets, or Space source.** The separate [producer-evidence audit](docs/PRODUCER_PROVENANCE_VS_CARD_LINKS.md) preserves that distinction before any production claim.
 
 ## Status (generated 2026-11-20, evidence sweep lap 2)
 
 - 666 HF assets censused (414 models, 173 datasets, 79 spaces; includes private)
-- 648 mapped to a source repo with evidence (66 by repo-name match, 513 by GitHub link/card evidence, 69 by curated override)
+- 648 with **legacy repository-link mappings**, not verified producing-source identities (66 by repo-name match, 513 by GitHub link/card, 69 by override). Of these, 491 point to the `estate-cards` card generator and require producer-specific review.
 - 18 UNMAPPED - declared honestly, never guessed; queue with reasons in data/unresolved_assets.json
 - 2026-11-20 evidence sweep: 73 backlog assets re-audited against their README cards; 63 case-cards carry an explicit canonical generator URL (github.com/szl-holdings/estate-cards weaver v0.1.0) and were mapped via evidence-cited overrides; 10 remain fail-closed (no unique canonical source URL).
 
@@ -15,7 +15,7 @@ Canonical machine-readable map of every Hugging Face asset in the SZLHOLDINGS or
 2. Card evidence: the asset's own README.md on the Hub is fetched and scanned for github.com/szl-holdings/ links; a link to an existing repo is accepted.
 3. Otherwise the asset is recorded UNMAPPED with a family tag. No mapping is ever fabricated.
 
-## Unmapped gap ledger (129)
+## Historical unmapped gap ledger (129, prior sweep; superseded by the 18-row current unmapped count)
 
 | Family | Count | Meaning |
 | --- | --- | --- |
@@ -33,6 +33,7 @@ Closing each bucket means either mapping it to the producing repo once that repo
 - `asset_map.json` — the map (generated, committed; regenerate with tools/build_asset_map.py)
 - `tools/build_asset_map.py` — generator (takes org_audit.json + hf_census.json as inputs)
 - `tools/validate.py` — CI validator (schema + count consistency)
+- `tools/audit_producer_provenance.py` — offline fail-closed audit of producer evidence versus legacy link coverage; does not mutate `asset_map.json`
 
 ## Regenerate
 
