@@ -239,6 +239,7 @@ def main(argv=None):
             sort_keys=True,
             separators=(",", ":"),
             allow_nan=False,
+            ensure_ascii=True,
         )
     )
     return 0 if not defects else 1
