@@ -2,20 +2,18 @@
  "generated": "2026-11-20",
  "stats": {
   "name": 66,
-  "card": 521,
-  "override": 6,
-  "unmapped": 73
+  "card": 513,
+  "override": 69,
+  "unmapped": 18
  },
  "coverage": {
   "total": 666,
-  "mapped": 593,
-  "unmapped": 73
+  "mapped": 648,
+  "unmapped": 18
  },
  "unmapped_family_counts": {
-  "other": 64,
-  "corpus-benchmark": 6,
-  "run-artifact-store": 2,
-  "marketing-surface": 1
+  "run-artifact-store": 1,
+  "other": 17
  },
  "assets": [
   {
@@ -182,8 +180,8 @@
    "id": "SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "run-artifact-store"
   },
   {
@@ -1774,16 +1772,16 @@
    "id": "SZLHOLDINGS/salad-ring-v1",
    "type": "models",
    "private": true,
-   "source_repo": "szl-ouroboros",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/salad-ring-v1b",
    "type": "models",
    "private": true,
-   "source_repo": "szl-ouroboros",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
@@ -1838,8 +1836,8 @@
    "id": "SZLHOLDINGS/salad-ring-serve-gemma1",
    "type": "models",
    "private": true,
-   "source_repo": "szl-ouroboros",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
@@ -1886,16 +1884,16 @@
    "id": "SZLHOLDINGS/salad-ring-serve-llama1",
    "type": "models",
    "private": true,
-   "source_repo": "szl-ouroboros",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/salad-ring-serve-mistral1",
    "type": "models",
    "private": true,
-   "source_repo": "szl-ouroboros",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
@@ -1910,8 +1908,8 @@
    "id": "SZLHOLDINGS/salad-flagship54-v2",
    "type": "models",
    "private": true,
-   "source_repo": "szl-frontier",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
@@ -3702,8 +3700,8 @@
    "id": "SZLHOLDINGS/a11oy-state",
    "type": "datasets",
    "private": true,
-   "source_repo": ".github",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
@@ -4246,120 +4244,120 @@
    "id": "SZLHOLDINGS/acoustic-governance-sft-api-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/world-science-sft-api-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/absrl-doubt-claude-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/absrl-reward-pool-v2-1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/unified-corpus-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "corpus-benchmark"
   },
   {
    "id": "SZLHOLDINGS/vgl-repro-ga-20261116",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/vgl-sweep-ga-20261116",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/vgl-repro-cd-20261116",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/vgl-sweep-cd-20261116",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/lean-math-sft-v2",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "corpus-benchmark"
   },
   {
    "id": "SZLHOLDINGS/szl-distill-abstention-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/vgl-triang-20261116",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/unified-corpus-v2",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "corpus-benchmark"
   },
   {
    "id": "SZLHOLDINGS/szl-distill-abstention-v1-sft",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/ring-curriculum-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
@@ -4374,56 +4372,56 @@
    "id": "SZLHOLDINGS/ring-curriculum-v2",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/estate-telemetry",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/axiom-invariant-corpus-v2",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "corpus-benchmark"
   },
   {
    "id": "SZLHOLDINGS/axiom-invariants-sft-v2",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/khipu-v2-abstention-curriculum",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/muhu-methodology-sft-v2",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/khipu-scholars-corpus-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "corpus-benchmark"
   },
   {
@@ -4454,8 +4452,8 @@
    "id": "SZLHOLDINGS/khipu-structure-sft-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
@@ -4470,56 +4468,56 @@
    "id": "SZLHOLDINGS/khipu-structure-sft-v2",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/khipu-structure-eval-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/khipu-scholar-eval-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/vgl-sft-certified-puzzles-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/ring-ouro-curriculum-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/frontier-mix-v6-rebalanced",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/ring-curriculum-v3",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
@@ -4534,8 +4532,8 @@
    "id": "SZLHOLDINGS/flagship55-sft-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
@@ -4550,8 +4548,8 @@
    "id": "SZLHOLDINGS/w29-runs",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
@@ -4566,32 +4564,32 @@
    "id": "SZLHOLDINGS/frontier-rewards",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/frontier-54-v2-receipts",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "run-artifact-store"
   },
   {
    "id": "SZLHOLDINGS/szl-distill-abstention-v2-sft",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/materials-frontier-sft-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
@@ -4606,48 +4604,48 @@
    "id": "SZLHOLDINGS/khipu-heritage-eval-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/khipu-yachay-research-v0",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/training-ledger",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/cram-sudoku-extreme-sft-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/distill-runs",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/szl-distill-abstention-v3-calib",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
@@ -4662,40 +4660,40 @@
    "id": "SZLHOLDINGS/szl-open-problems-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/szl-frontier-openprob-mix-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/szl-distill-v4-calib",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/governed-grounded-sft-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/rag-corpus-v2",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "corpus-benchmark"
   },
   {
@@ -4710,8 +4708,8 @@
    "id": "SZLHOLDINGS/khipu-scholars-sft-v2",
    "type": "datasets",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
@@ -5102,8 +5100,8 @@
    "id": "SZLHOLDINGS/newton-trust-upgrade",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
@@ -5118,15 +5116,15 @@
    "id": "SZLHOLDINGS/szl-energy-hologram",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/szlholdings-si",
    "type": "spaces",
    "private": false,
-   "source_repo": "szlholdings.com",
+   "source_repo": "estate-cards",
    "method": "card",
    "family": "other"
   },
@@ -5134,8 +5132,8 @@
    "id": "SZLHOLDINGS/measured-honesty-census",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
@@ -5150,16 +5148,16 @@
    "id": "SZLHOLDINGS/truth-router",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/frontier-showcase",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "marketing-surface"
   },
   {
@@ -5190,8 +5188,8 @@
    "id": "SZLHOLDINGS/szl-infra-warden",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
@@ -5206,8 +5204,8 @@
    "id": "SZLHOLDINGS/szl-research-council",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
@@ -5222,16 +5220,16 @@
    "id": "SZLHOLDINGS/szl-receipts-chain",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "run-artifact-store"
   },
   {
    "id": "SZLHOLDINGS/khipu-playground",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
@@ -5246,32 +5244,32 @@
    "id": "SZLHOLDINGS/khipu-hologram",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/szl-energy-ledger",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/szl-provenance-pitch",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/estate-holo",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
@@ -5334,16 +5332,16 @@
    "id": "SZLHOLDINGS/khipu-yachay",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/training-ledger-explorer",
    "type": "spaces",
    "private": false,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "estate-cards",
+   "method": "override",
    "family": "other"
   }
  ]

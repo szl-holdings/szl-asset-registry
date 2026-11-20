@@ -2,11 +2,12 @@
 
 Canonical machine-readable map of every Hugging Face asset in the SZLHOLDINGS org to the GitHub repository that codes and produces it ("GitHub is source" doctrine).
 
-## Status (generated 2026-11-14)
+## Status (generated 2026-11-20, evidence sweep lap 2)
 
-- 351 HF assets censused (191 models, 94 datasets, 66 spaces)
-- 222 mapped to a source repo with evidence (57 by repo-name match, 165 by GitHub links found in the asset's own Hub card)
-- 129 UNMAPPED — declared honestly, never guessed, bucketed by family below
+- 666 HF assets censused (414 models, 173 datasets, 79 spaces; includes private)
+- 648 mapped to a source repo with evidence (66 by repo-name match, 513 by GitHub link/card evidence, 69 by curated override)
+- 18 UNMAPPED - declared honestly, never guessed; queue with reasons in data/unresolved_assets.json
+- 2026-11-20 evidence sweep: 73 backlog assets re-audited against their README cards; 63 case-cards carry an explicit canonical generator URL (github.com/szl-holdings/estate-cards weaver v0.1.0) and were mapped via evidence-cited overrides; 10 remain fail-closed (no unique canonical source URL).
 
 ## Method (fail-closed)
 
