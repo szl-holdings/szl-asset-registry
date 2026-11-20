@@ -1,0 +1,83 @@
+{
+  "generated": "2026-11-20",
+  "policy": "map only with explicit canonical szl-holdings repo URL or unique exact match; everything else stays unmapped (fail-closed)",
+  "unresolved": [
+    {
+      "id": "SZLHOLDINGS/salad-flagship55-v1",
+      "type": "models",
+      "urls": [],
+      "reason": "no unique canonical szl-holdings source URL; fail-closed",
+      "quotes": [
+        "frontier-55-runs",
+        "frontier-55-runs",
+        "frontier-54-runs",
+        "frontier-54-runs",
+        "szl-holdings.github.io",
+        "a11oy"
+      ]
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-ouro-l12",
+      "type": "models",
+      "urls": [],
+      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+      "quotes": []
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-ouro-l13",
+      "type": "models",
+      "urls": [],
+      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+      "quotes": []
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-ouro-l15",
+      "type": "models",
+      "urls": [],
+      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+      "quotes": []
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-ouro-l16",
+      "type": "models",
+      "urls": [],
+      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+      "quotes": []
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-ouro-l17",
+      "type": "models",
+      "urls": [],
+      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+      "quotes": []
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-ouro-l18",
+      "type": "models",
+      "urls": [],
+      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+      "quotes": []
+    },
+    {
+      "id": "SZLHOLDINGS/salad-governed-distill-27b-qlora-r1",
+      "type": "models",
+      "urls": [],
+      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+      "quotes": []
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-ouro-l13b",
+      "type": "models",
+      "urls": [],
+      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+      "quotes": []
+    },
+    {
+      "id": "SZLHOLDINGS/szl-agentic-reflex-v1",
+      "type": "datasets",
+      "urls": [],
+      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+      "quotes": []
+    }
+  ]
+}
