@@ -3,16 +3,16 @@
  "stats": {
   "name": 66,
   "card": 513,
-  "override": 73,
-  "unmapped": 14
+  "override": 74,
+  "unmapped": 13
  },
  "coverage": {
   "total": 666,
-  "mapped": 652,
-  "unmapped": 14
+  "mapped": 653,
+  "unmapped": 13
  },
  "unmapped_family_counts": {
-  "other": 14
+  "other": 13
  },
  "assets": [
   {
@@ -1907,8 +1907,8 @@
    "id": "SZLHOLDINGS/salad-flagship54-v2",
    "type": "models",
    "private": true,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "szl-frontier",
+   "method": "override",
    "family": "other"
   },
   {
