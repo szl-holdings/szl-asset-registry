@@ -19,9 +19,9 @@ jobs:
       # The drift gate ALWAYS runs (consult v480, S3): an absent pins file
       # is a reported unseeded state (green zero-pin verdict), never a skip.
       - run: python tools/drift_gate.py
-      - name: Coverage gate (independent recomputation: 666 = 648 mapped + 18 unmapped; 10 unresolved inside 18)
+      - name: "Coverage gate (independent recomputation: 666 = 648 mapped + 18 unmapped, 10 unresolved inside 18)"
         run: python tools/coverage_check.py
-      - name: Catalog deterministic replay (regenerated catalog must be byte-identical to committed bytes)
+      - name: "Catalog deterministic replay (regenerated catalog must be byte-identical to committed bytes)"
         run: |
           python tools/build_catalog.py .
           git diff --exit-code -- data/
