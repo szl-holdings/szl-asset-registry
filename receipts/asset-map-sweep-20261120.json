@@ -1,0 +1,33 @@
+{
+ "after": {
+  "mapped": 593,
+  "total": 666,
+  "unmapped": 73
+ },
+ "asset_map_modified": false,
+ "asset_map_sha256_after": "90c6085b0b03f48328c212ae991bc1022d1f3914bc531cf76eecd610c77bd25a",
+ "asset_map_sha256_before": "90c6085b0b03f48328c212ae991bc1022d1f3914bc531cf76eecd610c77bd25a",
+ "before": {
+  "mapped": 593,
+  "total": 666,
+  "unmapped": 73
+ },
+ "class": "MEASURED",
+ "files_added": [
+  "data/sweep73_evidence_20261120.json",
+  "data/asset_map_unmapped_reasons_20261120.json",
+  "tools/test_unmapped_reasons.py"
+ ],
+ "honest_outcome": "zero of 73 gained source-identity evidence; all 73 remain unmapped fail-closed with reason NO_MATCH",
+ "job": "ASSET-MAP-73 reason codes (post-sweep)",
+ "remapped_count": 0,
+ "runner": "sovereign-runtime-python estate-cards/frontier lane",
+ "sweep_counts": {
+  "ambiguous": 0,
+  "exact": 0,
+  "nomatch": 73,
+  "total": 73
+ },
+ "utc_end": "2026-11-20T07:34:00Z",
+ "utc_start": "2026-11-20T07:20:00Z"
+}
