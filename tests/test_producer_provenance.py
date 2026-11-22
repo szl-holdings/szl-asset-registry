@@ -1,5 +1,7 @@
 """Adversarial offline checks for card-generator vs producer lineage boundary."""
 import importlib.util
+import io
+from contextlib import redirect_stdout
 import json
 from pathlib import Path
 import tempfile
@@ -99,6 +101,45 @@ class EvidenceTest(unittest.TestCase):
         fixture = {"assets": [row()], "coverage": {"total": 1, "mapped": 0, "unmapped": 1}}
         with self.assertRaises(audit_mod.AuditHold):
             audit_mod.audit(fixture, {})
+
+    def test_missing_asset_id_is_a_fail_closed_audit_hold(self):
+        fixture = {
+            "assets": [{"type": "models", "method": "card", "source_repo": "estate-cards"}],
+            "coverage": {"total": 1, "mapped": 1, "unmapped": 0},
+        }
+        with self.assertRaises(audit_mod.AuditHold):
+            audit_mod.audit(fixture, {})
+
+    def test_missing_id_cli_returns_structured_hold(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            snapshot = root / "map.json"
+            override = root / "overrides.json"
+            snapshot.write_text(json.dumps({
+                "assets": [{"type": "models", "method": "card", "source_repo": "estate-cards"}],
+                "coverage": {"total": 1, "mapped": 1, "unmapped": 0},
+            }), encoding="utf-8")
+            override.write_text("{}", encoding="utf-8")
+            output = io.StringIO()
+            with redirect_stdout(output):
+                code = audit_mod.main([
+                    "--map", str(snapshot), "--overrides", str(override), "--audit-only"
+                ])
+            self.assertEqual(code, 2)
+            self.assertEqual(json.loads(output.getvalue())["status"], "HOLD")
+
+    def test_coverage_requires_exact_builtin_integer_types(self):
+        for coverage in (
+            {"total": True, "mapped": True, "unmapped": False},
+            {"total": 1.0, "mapped": 1.0, "unmapped": 0.0},
+        ):
+            with self.subTest(coverage=coverage):
+                with self.assertRaises(audit_mod.AuditHold):
+                    audit_mod.audit({"assets": [row()], "coverage": coverage}, {})
+        valid = {"total": 1, "mapped": 1, "unmapped": 0}
+        self.assertEqual(
+            audit_mod.audit({"assets": [row()], "coverage": valid}, {})["legacy_mapping_total"], 1
+        )
 
     def test_real_frozen_snapshot_reclassification(self):
         mapping = json.loads((ROOT / "asset_map.json").read_text(encoding="utf-8"))
