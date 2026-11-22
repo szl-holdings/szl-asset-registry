@@ -1,5 +1,7 @@
 """Adversarial offline checks for card-generator vs producer lineage boundary."""
 import importlib.util
+from collections import Counter
+import hashlib
 import io
 from contextlib import redirect_stdout
 import json
@@ -153,6 +155,38 @@ class EvidenceTest(unittest.TestCase):
         self.assertEqual(report["producer_verified_total"], 0)
         self.assertEqual(report["card_generator_citations_present"], 63)
         self.assertFalse(report["producer_identity_claim_authorized"])
+
+    def test_documented_legacy_denominator_matches_exact_frozen_map(self):
+        raw = (ROOT / "asset_map.json").read_bytes()
+        mapping = json.loads(raw)
+        counts = Counter(row["method"] for row in mapping["assets"])
+        coverage = mapping["coverage"]
+        self.assertEqual(coverage["total"], len(mapping["assets"]))
+        self.assertEqual(
+            coverage["mapped"],
+            counts["name"] + counts["card"] + counts["override"],
+        )
+        self.assertEqual(coverage["unmapped"], counts["unmapped"])
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        contract = (
+            ROOT / "docs/PRODUCER_PROVENANCE_VS_CARD_LINKS.md"
+        ).read_text(encoding="utf-8")
+        digest = hashlib.sha256(raw).hexdigest()
+        self.assertIn(f"{coverage['mapped']} with **legacy repository-link mappings**", readme)
+        self.assertIn(
+            f"({counts['name']} by repo-name match, {counts['card']} by GitHub link/card, "
+            f"{counts['override']} by override)",
+            readme,
+        )
+        self.assertIn(f"{coverage['unmapped']} UNMAPPED", readme)
+        self.assertIn(f"superseded by the {coverage['unmapped']}-row current", readme)
+        self.assertIn(f"{coverage['mapped']} non-null", contract)
+        self.assertIn(f"{coverage['unmapped']} unmapped", contract)
+        self.assertIn(digest, readme)
+        self.assertIn(digest, contract)
+        # A reported link must never be promoted to a producer attestation.
+        self.assertIn("not verified producing-source identities", readme)
+        self.assertIn("`producer_verified_total=0`", contract)
 
     def test_bad_duplicate_json_key_refused(self):
         with tempfile.TemporaryDirectory() as temp:
