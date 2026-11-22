@@ -2,12 +2,14 @@
 
 Status: **SOURCE ONLY / EVIDENCE HOLD** (2026-11-20).
 
-The existing historical `asset_map.json` has 666 assets, 648 non-null
-`source_repo` links, and 18 unmapped. Exactly 491 links point to
+The committed `asset_map.json` has 666 assets, 653 non-null
+`source_repo` links, and 13 unmapped. Exactly 491 links point to
 `estate-cards` (428 from `card`, 63 from `override`). This is a
 README/SVG card weaver, so a link to it cannot prove it produced model
 weights, training data, or Space application source. A majority of links
 in a card is not proof of producer identity.
+
+Snapshot input SHA-256: `a0622be6cf6bb6b24f9c400a467ec779de56b8d8468c901c2e25fdeba93951ec`. These are source-file counts, not an authenticated live Hub census; no model weight or dataset content was read for this reconciliation.
 
 This change adds a separate, versioned **offline audit** instead of silently
 changing historical `source_repo` and breaking downstream clients. Its
