@@ -17,6 +17,15 @@ from pathlib import Path
 SCHEMA = "szl.source-binding-shadow/v1"
 METHODS = {"card", "name", "override", "unmapped"}
 TYPES = {"models", "datasets", "spaces"}
+# Keep aligned with the canonical asset-map family vocabulary in tools/validate.py.
+FAMILIES = {
+    "laptop-lora-training",
+    "candidate-eval-20261104",
+    "run-artifact-store",
+    "corpus-benchmark",
+    "marketing-surface",
+    "other",
+}
 MAP_KEYS = {"assets", "coverage", "generated", "stats", "unmapped_family_counts"}
 MAP_ROW_KEYS = {"id", "type", "private", "source_repo", "method", "family"}
 SHADOW_KEYS = {
@@ -106,7 +115,7 @@ def _reason(method, source_repo):
 def verify_source_shadow(map_bytes: bytes, shadow_bytes: bytes) -> dict:
     original = _read(map_bytes)
     shadow = _read(shadow_bytes)
-    _exact_keys(original, MAP_KEYS, {"assets", "coverage", "stats"})
+    _exact_keys(original, MAP_KEYS, MAP_KEYS)
     _exact_keys(shadow, SHADOW_KEYS, SHADOW_KEYS)
     digest = hashlib.sha256(map_bytes).hexdigest()
     if (
@@ -139,12 +148,15 @@ def verify_source_shadow(map_bytes: bytes, shadow_bytes: bytes) -> dict:
         _exact_keys(claim, SHADOW_ROW_KEYS, SHADOW_ROW_KEYS)
         identity = (source["type"], source["id"])
         if (
-            source["type"] not in TYPES
+            type(source["type"]) is not str
+            or source["type"] not in TYPES
             or type(source["id"]) is not str
             or not source["id"].startswith("SZLHOLDINGS/")
             or type(source["private"]) is not bool
+            or type(source["method"]) is not str
             or source["method"] not in METHODS
             or type(source["family"]) is not str
+            or source["family"] not in FAMILIES
         ):
             raise ShadowHold("INVALID_SOURCE_ID_OR_METADATA")
         if identity in seen:

@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
+import tempfile
 import sys
 import unittest
 from pathlib import Path
@@ -196,6 +198,68 @@ class ShadowReadbackTests(unittest.TestCase):
         result = verify_source_shadow(forged_map, encode(shadow))
         self.assertFalse(result["producer_verified"])
         self.assertEqual(result["state"], "BYTE_BOUND_SHADOW_ONLY")
+
+
+    def test_non_scalar_source_type_and_method_hold_instead_of_crashing(self):
+        for field in ("type", "method"):
+            for value in ([], {}):
+                with self.subTest(field=field, value=value):
+                    raw, shadow = fixture()
+                    source = json.loads(raw)
+                    source["assets"][0][field] = value
+                    altered = encode(source)
+                    shadow["source_map_sha256"] = hashlib.sha256(altered).hexdigest()
+                    with self.assertRaisesRegex(ShadowHold, "INVALID_SOURCE_ID_OR_METADATA"):
+                        verify_source_shadow(altered, encode(shadow))
+
+    def test_missing_canonical_map_root_fields_hold(self):
+        for field in ("generated", "unmapped_family_counts"):
+            with self.subTest(field=field):
+                raw, shadow = fixture()
+                source = json.loads(raw)
+                del source[field]
+                altered = encode(source)
+                shadow["source_map_sha256"] = hashlib.sha256(altered).hexdigest()
+                with self.assertRaisesRegex(ShadowHold, "UNREVIEWED_FIELDS_OR_MISSING_REQUIRED"):
+                    verify_source_shadow(altered, encode(shadow))
+
+    def test_noncanonical_asset_family_holds(self):
+        for family in ("unlisted-family", "", "LAPTOP-LORA-TRAINING"):
+            with self.subTest(family=family):
+                raw, shadow = fixture()
+                source = json.loads(raw)
+                source["assets"][0]["family"] = family
+                altered = encode(source)
+                shadow["source_map_sha256"] = hashlib.sha256(altered).hexdigest()
+                with self.assertRaisesRegex(ShadowHold, "INVALID_SOURCE_ID_OR_METADATA"):
+                    verify_source_shadow(altered, encode(shadow))
+
+
+    def test_cli_malformed_type_emits_structured_hold(self):
+        raw, shadow = fixture()
+        source = json.loads(raw)
+        source["assets"][0]["type"] = []
+        altered = encode(source)
+        shadow["source_map_sha256"] = hashlib.sha256(altered).hexdigest()
+        with tempfile.TemporaryDirectory() as directory:
+            directory = Path(directory)
+            (directory / "map.json").write_bytes(altered)
+            (directory / "shadow.json").write_bytes(encode(shadow))
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(Path(__file__).resolve().parents[1] / "tools/verify_source_shadow.py"),
+                    "--map", str(directory / "map.json"),
+                    "--shadow", str(directory / "shadow.json"),
+                ],
+                capture_output=True, text=True, check=False,
+            )
+        self.assertEqual(result.returncode, 78, result.stderr)
+        self.assertEqual(
+            json.loads(result.stdout),
+            {"state": "HOLD", "reason": "INVALID_SOURCE_ID_OR_METADATA"},
+        )
+        self.assertEqual(result.stderr, "")
 
 
 if __name__ == "__main__":
