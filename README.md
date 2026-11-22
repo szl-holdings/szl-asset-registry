@@ -80,3 +80,44 @@ Do not auto-delete, rename, change visibility, retrain, or publish from this cen
 - Fail-closed honesty: UNMAPPED stays UNMAPPED until evidence exists.
 - Receipts chain canonical: mappings carry the method that produced them.
 - This registry is metadata only; it never duplicates asset content.
+## Durable source pins (drift gate v2)
+
+`tools/drift_gate.py` is an offline gate that binds every mapped asset to a
+pinned GitHub source and a measured Hub README hash.
+
+**Identity model.** Hub identity is `(id, type)`; the real map contains legal
+cross-type twins (same id, different type), so pin keys are composite with the
+exact grammar `^(models|datasets|spaces)/[A-Za-z0-9][A-Za-z0-9._-]*/[A-Za-z0-9][A-Za-z0-9._-]*$`
+(one type prefix, one owner/name id). A bare-id pins file cannot even hold both
+twins (JSON key collision), so composite keys are structural, not stylistic.
+
+**Accounting.** Every asset must appear exactly once: as a pin, or as a
+declared backlog entry with one of the reason tokens `no_hub_readme`,
+`card_method_deferred`, `override_method_deferred`, `unmapped_method_deferred`,
+`source_moved_during_measurement`. An asset that is neither pinned nor in the
+backlog is a `missing_backlog_entry` defect. An absent pins file is a reported
+unseeded state (green zero-pin verdict), never a reason to skip the gate in CI.
+
+**Defect tokens** (machine-stable, byte-stable output): `composite_pin_key_malformed`,
+`pin_key_type_prefix_invalid`, `pin_key_bare_id`, `pin_asset_unknown`,
+`pin_asset_unmapped`, `pin_asset_unmapped_method`, `duplicate_pin_key`,
+`pin_not_object`, `missing_required_field`, `source_repo_mismatch`,
+`revision_sha_mutable_ref`, `revision_sha_invalid`, `readme_sha256_invalid`,
+`evidence_quote_empty`, `pinned_utc_invalid`, `backlog_key_invalid`,
+`backlog_asset_unknown`, `backlog_reason_invalid`, `backlog_entry_conflicts_pin`,
+`missing_backlog_entry`, `duplicate_id_type_pair`.
+
+**Pin fields.** `source_repo` (equal to the map row), `revision_sha` (40 lowercase
+hex; mutable refs such as HEAD/main/master rejected), `readme_sha256` (64 hex
+over the Hub README.md bytes), `evidence_quote` (non-empty), `pinned_utc`
+(UTC, `...Z`). The seeder measures everything live and verifies after read: a
+source that moved during measurement defers to `source_moved_during_measurement`,
+never a mixed pin.
+
+**Exit codes.** 0 = valid (or unseeded), 1 = defects, 2 = input error
+(unreadable, malformed JSON, non-standard constants, duplicate asset_map keys,
+oversized input, excessive nesting). Verdicts are single-line sorted JSON on
+stdout with full backlog accounting.
+
+Design consults are recorded in wave-logs (Kimi v480 `e3f63149...`,
+Mistral v480 `c12bd881...`).
