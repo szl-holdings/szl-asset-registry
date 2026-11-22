@@ -89,7 +89,10 @@ def audit(asset_map: dict, overrides: dict) -> dict:
         raise AuditHold("EMPTY_MAP")
     # Hub permits the same namespace/name in different repo types.
     typed_ids = [(a.get("type"), a.get("id")) for a in assets if isinstance(a, dict)]
-    if len(typed_ids) != len(assets) or len(set(typed_ids)) != len(typed_ids):
+    if (len(typed_ids) != len(assets)
+            or any(type(a.get("id")) is not str or type(a.get("type")) is not str
+                   for a in assets)
+            or len(set(typed_ids)) != len(typed_ids)):
         raise AuditHold("DUPLICATE_OR_INVALID_ASSETS")
     ids = {a["id"] for a in assets}
     if any(type(key) is not str or key not in ids or type(value) is not str
@@ -105,7 +108,7 @@ def audit(asset_map: dict, overrides: dict) -> dict:
     expected_total = len(results)
     expected_mapped = expected_total - methods["unmapped"]
     if not isinstance(coverage, dict) or any(
-        coverage.get(k) != n for k, n in (
+        type(coverage.get(k)) is not int or coverage[k] != n for k, n in (
             ("total", expected_total), ("mapped", expected_mapped),
             ("unmapped", methods["unmapped"])
         )
