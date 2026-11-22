@@ -2,6 +2,7 @@
 import hashlib
 import json
 import unittest
+from pathlib import Path
 
 from tools.source_binding_audit import AuditError, audit_map, read_json_strict
 
@@ -79,6 +80,30 @@ class SourceBindingAuditTests(unittest.TestCase):
         digest = hashlib.sha256(raw).hexdigest()
         r = audit_map(read_json_strict(raw), digest)
         self.assertEqual(r["source_map_sha256"], digest)
+
+
+    def test_committed_shadow_receipt_is_byte_bound_to_current_asset_map(self):
+        root = Path(__file__).resolve().parents[1]
+        raw = (root / "asset_map.json").read_bytes()
+        receipt = read_json_strict(
+            (root / "receipts/source-binding-shadow-20261120.json").read_bytes()
+        )
+        digest = hashlib.sha256(raw).hexdigest()
+        self.assertEqual(receipt["source_map_sha256"], digest)
+        self.assertEqual(receipt, audit_map(read_json_strict(raw), digest))
+
+    def test_semantically_identical_changed_bytes_invalidate_shadow_digest(self):
+        root = Path(__file__).resolve().parents[1]
+        raw = (root / "asset_map.json").read_bytes()
+        altered_raw = raw + b"\n"
+        self.assertEqual(read_json_strict(raw), read_json_strict(altered_raw))
+        self.assertNotEqual(hashlib.sha256(raw).hexdigest(),
+                            hashlib.sha256(altered_raw).hexdigest())
+        first = audit_map(read_json_strict(raw), hashlib.sha256(raw).hexdigest())
+        altered = audit_map(read_json_strict(altered_raw),
+                            hashlib.sha256(altered_raw).hexdigest())
+        self.assertNotEqual(first["source_map_sha256"], altered["source_map_sha256"])
+        self.assertEqual(first["assets"], altered["assets"])
 
 
 if __name__ == "__main__":
