@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "repo_name": "szl-asset-registry",
+    "last_audit_date": "2026-11-22",
+    "loop_level": 1
+  },
+  "estate_context": {
+    "purpose_domain": "Machine-readable legacy source-hint registry for Hugging Face assets, with explicit separation of discovery metadata from independently verified producer provenance",
+    "baseline_commit": "8a114bd9f5c7679df0f4bfbf1fa070ba91dbc214",
+    "leader_profiles": [
+      {
+        "name": "in-toto",
+        "url": "https://github.com/in-toto/in-toto",
+        "checked_date": "2026-11-22"
+      },
+      {
+        "name": "SLSA",
+        "url": "https://github.com/slsa-framework/slsa",
+        "checked_date": "2026-11-22"
+      }
+    ]
+  },
+  "evidence_index": {
+    "publications": [
+      {
+        "id": "github:in-toto/in-toto",
+        "link": "https://github.com/in-toto/in-toto",
+        "applicability": "Assigned provenance/attestation leader for reviewing authenticated supply-chain layouts, link evidence, and verification semantics; no in-toto adoption or SLSA level is inferred."
+      },
+      {
+        "id": "github:slsa-framework/slsa",
+        "link": "https://github.com/slsa-framework/slsa",
+        "applicability": "Assigned provenance leader for assessing source-to-artifact binding, immutable revisions, artifact digests, and build provenance without treating source hints as producer evidence."
+      },
+      {
+        "id": "github:szl-holdings/szl-asset-registry",
+        "link": "https://github.com/szl-holdings/szl-asset-registry/pull/15",
+        "applicability": "In-repo audit evidence separating source hints from verified producer provenance (#15)."
+      },
+      {
+        "id": "github:szl-holdings/szl-asset-registry",
+        "link": "https://github.com/szl-holdings/szl-asset-registry/pull/29",
+        "applicability": "In-repo receipt evidence: fresh dated receipt bound to tip 302fe54e and catalog 344504bfd251 at wave-5 close-out (#29)."
+      },
+      {
+        "id": "github:szl-holdings/szl-asset-registry",
+        "link": "https://github.com/szl-holdings/szl-asset-registry/pull/24",
+        "applicability": "In-repo evidence for receipt-bound clean-room catalog verification and its CI step (#24)."
+      }
+    ],
+    "gap_register": [
+      "The newest head adds a fail-closed estate-audit manifest validator and suite without a PR number in the supplied commit subject, so its review/check provenance is less directly traceable than the adjacent PR-linked changes.",
+      "The README's generated status is dated 2026-11-20 and truncates the census/hint breakdown; the supplied data does not establish that those generated counts are current at baseline 60c28d5.",
+      "Receipt freshness is demonstrated by a wave-5 close-out bound to tip 302fe54e (#29), but later supplied commits mean that receipt does not by itself cover the current audit head.",
+      "The supplied top-level inventory has no dependency or lock manifest and no SECURITY/PROVENANCE detail beyond file presence; pinned tool versions and specific verification commands are therefore unverified at L1."
+    ],
+    "prioritized_changes": [
+      "Add a PR/commit evidence record for the head validator, including its validation command, CI result, schema version, and negative fail-closed test cases.",
+      "Regenerate the README status and a fresh receipt against 60c28d5bf8f7d45f490acf41bbae1843fb6f200a, recording the catalog digest and generator/validator versions.",
+      "Document the provenance-verification workflow in PROVENANCE.md/SECURITY.md with pinned tooling and explicit source-hint, revision, digest, receipt-freshness, and revocation checks."
+    ]
+  },
+  "execution_trace": {}
+}
