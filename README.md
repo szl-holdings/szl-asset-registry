@@ -1,13 +1,15 @@
 # szl-asset-registry
 
-Machine-readable **legacy source-hint** map for Hugging Face assets in the SZLHOLDINGS org. A matching repo name, shared README URL, or curated override is discovery metadata; it does **not** independently establish the GitHub checkout that produced an asset's model weights, dataset, or deployed Space. Source binding requires independently verified immutable revisions and artifact digests.
+Machine-readable **legacy source-hint** map for Hugging Face assets in the SZLHOLDINGS org. A matching repo name, shared README URL, or curated override is discovery metadata; it does **not** independently establish the GitHub checkout that produced an asset's model weights, dataset, or deployed Space. Source binding requires independently verified immutable revisions and artifact digests. The separate [producer-evidence audit](docs/PRODUCER_PROVENANCE_VS_CARD_LINKS.md) preserves that distinction before any production claim.
 
-## Status (generated 2026-11-20, evidence sweep lap 2)
+## Status (committed asset_map.json snapshot, reconciled 2026-11-22)
 
 - 666 HF assets censused (414 models, 173 datasets, 79 spaces; includes private)
-- 648 legacy source **hints** (66 by name heuristic, 513 by card URL, 69 by curated override), not 648 independently producer-attested mappings
-- 18 UNMAPPED - declared honestly, never guessed; queue with reasons in data/unresolved_assets.json
-- 2026-11-20 evidence sweep: 73 backlog assets re-audited against their README cards; 63 case-cards carry an explicit canonical generator URL (github.com/szl-holdings/estate-cards weaver v0.1.0) and were mapped via evidence-cited overrides; 10 remain fail-closed (no unique canonical source URL).
+- 653 with **legacy repository-link mappings**, not verified producing-source identities (66 by repo-name match, 513 by GitHub link/card, 74 by override). Of these, 491 point to the `estate-cards` card generator and require producer-specific review.
+- 13 UNMAPPED - declared honestly, never guessed; queue with reasons in data/unresolved_assets.json
+- Historical 2026-11-20 evidence sweep: 73 backlog assets re-audited against their README cards; 63 case-cards carry an explicit canonical generator URL (github.com/szl-holdings/estate-cards weaver v0.1.0) and were mapped via evidence-cited overrides; 10 remain fail-closed (no unique canonical source URL).
+
+**Evidence scope:** These are the counts of the committed metadata file `asset_map.json` (SHA-256 `a0622be6cf6bb6b24f9c400a467ec779de56b8d8468c901c2e25fdeba93951ec`), not a live authenticated Hugging Face census. Legacy repository links are **not** verified producer lineage. The historical November 20 sweep describes a past intake, not the current unmapped denominator.
 
 ## Source-binding evidence qualification (2026-11-20)
 
@@ -25,7 +27,7 @@ The output is exclusive-create and should be retained with the source map commit
 2. Card evidence: the asset's own README.md on the Hub is fetched and scanned for github.com/szl-holdings/ links; a link to an existing repo is accepted.
 3. Otherwise the asset is recorded UNMAPPED with a family tag. This prevents unsupported hint generation; it does not certify a found link as the actual producer.
 
-## Historical unmapped gap ledger (129 before the November 20 evidence sweeps)
+## Historical unmapped gap ledger (129, prior sweep; superseded by the 13-row current unmapped count)
 
 | Family | Count | Meaning |
 | --- | --- | --- |
@@ -43,6 +45,7 @@ Closing each bucket means either mapping it to the producing repo once that repo
 - `asset_map.json` — the map (generated, committed; regenerate with tools/build_asset_map.py)
 - `tools/build_asset_map.py` — generator (takes org_audit.json + hf_census.json as inputs)
 - `tools/validate.py` — CI validator (schema + count consistency)
+- `tools/audit_producer_provenance.py` — offline fail-closed audit of producer evidence versus legacy link coverage; does not mutate `asset_map.json`
 
 ## Regenerate
 
