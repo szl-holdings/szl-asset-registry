@@ -1,0 +1,4 @@
+# Keep producer-audit input bytes equal to immutable Git blob bytes on Windows.
+# CRLF worktree conversion changes SHA-256 and would falsify source-hash parity.
+asset_map.json text eol=lf
+overrides.json text eol=lf

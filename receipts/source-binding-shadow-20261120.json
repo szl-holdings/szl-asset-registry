@@ -162,10 +162,10 @@
     },
     {
       "id": "SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent",
-      "legacy_method": "unmapped",
-      "legacy_source_hint": null,
+      "legacy_method": "override",
+      "legacy_source_hint": "szl-forge",
       "producer_proof_state": "NOT_ESTABLISHED",
-      "reason": "NO_SOURCE_HINT",
+      "reason": "OVERRIDE_WITHOUT_VERIFIED_ATTESTATION",
       "type": "models"
     },
     {
@@ -1754,18 +1754,18 @@
     },
     {
       "id": "SZLHOLDINGS/salad-ring-v1",
-      "legacy_method": "unmapped",
-      "legacy_source_hint": null,
+      "legacy_method": "override",
+      "legacy_source_hint": "a11oy",
       "producer_proof_state": "NOT_ESTABLISHED",
-      "reason": "NO_SOURCE_HINT",
+      "reason": "OVERRIDE_WITHOUT_VERIFIED_ATTESTATION",
       "type": "models"
     },
     {
       "id": "SZLHOLDINGS/salad-ring-v1b",
-      "legacy_method": "unmapped",
-      "legacy_source_hint": null,
+      "legacy_method": "override",
+      "legacy_source_hint": "a11oy",
       "producer_proof_state": "NOT_ESTABLISHED",
-      "reason": "NO_SOURCE_HINT",
+      "reason": "OVERRIDE_WITHOUT_VERIFIED_ATTESTATION",
       "type": "models"
     },
     {
@@ -1890,10 +1890,10 @@
     },
     {
       "id": "SZLHOLDINGS/salad-flagship54-v2",
-      "legacy_method": "unmapped",
-      "legacy_source_hint": null,
+      "legacy_method": "override",
+      "legacy_source_hint": "szl-frontier",
       "producer_proof_state": "NOT_ESTABLISHED",
-      "reason": "NO_SOURCE_HINT",
+      "reason": "OVERRIDE_WITHOUT_VERIFIED_ATTESTATION",
       "type": "models"
     },
     {
@@ -3682,10 +3682,10 @@
     },
     {
       "id": "SZLHOLDINGS/a11oy-state",
-      "legacy_method": "unmapped",
-      "legacy_source_hint": null,
+      "legacy_method": "override",
+      "legacy_source_hint": "a11oy",
       "producer_proof_state": "NOT_ESTABLISHED",
-      "reason": "NO_SOURCE_HINT",
+      "reason": "OVERRIDE_WITHOUT_VERIFIED_ATTESTATION",
       "type": "datasets"
     },
     {
@@ -5330,27 +5330,27 @@
     }
   ],
   "coverage": {
-    "legacy_mapped_hints": 648,
+    "legacy_mapped_hints": 653,
     "producer_proven_by_input": 0,
     "showcase_link_hints": 428,
     "total": 666,
-    "unmapped_without_hint": 18
+    "unmapped_without_hint": 13
   },
   "method_counts": {
     "card": 513,
     "name": 66,
-    "override": 69,
-    "unmapped": 18
+    "override": 74,
+    "unmapped": 13
   },
   "reason_counts": {
     "CARD_LINK_NOT_PRODUCER_PROOF": 85,
     "NAME_SIMILARITY_NOT_PRODUCER_PROOF": 66,
-    "NO_SOURCE_HINT": 18,
-    "OVERRIDE_WITHOUT_VERIFIED_ATTESTATION": 69,
+    "NO_SOURCE_HINT": 13,
+    "OVERRIDE_WITHOUT_VERIFIED_ATTESTATION": 74,
     "SHOWCASE_LINK_NOT_PRODUCER_PROOF": 428
   },
   "receipt_signature": "UNSIGNED_LOCAL",
   "schema": "szl.source-binding-shadow/v1",
   "semantics": "source hints are NOT verified producing-source attestations",
-  "source_map_sha256": "a4ae0c9bf02f21f91680191ce588fde7c4a7fd70dc42bd6b40c090ab72e4ea75"
+  "source_map_sha256": "96636fe2d8731c91e37d4cf233b72ddd5734c2dcf82b2dd66624493e73bbe6a3"
 }
