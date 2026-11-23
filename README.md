@@ -9,7 +9,7 @@ Machine-readable **legacy source-hint** map for Hugging Face assets in the SZLHO
 - 13 UNMAPPED - declared honestly, never guessed; queue with reasons in data/unresolved_assets.json
 - Historical 2026-11-20 evidence sweep: 73 backlog assets re-audited against their README cards; 63 case-cards carry an explicit canonical generator URL (github.com/szl-holdings/estate-cards weaver v0.1.0) and were mapped via evidence-cited overrides; 10 remain fail-closed (no unique canonical source URL).
 
-**Evidence scope:** These are the counts of the committed metadata file `asset_map.json` (SHA-256 `96636fe2d8731c91e37d4cf233b72ddd5734c2dcf82b2dd66624493e73bbe6a3`), not a live authenticated Hugging Face census. Legacy repository links are **not** verified producer lineage. The historical November 20 sweep describes a past intake, not the current unmapped denominator.
+**Evidence scope:** These are the counts of the committed metadata file `asset_map.json` (SHA-256 `a0622be6cf6bb6b24f9c400a467ec779de56b8d8468c901c2e25fdeba93951ec`), not a live authenticated Hugging Face census. Legacy repository links are **not** verified producer lineage. The historical November 20 sweep describes a past intake, not the current unmapped denominator.
 
 ## Source-binding evidence qualification (2026-11-20)
 

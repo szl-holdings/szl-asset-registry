@@ -5352,5 +5352,5 @@
   "receipt_signature": "UNSIGNED_LOCAL",
   "schema": "szl.source-binding-shadow/v1",
   "semantics": "source hints are NOT verified producing-source attestations",
-  "source_map_sha256": "96636fe2d8731c91e37d4cf233b72ddd5734c2dcf82b2dd66624493e73bbe6a3"
+  "source_map_sha256": "a0622be6cf6bb6b24f9c400a467ec779de56b8d8468c901c2e25fdeba93951ec"
 }
