@@ -1,0 +1,110 @@
+{
+  "_comment": "Recheck of data/unresolved_assets.json (generated 2026-11-20). Does NOT modify the ledger; rows stay unmapped per policy unless owner adjudicates. This file records that the 2026-11-20 reasons are now stale.",
+  "_provenance": {
+    "generated": "2026-11-24",
+    "generated_by": "Vibe CTO lane (hf audit leg)",
+    "policy": "unresolved stays unresolved (fail-closed). Card existence alone does not map; requires unique canonical szl-holdings repo URL or unique exact match.",
+    "evidence_basis": "Direct hub file listings (HF API via estate admin OAuth) 2026-11-24."
+  },
+  "rechecked": [
+    {
+      "id": "SZLHOLDINGS/salad-flagship55-v1",
+      "card_root": true,
+      "old_reason": "no unique canonical szl-holdings source URL; fail-closed",
+      "new_observation": "unchanged: still no unique canonical; quotes cite both frontier-55-runs and frontier-54-runs",
+      "map_decision": "stays unmapped"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-ouro-l12",
+      "card_root": true,
+      "old_reason": "no card evidence at all (empty or unfetchable README)",
+      "new_observation": "STALE: card now exists (README 832B; szl:canonical-source v1 block; receipts-tranche-6 scan section; cites org https://github.com/szl-holdings only, no unique repo URL)",
+      "map_decision": "stays unmapped (org-level link is not unique canonical evidence)"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-ouro-l13",
+      "card_root": true,
+      "old_reason": "no card evidence at all",
+      "new_observation": "STALE: card now exists (receipts dir + README); org-level canonical only",
+      "map_decision": "stays unmapped"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-ouro-l13b",
+      "card_root": true,
+      "old_reason": "no card evidence at all",
+      "new_observation": "STALE: card now exists; org-level canonical only",
+      "map_decision": "stays unmapped"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-ouro-l15",
+      "card_root": true,
+      "old_reason": "no card evidence at all",
+      "new_observation": "STALE: card now exists (README 832B, same pattern as l12)",
+      "map_decision": "stays unmapped"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-ouro-l16",
+      "card_root": true,
+      "old_reason": "no card evidence at all",
+      "new_observation": "STALE: card now exists (README 832B)",
+      "map_decision": "stays unmapped"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-ouro-l17",
+      "card_root": true,
+      "old_reason": "no card evidence at all",
+      "new_observation": "STALE: card now exists (README 832B)",
+      "map_decision": "stays unmapped"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-ouro-l18",
+      "card_root": true,
+      "old_reason": "no card evidence at all",
+      "new_observation": "STALE: card now exists (README 832B)",
+      "map_decision": "stays unmapped"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-governed-distill-27b-qlora-r1",
+      "card_root": true,
+      "old_reason": "no card evidence at all",
+      "new_observation": "STALE: card now exists (updated 2026-11-24T01:14Z); org-level canonical only",
+      "map_decision": "stays unmapped"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-serve-gemma1",
+      "card_root": true,
+      "old_reason": "no card evidence at all",
+      "new_observation": "STALE: card now exists",
+      "map_decision": "stays unmapped"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-serve-llama1",
+      "card_root": true,
+      "old_reason": "no card evidence at all",
+      "new_observation": "STALE: card now exists",
+      "map_decision": "stays unmapped"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-ring-serve-mistral1",
+      "card_root": true,
+      "old_reason": "no card evidence at all",
+      "new_observation": "STALE: card now exists",
+      "map_decision": "stays unmapped"
+    },
+    {
+      "id": "SZLHOLDINGS/szl-agentic-reflex-v1",
+      "card_root": true,
+      "type": "datasets",
+      "old_reason": "no card evidence at all",
+      "new_observation": "STALE: card now exists (dataset has mesh/ + trajectories/ + README)",
+      "map_decision": "stays unmapped"
+    }
+  ],
+  "summary": {
+    "unresolved_20261120": 13,
+    "card_now_present": 13,
+    "reason_stale": 12,
+    "properly_still_unmapped": 13,
+    "recommendation": "Regenerate unresolved assets reasons with a dated re-sweep (tools own the ledger); possible next step: per-model canonical source-binding repos (pure Python) or evidence-cited overrides for the ring-ouro / ring-serve families if a unique canonical emerges."
+  }
+}

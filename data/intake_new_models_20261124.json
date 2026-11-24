@@ -1,0 +1,173 @@
+{
+  "_comment": "Intake rows only. This file does NOT modify asset_map.json or overrides.json; mapping decisions stay with the owning tools + owner adjudication (fail-closed).",
+  "_provenance": {
+    "generated": "2026-11-24",
+    "generated_by": "Vibe CTO lane (dc in + hf audit leg, owner green-light 2026-11-24)",
+    "purpose": "2026-11-22 census had 414 models; live recheck 2026-11-24 found 14 models not in the committed asset_map.json. These rows record card state + evidence so build_asset_map/owner can adjudicate.",
+    "evidence_basis": "Direct hub file listings (HF API via estate admin OAuth) 2026-11-24; laptop threaded audit audit_v2_out.json (428 models, done=true); registry_diff_out.json (14 new ids).",
+    "policy": "No row here asserts a mapping. proposed_source entries are hypotheses requiring evidence-cited override or name-match before build_asset_map maps them."
+  },
+  "new_models": [
+    {
+      "id": "SZLHOLDINGS/frontier-promotion-gate-v1",
+      "type": "models",
+      "private": true,
+      "card_root": true,
+      "card_evidence": "README 2928B; describes deterministic stdlib-only promotion gate for the 4B/9B op1 frontier lane (vet/verdict contract per gate_promotion_spec.txt)",
+      "name_match": null,
+      "proposed_source": "frontier-55-runs",
+      "proposal_reason": "F55 promotion evidence is mirrored by szl-holdings/frontier-55-runs (its README declares it the GitHub home of flagship-55 run evidence); gate artifacts also live in SZLHOLDINGS/wave-logs promotion/. NOT an override without owner adjudication.",
+      "decision": "intake-row; unmapped until adjudicated (fail-closed)"
+    },
+    {
+      "id": "SZLHOLDINGS/kimi-estate-ops",
+      "type": "models",
+      "private": false,
+      "card_root": true,
+      "card_evidence": "README; Kimi-lineage ops/governance seat model 16B Q4_K_M published 2026-11-24 from the device ollama rail; no-deploy-claims doctrine",
+      "name_match": null,
+      "proposed_source": null,
+      "proposal_reason": "Card cites ollama publish rail only; no canonical szl-holdings repo URL; no trainer/publish kit repo exists in the org",
+      "decision": "intake-row; coding-back gap: needs a pure-Python publish/ops kit repo before mapping"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-best-khipu-r4",
+      "type": "models",
+      "private": true,
+      "card_root": false,
+      "card_evidence": "NO root README.md. README.md 5250B exists at final/README.md and inside every checkpoint dir (25/50/75/100). Updated 2026-11-24T14:08Z (sibling lane active).",
+      "name_match": null,
+      "proposed_source": null,
+      "proposal_reason": "Khipu family repos exist (khipu-lab, szl-khipu) but no unique canonical source; root card missing so hub renders no card",
+      "decision": "intake-row; unmapped; card placement belongs to the owning sovereign/dream lane (no-stomp)"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-chaski-frontier-4b-narrow1",
+      "type": "models",
+      "private": true,
+      "card_root": false,
+      "card_evidence": "NO README.md at 2026-11-24 recheck (repo has progress/ dir + .gitattributes only; updated 2026-11-24T14:44Z = mid-publish)",
+      "name_match": null,
+      "proposed_source": null,
+      "proposal_reason": "Sibling sovereign/dream lane is actively publishing; historic pattern: cards land at lane completion (cf. op1-r2/r3/r9/r11)",
+      "decision": "intake-row; unmapped; card + source pending lane completion (no-stomp)"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-chaski-frontier-9b-narrow1",
+      "type": "models",
+      "private": true,
+      "card_root": false,
+      "card_evidence": "NO README.md at 2026-11-24 recheck (.gitattributes only; updated 2026-11-24T14:44Z = mid-publish)",
+      "name_match": null,
+      "proposed_source": null,
+      "proposal_reason": "Same narrow-1 lane as 4b-narrow1",
+      "decision": "intake-row; unmapped; card + source pending lane completion (no-stomp)"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1-r2",
+      "type": "models",
+      "private": true,
+      "card_root": true,
+      "card_evidence": "README (progress dir + README + .gitattributes)",
+      "name_match": null,
+      "proposed_source": null,
+      "proposal_reason": "Chaski-frontier LoRA lane has no GitHub trainer repo; ChaskaLLM repo is the GGUF serving mouth, NOT this training lane",
+      "decision": "intake-row; unmapped; coding-back gap: chaski-frontier trainer kit needs a GitHub home"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1-r3",
+      "type": "models",
+      "private": true,
+      "card_root": true,
+      "card_evidence": "README present",
+      "name_match": null,
+      "proposed_source": null,
+      "proposal_reason": "Same lane as op1-r2",
+      "decision": "intake-row; unmapped; coding-back gap: chaski-frontier trainer kit needs a GitHub home"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1-r9",
+      "type": "models",
+      "private": true,
+      "card_root": true,
+      "card_evidence": "README + ckpt/ + progress/ + train_log.txt",
+      "name_match": null,
+      "proposed_source": null,
+      "proposal_reason": "Same lane as op1-r2",
+      "decision": "intake-row; unmapped; coding-back gap: chaski-frontier trainer kit needs a GitHub home"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1-r11",
+      "type": "models",
+      "private": true,
+      "card_root": true,
+      "card_evidence": "README 396B: LoRA q/k/v/o r=32 over Qwen/Qwen3.5-9B on SZLHOLDINGS/szl-frontier-openprob-mix-v1 @ f2565bac0e43; training MEASURED; promotion HOLD pending eval receipts; cites final/train_receipt.json",
+      "name_match": null,
+      "proposed_source": null,
+      "proposal_reason": "Card cites HF dataset + receipt, no szl-holdings repo URL",
+      "decision": "intake-row; unmapped; coding-back gap: chaski-frontier trainer kit needs a GitHub home"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1-r12",
+      "type": "models",
+      "private": true,
+      "card_root": false,
+      "card_evidence": "NO README.md at 2026-11-24 recheck (.gitattributes only; updated 2026-11-24T04:17Z)",
+      "name_match": null,
+      "proposed_source": null,
+      "proposal_reason": "Same lane; card pending lane completion (no-stomp)",
+      "decision": "intake-row; unmapped; card + source pending lane completion"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-chaski-preflight",
+      "type": "models",
+      "private": true,
+      "card_root": true,
+      "card_evidence": "README + adapter files present",
+      "name_match": null,
+      "proposed_source": null,
+      "proposal_reason": "Preflight artifact of the chaski-frontier lane; no GitHub home",
+      "decision": "intake-row; unmapped"
+    },
+    {
+      "id": "SZLHOLDINGS/salad-khipu-scholar-4b-v2",
+      "type": "models",
+      "private": true,
+      "card_root": true,
+      "card_evidence": "README + adapter + chat_template + tokenizer + training_args present",
+      "name_match": null,
+      "proposed_source": "szl-khipu-scholar",
+      "proposal_reason": "szl-holdings/szl-khipu-scholar exists and is mapped to HF SZLHOLDINGS/szl-khipu-scholar; lineages likely shared (khipu-scholar) but this is NOT asserted as canonical without owner adjudication (fail-closed)",
+      "decision": "intake-row; unmapped until adjudicated"
+    },
+    {
+      "id": "SZLHOLDINGS/szl-scratch-frontier-canary-r4",
+      "type": "models",
+      "private": true,
+      "card_root": true,
+      "card_evidence": "README + eval/ + final/ + train_log.txt",
+      "name_match": null,
+      "proposed_source": null,
+      "proposal_reason": "Scratch canary lane; no szl-holdings repo URL in card",
+      "decision": "intake-row; unmapped"
+    },
+    {
+      "id": "SZLHOLDINGS/szl-scratch-r4-upload-validation",
+      "type": "models",
+      "private": true,
+      "card_root": true,
+      "card_evidence": "README + fixtureA/ + fixtureB/ + results/",
+      "name_match": null,
+      "proposed_source": null,
+      "proposal_reason": "Upload-validation fixture repo; no szl-holdings repo URL in card",
+      "decision": "intake-row; unmapped"
+    }
+  ],
+  "summary": {
+    "total_new": 14,
+    "with_root_card": 10,
+    "card_pending_mid_publish": 3,
+    "card_in_subdir_only": 1,
+    "note": "Estate is live: sibling training lanes keep publishing (narrow1 pair updated 14:44Z during this audit). Counts are a 2026-11-24 snapshot, not a stable state."
+  }
+}
