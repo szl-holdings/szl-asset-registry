@@ -1,0 +1,51 @@
+{
+ "schema": "szl.asset-registry/promotion-proposal/v1",
+ "proposal_id": "promotion-flagship54-20261124",
+ "date": "2026-11-24",
+ "action": "designate ESTATE FLAGSHIP",
+ "subject": {
+  "hub_repo": "SZLHOLDINGS/salad-flagship54-v1",
+  "adapter_dir": "final",
+  "final_adapter_sha256": "b3040123b7f9609979ef9c940a9d6733f7dfa6e2aab2d4bc96cca8698b76535e",
+  "base": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Estate-v1",
+  "base_revision": "272514fd62729db94dc4fb66052753c7ab6397d7",
+  "canonical_source": "szl-holdings/szl-frontier"
+ },
+ "authorization_chain": [
+  "2026-11-24: owner verbatim unlock sentence: GO: MINT THE OB2 SIGNATURE FOR salad-flagship54-v1 AND OPEN THE PROMOTION GATE, I ACCEPT THE TRAVELING c3 BAND FAILURE AND THE NEGATIVE FRESH ABSTENTION DELTA.",
+  "2026-11-24: Kimi execution-GO P2DGO2-MINT-20261124 (q1 YES, amendments NONE, conditions NONE, nonce echoed)",
+  "2026-11-24: OB2 ed25519 signature mint (single-purpose key szl-owner-auth-mint-20261124-01, genesis receipt published)",
+  "2026-11-24: p2d engine fold v4.2 - ALL SEVEN PROVEN, gate ALLOWED blocked_by=[] (action promote-f54)",
+  "2026-11-24: owner menu selection DO IT ALL on the promotion component menu (this registry proposal)"
+ ],
+ "engine_verdicts": {
+  "OB1-terminal": "PROVEN",
+  "OB2-digests": "PROVEN",
+  "OB3-recovery": "PROVEN",
+  "OB4-quality": "PROVEN",
+  "OB5-calibration": "PROVEN",
+  "OB6-runtime": "PROVEN",
+  "OB7-independence": "PROVEN",
+  "OB-v5-heldout-quality": "REFUTED (other subject, travels)",
+  "OB-r2-allpass": "REFUTED (other subject, travels)"
+ },
+ "receipts": [
+  "wave-logs mesh/p2d/p2d-v42-fold-receipt-20261124T192002Z.json",
+  "wave-logs mesh/p2d/p2d-ob2-signed-record-20261124T192002Z.json",
+  "wave-logs mesh/p2d/p2d-ob2-key-genesis-20261124T192002Z.json",
+  "wave-logs mesh/p2d/p2d-v42-packet-20261124T192002Z.json",
+  "wave-logs mesh/p2d/FLAGSHIP54_P2D_REPORT_V3_20261124_GATE_OPEN.md"
+ ],
+ "honest_caveats_traveling": [
+  "c3 refusal two-sided band FAIL: |0.70-0.45|=0.25 > 0.15 (folded 11-17 receipt)",
+  "c4 neutral band FAIL: |0.75-0.50|=0.25 > 0.10 (folded 11-17 receipt)",
+  "fresh 11-24 calibration abstention delta NEGATIVE: adapter abstain 0.00 vs base 0.25, delta -0.25",
+  "final/trainer_state.json download 404 (republished training-observer pin only)",
+  "single-estate witnesses; no external third-party partner yet"
+ ],
+ "proposed_registry_effect": "additive proposal only; asset_map.json and overrides.json untouched (owner/Kimi adjudication before any mapping change); merge of this PR is owner-gated per doctrine",
+ "web_seat_limitations_disclosed": [
+  "HF card designation block drafted and staged (sandbox HF OAuth is read-only on estate repos: direct commit Forbidden, create-pr preupload Authorization error); push from device next desktop lap",
+  "device-only promotion components (unpark Salad groups, serving frontends) not executable from web seat; parked, replicas 0"
+ ]
+}
