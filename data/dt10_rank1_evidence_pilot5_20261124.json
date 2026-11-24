@@ -1,0 +1,265 @@
+{
+ "schema": "szl.dt10.rank1-evidence/v1",
+ "generated_utc": "2026-11-24T21:32:01Z",
+ "lane": "ouroboros datasets-leg lap-2 follow-on (rank-1 pilot-5 evidence research)",
+ "contract": "KIMI_K3.1_CONDITIONAL_GO_7AMENDMENTS nonce DSK-KIMI-RANK1-20261124 (device ollama kimi-k3.1-pro:cloud, 17.2s, receipt kimi_rank1.out, content cap 4000 chars disclosed)",
+ "ruling_scope": "read-only research on the pilot top-5 of data/dt10_rank1_packet_20261124.json (44 NO_LICENSE candidates, deterministic order: downloads desc, likes desc, id asc); NO license inferred/applied/written; NO HF metadata writes; name-match is not a binding; propose-only commit may add this research to DRAFT PR#37 without changing license metadata, candidate ordering, or census; remediation NOT complete for any candidate",
+ "method": "GitHub code search org:szl-holdings via github_app connector (authed, read-only, 2026-11-24 ~21:1x-21:3xZ) + registry records (source_pins.json sha fd1a12eb0c0ddcbff30f45bb562c321501f96ae9, overrides.json sha a5fdd3d783da6f0a31492ea901fc4561bf2d9c99, data/asset_map_unmapped_reasons_20261120.json, all at registry head f7efb7c995cd1efe2f8461759c20d514259b17fd) + candidate repo LICENSE reads at measured head SHAs; fail-closed; card-issuer links (estate-cards provenance) explicitly excluded as source-identity evidence per registry unmapped-reasons contract",
+ "candidates": [
+  {
+   "id": "SZLHOLDINGS/khipu-scholar-runs",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/khipu-scholar-runs reason=card_method_deferred (pins section: no entry; identity_verified false by design)"
+    },
+    {
+     "repo": "szl-holdings/szl-khipu-scholar",
+     "path": "docs/RECEIPTS.md",
+     "sha": "1d47b58e",
+     "at_head": "573eb48514133183bc892461dffb3da0cf155c13",
+     "url": "https://github.com/szl-holdings/szl-khipu-scholar/blob/573eb48514133183bc892461dffb3da0cf155c13/docs/RECEIPTS.md",
+     "evidence_class": "live_receipt_repo_declaration",
+     "excerpt": "Live receipt repositories: [khipu-scholar-runs](https://huggingface.co/datasets/SZLHOLDINGS/khipu-scholar-runs) (receipts) and [mesh-liveness](https://huggingface.co/datasets/SZLHOLDINGS/mesh-liveness) (beacons)."
+    },
+    {
+     "repo": "szl-holdings/szl-khipu-scholar",
+     "path": "LICENSE",
+     "sha": "fbf89e5ffae10c8b9200a47ae829c90b30d1658e",
+     "at_head": "573eb48514133183bc892461dffb3da0cf155c13",
+     "url": "https://github.com/szl-holdings/szl-khipu-scholar/blob/573eb48514133183bc892461dffb3da0cf155c13/LICENSE",
+     "evidence_class": "repo_license_adjacent_not_dataset_coverage",
+     "excerpt": "Apache License Version 2.0 ... END OF TERMS AND CONDITIONS / Copyright 2026 SZL Holdings"
+    },
+    {
+     "repo": "szl-holdings/estate-cards",
+     "path": "weaver/policy.py",
+     "sha": "b5383455",
+     "at_head": "5836d806d850b9d4a0cb628f67c7376299bddd40",
+     "url": "https://github.com/szl-holdings/estate-cards/blob/5836d806d850b9d4a0cb628f67c7376299bddd40/weaver/policy.py",
+     "evidence_class": "card_issuer_hypothesis_excluded",
+     "excerpt": "\"SZLHOLDINGS/khipu-scholar-runs\": GH + \"/szl-khipu-scholar\" (card-issuer mapping hypothesis; EXCLUDED as source-identity evidence per registry contract)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement_for_dataset_artifacts; adjacent repo license names \"SZL Holdings\"",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read)); adjacent repo LICENSE: Apache-2.0",
+   "coverage": "adjacent repo license covers szl-khipu-scholar repository contents; no express statement covers the separately published HF dataset artifacts",
+   "binding_status": "UNBOUND (registry backlog card_method_deferred; identity_verified false)",
+   "notes": "strongest linkage found: dedicated project repo declares the dataset as its live receipt repository; still not an authority for license of the dataset artifacts; owner gate required before any license claim"
+  },
+  {
+   "id": "SZLHOLDINGS/w29-runs",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/w29-runs reason=override_method_deferred (pins section: no entry; identity_verified false by design)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/w29-runs\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/frontier-55-runs",
+     "path": "kit/promotion/PROVENANCE.md",
+     "sha": "aee2aba24334f32fe8d73b97c7b99cc7ab5c77af",
+     "at_head": "49c505e41d09e861b1ede67463a4e5f2de9556a1",
+     "url": "https://github.com/szl-holdings/frontier-55-runs/blob/49c505e41d09e861b1ede67463a4e5f2de9556a1/kit/promotion/PROVENANCE.md",
+     "evidence_class": "kit_rehost_lineage_note",
+     "excerpt": "reward_gate.py | 6966 | hf://datasets/SZLHOLDINGS/wave-logs/kit/reward-gate/reward_gate.py (kit re-hosted from w29-runs per wave-logs kit/manifest.json pin df5d9c1169c7) | 2026-11-24"
+    },
+    {
+     "repo": "szl-holdings/frontier-55-runs",
+     "path": "LICENSE",
+     "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+     "at_head": "49c505e41d09e861b1ede67463a4e5f2de9556a1",
+     "url": "https://github.com/szl-holdings/frontier-55-runs/blob/49c505e41d09e861b1ede67463a4e5f2de9556a1/LICENSE",
+     "evidence_class": "repo_license_adjacent_unfilled_placeholder",
+     "excerpt": "Apache License Version 2.0 ... Copyright [yyyy] [name of copyright owner] (boilerplate placeholders unfilled)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read)); adjacent repo LICENSE: Apache-2.0 template with unfilled copyright holder",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry backlog override_method_deferred + 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "the kit-re-host lineage note is content provenance for a single kit file, not a binding nor a license grant; no dedicated w29-runs source repo exists in the org code index"
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-rewards",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/frontier-rewards reason=override_method_deferred (pins section: no entry; identity_verified false by design)"
+    },
+    {
+     "repo": "szl-holdings/frontier-55-runs",
+     "path": "kit/promotion/reward_gate.py",
+     "sha": "cd6b978e563b45a29cc4682c42d1b4b96c3aa7e1",
+     "at_head": "49c505e41d09e861b1ede67463a4e5f2de9556a1",
+     "url": "https://github.com/szl-holdings/frontier-55-runs/blob/49c505e41d09e861b1ede67463a4e5f2de9556a1/kit/promotion/reward_gate.py",
+     "evidence_class": "producer_pipeline_declaration",
+     "excerpt": "SCHEMA = \"szl.reward/v1\" / OUT_REPO = \"SZLHOLDINGS/frontier-rewards\" (also: \"mean cross-entropy on an eval slice, and publishes an szl.reward/v1 receipt to SZLHOLDINGS/frontier-rewards. Fail-closed: any error means NO receipt\")"
+    },
+    {
+     "repo": "szl-holdings/frontier-55-runs",
+     "path": "LICENSE",
+     "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+     "at_head": "49c505e41d09e861b1ede67463a4e5f2de9556a1",
+     "url": "https://github.com/szl-holdings/frontier-55-runs/blob/49c505e41d09e861b1ede67463a4e5f2de9556a1/LICENSE",
+     "evidence_class": "repo_license_adjacent_unfilled_placeholder",
+     "excerpt": "Apache License Version 2.0 ... Copyright [yyyy] [name of copyright owner] (boilerplate placeholders unfilled)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read)); adjacent repo LICENSE: Apache-2.0 template with unfilled copyright holder",
+   "coverage": "the producer pipeline declares where receipt artifacts are published (OUT_REPO), which is a production-path declaration, not a license grant; no express license coverage of the dataset artifacts",
+   "binding_status": "UNBOUND (registry backlog override_method_deferred + 2026-11-20 sweep NO_MATCH; identity_verified false)",
+   "notes": "producer-pipeline is the strongest linkage class found in this pilot; fail-closed: pipeline declaration is not license evidence; the adjacent repo license would in any case not bind the separately published dataset (amendment 4)"
+  },
+  {
+   "id": "SZLHOLDINGS/proving-ground-54h-mesh",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/proving-ground-54h-mesh reason=card_method_deferred (pins section: no entry; identity_verified false by design)"
+    },
+    {
+     "repo": "szl-holdings/estate-cards",
+     "path": "weaver/policy.py",
+     "sha": "b5383455",
+     "at_head": "5836d806d850b9d4a0cb628f67c7376299bddd40",
+     "url": "https://github.com/szl-holdings/estate-cards/blob/5836d806d850b9d4a0cb628f67c7376299bddd40/weaver/policy.py",
+     "evidence_class": "card_issuer_hypothesis_excluded",
+     "excerpt": "\"SZLHOLDINGS/proving-ground-54h-mesh\": GH + \"/szl-frontier\" (card-issuer mapping hypothesis; EXCLUDED as source-identity evidence per registry contract)"
+    },
+    {
+     "repo": "szl-holdings/anatomy",
+     "path": "ESTATE-ALIGNMENT.md",
+     "sha": "40172cfd",
+     "at_head": "2b73b578c4fefde17a2396d45ee9e4fb011dc13a",
+     "url": "https://github.com/szl-holdings/anatomy/blob/2b73b578c4fefde17a2396d45ee9e4fb011dc13a/ESTATE-ALIGNMENT.md",
+     "evidence_class": "eval_pool_directive_note",
+     "excerpt": "Eval/heldout pools (frontier-54-runs, frontier-55-runs, proving-ground-54h-mesh, VGL probe pools) are now public by the same directive."
+    },
+    {
+     "repo": "szl-holdings/anatomy",
+     "path": "LICENSE",
+     "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+     "at_head": "2b73b578c4fefde17a2396d45ee9e4fb011dc13a",
+     "url": "https://github.com/szl-holdings/anatomy/blob/2b73b578c4fefde17a2396d45ee9e4fb011dc13a/LICENSE",
+     "evidence_class": "repo_license_adjacent_unfilled_placeholder",
+     "excerpt": "Apache License Version 2.0 ... Copyright [yyyy] [name of copyright owner] (boilerplate placeholders unfilled)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read)); adjacent repo LICENSEs: Apache-2.0 templates with unfilled copyright holder",
+   "coverage": "no express license statement covering the HF dataset artifacts; the anatomy note is a publication-directive context mention, not a binding",
+   "binding_status": "UNBOUND (registry backlog card_method_deferred; identity_verified false)",
+   "notes": "no dedicated source repo found in the org code index; the /szl-frontier card-issuer hypothesis is excluded by the registry contract; owner gate required before any remediation"
+  },
+  {
+   "id": "SZLHOLDINGS/ring-curriculum-v3",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/ring-curriculum-v3 reason=override_method_deferred (pins section: no entry; identity_verified false by design)"
+    },
+    {
+     "repo": "szl-holdings/a11oy",
+     "path": "mesh/curriculum_registry.json",
+     "sha": "99bbc9a8",
+     "at_head": "876f94707e90443d18505bff2e5402847a83ac3e",
+     "url": "https://github.com/szl-holdings/a11oy/blob/876f94707e90443d18505bff2e5402847a83ac3e/mesh/curriculum_registry.json",
+     "evidence_class": "curriculum_registry_note",
+     "excerpt": "\"promotion\": { \"date\": \"2026-11-18\", \"basis\": \"card+file-inventory+row-peek evidence pass (owner-directed)\", \"evidence\": \"card: curriculum candidate; already included in ring-curriculum-v3\" }"
+    },
+    {
+     "repo": "szl-holdings/a11oy",
+     "path": "docs/ecosystem-stage-matrix.json",
+     "sha": "f3456b59",
+     "at_head": "876f94707e90443d18505bff2e5402847a83ac3e",
+     "url": "https://github.com/szl-holdings/a11oy/blob/876f94707e90443d18505bff2e5402847a83ac3e/docs/ecosystem-stage-matrix.json",
+     "evidence_class": "ecosystem_manifest_note",
+     "excerpt": "{ \"id\": \"SZLHOLDINGS/ring-curriculum-v3\", \"repoType\": \"dataset\", \"evidenceUrls\": [\"https://huggingface.co/datasets/SZLHOLDINGS/ring-curriculum-v3\"] } (evidence URL points back at the HF dataset itself, not a source repo)"
+    },
+    {
+     "repo": "szl-holdings/a11oy",
+     "path": "LICENSE",
+     "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+     "at_head": "876f94707e90443d18505bff2e5402847a83ac3e",
+     "url": "https://github.com/szl-holdings/a11oy/blob/876f94707e90443d18505bff2e5402847a83ac3e/LICENSE",
+     "evidence_class": "repo_license_adjacent_unfilled_placeholder",
+     "excerpt": "Apache License Version 2.0 ... Copyright [yyyy] [name of copyright owner] (boilerplate placeholders unfilled)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read)); adjacent repo LICENSE: Apache-2.0 template with unfilled copyright holder",
+   "coverage": "the curriculum registry records that a curriculum candidate is included in the dataset (content lineage for curriculum rows), not a license for the dataset artifacts; no express coverage found",
+   "binding_status": "UNBOUND (registry backlog override_method_deferred + 2026-11-20 sweep NO_MATCH; identity_verified false)",
+   "notes": "sibling ring datasets ring-curriculum-v1/v2 and ring-ouro-curriculum-v1 share the same NO_MATCH/NO_LICENSE state (same census cohort); not adjudicated here, listed for the remaining-39 queue"
+  }
+ ],
+ "results_summary": {
+  "candidates_examined": 5,
+  "with_authoritative_upstream_license_evidence": 0,
+  "no_authoritative_upstream_evidence": 5,
+  "dataset_side": "all 5 are among the 44 census NO_LICENSE datasets; HF READMEs are stub cards (License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+  "registry_side": "all 5 sit in szl-asset-registry backlog (method_deferred, identity_verified false by design); w29-runs + frontier-rewards + ring-curriculum-v3 additionally marked NO_MATCH in the 2026-11-20 provenance sweep; khipu-scholar-runs + proving-ground-54h-mesh not in that unmapped-reasons file (sweep predates or excluded them; not adjudicated here)",
+  "adjacent_repos_with_filled_license_copyright": [
+   "szl-khipu-scholar (Apache-2.0, Copyright 2026 SZL Holdings)",
+   "estate-cards (MIT, Copyright (c) 2026 SZL Holdings)"
+  ],
+  "adjacent_repos_with_unfilled_license_placeholder": [
+   "frontier-55-runs (Apache-2.0 template, [yyyy] [name of copyright owner] unfilled)",
+   "a11oy (same)",
+   "anatomy (same)"
+  ],
+  "coverage_caveat": "adjacent repo licenses cover repository contents as measured; none of them contains an express statement covering the separately published HF dataset artifacts; per amendment 4/5 this is fail-closed recorded, never promoted to evidence"
+ },
+ "honesty_notes": [
+  "only one council seat fired for this ruling: Kimi (governing) via device ollama rail, nonce-verified; wake probe receipt kimi_wake.out (3.9s nonce byte-exact echo); no other seat claimed",
+  "kimi_rank1.out content was flushed/kept to first 4000 chars (truncation disclosed); the 7 amendments + q2 evidence classes + q3 fields quoted here are from that capped capture",
+  "GitHub code search fragment excerpts are from text_matches at fetch time; SHAs recorded per file where available; registry reads measured at head f7efb7c995cd1efe2f8461759c20d514259b17fd on 2026-11-24",
+  "DC rail probed live 21:23:51Z (nonce DC_RAIL_PROBE_OK) after web-app access note; all device receipts live on C:\\SZL\\estate-audit\\full_ops\\ (device-local paths, not reproducible from this record)",
+  "this record asserts NO license for any dataset; it inventories adjacent evidence only; owner gate required for any future license remediation (mint/signature gate standing)"
+ ]
+}
