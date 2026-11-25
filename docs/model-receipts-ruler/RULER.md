@@ -133,5 +133,6 @@ MERGE vs QUANTIZE vs CONVERT vs PACKAGE) replaces forced training facts on non-t
 - 2026-11-24 web-seat control revalidation: 11/11 controls re-measured read-only
   (this PR, controls-revalidation-20261124.md), one digest independently corroborated
   via HF LFS metadata (receipt_agent.npz, 8aca4d24..., cross-repo pointer match).
-- HONEST GATE: the validator's selftest has NOT been executed yet (no Python runtime on
-  the web seat); device-lap runs `--selftest` before any CI or promotion references this tool.
+- HONEST GATE CLEARED BY MEASUREMENT (2026-11-24): the validator selftest was
+  executed on the owner device, 6/6 cases OK, SELFTEST PASS
+  (selftest-receipt-20261124.md in this directory; advisory GO W27T2 Q2).

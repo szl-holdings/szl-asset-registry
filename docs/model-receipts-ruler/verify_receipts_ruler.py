@@ -21,9 +21,10 @@ Modes:
   python verify_receipts_ruler.py RECEIPT.json [MORE.json ...]
   python verify_receipts_ruler.py --selftest      # runs the embedded samples; exit 0 iff expectations match
 
-NOTE (2026-11-24): the selftest has not yet been executed on this branch's CI;
-the proposing lane could not run Python on the web seat. The device lap must run
---selftest (and this note must be removed only together with that receipt).
+NOTE (2026-11-25): the selftest WAS executed on the owner device (betterwithage,
+2026-11-24): 6/6 cases OK, SELFTEST PASS. Execution receipt:
+selftest-receipt-20261124.md (this commit). Advisory ruling W27T2 Q2 authorized
+replacing the previous not-yet-executed note with this receipt-bearing note.
 """
 
 import json
