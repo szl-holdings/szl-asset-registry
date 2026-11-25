@@ -1,30 +1,45 @@
-# CI Promotion Proposal: receipts-ruler selftest gate — 2026-11-25 (PROPOSE-ONLY, DRAFT)
+# CI Promotion Proposal: receipts-ruler selftest gate — 2026-11-25 (propose-only)
+
+## Status update (revision 2, same day)
+
+The first CI run of this proposal FAILED the repo's actions-security policy: tag-pinned actions
+(`actions/checkout@v4`, `actions/setup-python@v5`) are not allowed in szl-holdings — all actions
+must be pinned to full-length commit SHAs. This lap corrects the workflow to the estate's own
+sanctioned pin pattern (taken verbatim from main's `validate.yml`):
+
+- `actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683`
+- `actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0` with `python-version: "3.12"`
+- `permissions: contents: read`
+- the workflow now also gates its own file (`paths:` includes the workflow yml)
+
+The failure was disclosed, root-caused from the run annotations ("Set up job: actions must be
+pinned to a full-length commit SHA"), and repaired with the estate's standing pins — not invented
+ones. This is the honest-bar way the estate does CI: fail-closed, measure, fix, re-run.
 
 ## What
 
 Add a minimal GitHub Actions workflow (`.github/workflows/receipts-ruler-selftest.yml`) that runs the
-estate ruler validator's embedded 6-case selftest on every PR touching `docs/model-receipts-ruler/**`,
-plus manual dispatch. Stdlib-only validator; no dependencies, no secrets, no network.
+estate ruler validator's embedded 6-case selftest on every PR touching `docs/model-receipts-ruler/**`
+(and the workflow itself), plus manual dispatch. Stdlib-only validator; no dependencies, no secrets,
+read-only contents permission.
 
 ## Why
 
 1. The selftest was cleared by measurement on 2026-11-24 (device execution 6/6 PASS, receipt
-   `selftest-receipt-20261124.md`, in-file honest note cleared by Kimi W27T2 Q2 ruling) and verified
-   again on PR#36 commit 5d59944e readbacks. CI promotion gives the estate *measurement continuity*
-   so the fail-closed property is checked on every future edit of the ruler docs, by machine.
-2. The ruler's own honest bar is preserved: a green CI check is **NOT** a signature and **NOT** trust.
-   Trust stays UNSIGNED_UNVERIFIED (amber) pending the owner signature credential mint (.github#1058).
+   `selftest-receipt-20261124.md`) and re-verified on PR#36 commit readbacks. CI promotion gives the
+   estate measurement continuity: the fail-closed property gets checked by machine on every future
+   edit of the ruler docs.
+2. The ruler's honest bar is preserved: a green CI check is NOT a signature and NOT trust. Trust
+   stays UNSIGNED_UNVERIFIED (amber) pending the owner signature credential mint (.github#1058).
    This gate annotation shall not be represented as verified-green anywhere.
 
 ## Scope and discipline
 
-- Propose-only, DRAFT, owner-gated merge. This branch is cut from `receipts-ruler-20261124` (PR#36)
-  so the validator exists for the workflow; merge only AFTER (or together with) PR#36, or rebase
-  onto main once PR#36 lands.
-- Zero writes outside this branch. No guards, no rulesets touched (owner-physics: the 9 BLOCKED
-  signature/review rulesets stay authoritative).
-- If the owner prefers, an alternative is adding the same selftest step to an existing lint workflow
-  instead of a new one; this PR is the minimal additive proposal.
+- Propose-only; adoption owner-gated. Branch stacked on the ruler docs (merged to main via PR#36);
+  base retargeted to main.
+- Zero writes outside this branch. No guards, no rulesets touched (the blocked signature/review
+  rulesets stay authoritative).
 
-Markers: PROPOSE_ONLY_DRAFT_OWNER_GATED; SELFTEST_CLEARED_BY_MEASUREMENT_20261124_6_OF_6;
-CI_CHECK_IS_NOT_A_SIGNATURE; ZERO_TRUST_UPGRADE.
+Markers: PROPOSE_ONLY_OWNER_GATED; SELFTEST_CLEARED_BY_MEASUREMENT_20261124_6_OF_6;
+CI_CHECK_IS_NOT_A_SIGNATURE; ZERO_TRUST_UPGRADE; SHA_PINNED_ACTIONS_ESTATE_POLICY;
+FIRST_CI_FAILURE_DISCLOSED_AND_ROOT_CAUSED.
