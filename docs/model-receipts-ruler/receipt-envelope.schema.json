@@ -1,0 +1,169 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "szl/estate/model-receipt-envelope/1.0",
+  "title": "Estate model-receipt common envelope (ruler v1.0)",
+  "type": "object",
+  "required": ["schema_version", "receipt_id", "subject", "generator", "tier", "status", "honesty", "signature", "trust_status"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0-model-receipt" },
+    "receipt_id": { "type": "string", "pattern": "^mr-[0-9a-f]{6,16}$" },
+    "subject": {
+      "type": "object",
+      "required": ["repo_id", "repo_type", "visibility", "revision", "captured_at"],
+      "properties": {
+        "repo_id": { "type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$" },
+        "repo_type": { "enum": ["model", "dataset", "space"] },
+        "visibility": { "enum": ["public", "private"] },
+        "revision": { "type": ["string", "null"], "description": "full HF commit SHA, or explicit null at T0 with blocking_reasons" },
+        "captured_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "generator": {
+      "type": "object",
+      "required": ["name", "version"],
+      "properties": { "name": { "type": "string" }, "version": { "type": "string" } }
+    },
+    "tier": { "enum": ["T0", "T1", "T2"] },
+    "status": { "enum": ["COMPLETE", "INCOMPLETE", "CLASSIFIED_INCOMPLETE", "BLOCKED", "CONFLICT"] },
+    "signature": {
+      "type": "object",
+      "required": ["status", "reason"],
+      "properties": {
+        "status": { "enum": ["UNSIGNED", "SIGNED"] },
+        "reason": { "type": ["string", "null"] }
+      },
+      "description": "UNSIGNED/OWNER_CREDENTIAL_UNMINTED while the owner signing credential is unminted"
+    },
+    "trust_status": {
+      "enum": ["UNSIGNED_UNVERIFIED", "SIGNED_VERIFIED"],
+      "description": "UNSIGNED_UNVERIFIED is the only legal value until the signature era begins; render amber, never green"
+    },
+    "honesty": {
+      "type": "object",
+      "required": ["what", "what_not"],
+      "properties": {
+        "what": { "type": "string" },
+        "what_not": { "type": ["string", "array"] },
+        "limitations": { "type": ["string", "array"] },
+        "unknowns": { "type": ["string", "array"] }
+      }
+    },
+    "discovery": {
+      "type": "object",
+      "description": "T0 mandatory",
+      "properties": {
+        "receipt_named_paths": { "type": "array", "items": { "type": "string" } },
+        "training_receipt_present": { "type": "boolean" },
+        "legacy_receipt": {
+          "type": "object",
+          "properties": {
+            "path": { "type": "string" },
+            "sha256": { "type": ["string", "null"] },
+            "bytes": { "type": "integer" },
+            "parse_status": { "type": "string" },
+            "claims_preserved": { "type": "boolean" },
+            "promoted": { "type": "boolean", "const": false, "description": "legacy claims are NEVER promoted wholesale (anti-laundering)" }
+          }
+        }
+      }
+    },
+    "artifact_scope": { "type": "string" },
+    "artifact_inventory_status": { "enum": ["COMPLETE", "PARTIAL", "EMPTY_SCOPE_NO_WEIGHTS", "NOT_STARTED"] },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "artifact_kind"],
+        "anyOf": [
+          { "required": ["sha256", "size_bytes", "digest_source", "locally_recomputed"] },
+          { "required": ["hash_error"] }
+        ],
+        "properties": {
+          "path": { "type": "string" },
+          "size_bytes": { "type": "integer" },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "artifact_kind": { "enum": ["weights", "config", "tokenizer", "code", "document", "other"] },
+          "digest_source": { "enum": ["LOCAL_DOWNLOAD", "HF_LFS_METADATA"], "description": "provider digests must be labeled, never presented as locally recomputed" },
+          "locally_recomputed": { "type": "boolean" },
+          "hash_error": { "type": "string", "description": "explicit when a digest could not be resolved (e.g. DOWNLOAD_BUDGET_EXCEEDED_30MB_CAP)" }
+        }
+      }
+    },
+    "training_facts": {
+      "type": "object",
+      "description": "every fact is a typed value; bare numbers are invalid",
+      "additionalProperties": { "$ref": "#/definitions/typed_fact" }
+    },
+    "lineage": {
+      "type": "object",
+      "description": "T2 mandatory",
+      "properties": {
+        "operation": { "enum": ["TRAIN", "FINETUNE", "MERGE", "QUANTIZE", "CONVERT", "PACKAGE", "UNKNOWN"] },
+        "run_id": { "type": ["string", "null"] },
+        "code_revision": { "type": ["string", "null"] },
+        "data_revision": { "type": ["string", "null"] },
+        "config_digest": { "type": ["string", "null"] },
+        "base_artifacts": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "description": "T2 mandatory, >=1 strong subject-bound binding",
+      "items": {
+        "type": "object",
+        "required": ["evidence_id", "dataset_repo", "dataset_revision", "path", "sha256", "locator", "visibility", "subject_binding"],
+        "properties": {
+          "evidence_id": { "type": "string" },
+          "dataset_repo": { "type": "string" },
+          "dataset_revision": { "type": "string", "description": "IMMUTABLE revision, never a moving branch like main" },
+          "path": { "type": "string" },
+          "sha256": { "type": "string" },
+          "locator": { "type": "string", "description": "JSON pointer, event id, or line range" },
+          "visibility": { "enum": ["public", "private"] },
+          "subject_binding": { "enum": ["EXACT_OUTPUT_DIGEST_MATCH", "IMMUTABLE_RUN_ID_BINDING", "EXACT_CONFIG_DATA_OUTPUT_BINDING", "LEAD_ONLY_NOT_PROMOTABLE"] }
+        }
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "properties": {
+        "status": { "enum": ["NOT_RUN", "LAPTOP_SMOKE", "GOLDEN"] },
+        "reason": { "type": "string" },
+        "reproduction_note": { "type": "string", "description": "a laptop eval is a NEW reproduction, never the original training result" }
+      }
+    },
+    "blocking_reasons": { "type": "array", "items": { "type": "string" } },
+    "separate_counts": {
+      "type": "object",
+      "description": "org-level scoreboard only; never collapse into one green percentage",
+      "properties": {
+        "classified": { "type": "integer" },
+        "t1_complete": { "type": "integer" },
+        "t2_complete": { "type": "integer" },
+        "locally_hashed": { "type": "integer" },
+        "provider_digest_only": { "type": "integer" },
+        "published": { "type": "integer" },
+        "blocked": { "type": "integer" },
+        "conflicted": { "type": "integer" }
+      }
+    }
+  },
+  "definitions": {
+    "typed_fact": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "value": {},
+        "status": { "enum": ["OBSERVED", "DERIVED", "REPORTED_UNVERIFIED", "UNKNOWN", "NOT_APPLICABLE", "CONFLICT"] },
+        "evidence_ids": { "type": "array", "items": { "type": "string" } },
+        "formula": { "type": ["string", "null"] },
+        "reason": { "type": ["string", "null"] }
+      },
+      "allOf": [
+        { "if": { "properties": { "status": { "const": "OBSERVED" } } }, "then": { "required": ["evidence_ids"] } },
+        { "if": { "properties": { "status": { "const": "DERIVED" } } }, "then": { "required": ["evidence_ids", "formula"] } },
+        { "if": { "properties": { "status": { "const": "UNKNOWN" } } }, "then": { "required": ["reason"] } }
+      ]
+    }
+  }
+}
