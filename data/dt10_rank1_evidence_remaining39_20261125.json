@@ -1,0 +1,1929 @@
+{
+ "schema": "szl.dt10.rank1-evidence/v1",
+ "generated_utc": "2026-11-25T02:28:08Z",
+ "lane": "ouroboros datasets-leg lap-2 follow-on (rank-1 remaining-39 evidence research; completes all 44 rank-1 candidates with the 2026-11-24 pilot-5 record)",
+ "contract": "KIMI_K3.1_CONDITIONAL_GO_EXT39 amendments EXT-39-01..07 nonce DSK-KIMI-RANK1-EXT39-20261125-T0200Z (device ollama kimi-k3.1-pro:cloud, 10.5s, full ruling text captured in device receipt kimi_rank1_ext39_20261125.out, 3797 chars, no truncation)",
+ "ruling_scope": "read-only research on the remaining 39 of 44 rank-1 candidates from data/dt10_rank1_packet_20261124.json (44 NO_LICENSE candidates, deterministic order: downloads desc, likes desc, id asc); exactly ONE new file on branch datasets/leg-lap2-20261124; NO license inferred/applied/written; NO HF metadata writes; NO edits to pilot-5 artifacts or census/packet/ordering; PR#37 stays DRAFT and owner-gated; remediation NOT complete for any candidate; no implicit precedent (amendment 07)",
+ "method": "EXT-39-01 pre-execution: packet read from branch datasets/leg-lap2-20261124 and SHA-256 verified on device: PACKET_SHA256=0cc56e7d00047b1334b63930cf3abaed9d39aa574139714e72374f0edcb34a52 (matches lap-2 published hash); ids=44 pilots=5 rem39=39 overlap=0 union=44 (receipt rank1_compact2_20261125.out). Per-candidate GitHub code search via device gh CLI (gh search code --owner szl-holdings <name> --limit 100, per-name queries, 8s pacing; device receipts gh_search39_20261125.out + gh_search39b_20261125.out). Excerpt + blob-SHA pass: 47 public files fetched at measured repo head revisions via raw.githubusercontent + oneauthenticated gh api contents fetch; 8 context files (a11oy, szl-khipu) fetched via authed gh api; blob SHAs for all cited files captured via authed gh api contents (receipts rank1_excerpts39_20261125.out, rank1_ctxfrag_20261125.out, rank1_blobshas_20261125.out, rank1_evalharness_20261125.out). Registry reads measured at szl-asset-registry main head f7efb7c995cd1efe2f8461759c20d514259b17fd (unchanged from pilot-5 pass); a11oy at 3573895a9171700b15828c72cb390af66dc43474; szl-khipu at dc0bda41952106c83d53ba1611e4532bf6949f32; estate-cards at 5836d806d850b9d4a0cb628f67c7376299bddd40. Fail-closed throughout; card-issuer links (estate-cards provenance) excluded as source-identity evidence per registry unmapped-reasons contract",
+ "candidates": [
+  {
+   "id": "SZLHOLDINGS/frontier-55-runs",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_name_identity_pin_hypothesis",
+     "excerpt": "pins entry datasets/SZLHOLDINGS/frontier-55-runs: evidence_quote \"normalized name identity: asset id == szl-holdings/frontier-55-runs (normalized asset name == normalized repo name), measured at fetch time\"; pinned_utc 2026-11-20T10:51:40Z; readme_sha256 fc2488b3e85caf446157cb525af7da728fff4c31d94849f004acfc4f1cdc6767 (as stored, 63 hex chars, in source_pins.json at registry head f7efb7c9, verified by direct read this pass); revision_sha 888e83693d13a9ec3bb22b1c24261c52e9114120 (HF dataset revision); source_repo frontier-55-runs"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "asset_map.json",
+     "sha": "d116d2aa51ff0340a826906afcb971f2b89d13a7",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/asset_map.json",
+     "evidence_class": "registry_asset_map_state",
+     "excerpt": "no asset_map entry for the id (registry digest: empty/unmapped; the name-identity pin lives in source_pins only)"
+    },
+    {
+     "repo": "szl-holdings/frontier-55-runs",
+     "path": "README.md",
+     "sha": "ab35192c3b35b4b03e086c8f92c8b0fc16cba658",
+     "at_head": "49c505e41d09e861b1ede67463a4e5f2de9556a1",
+     "url": "https://github.com/szl-holdings/frontier-55-runs/blob/49c505e41d09e861b1ede67463a4e5f2de9556a1/README.md",
+     "evidence_class": "dedicated_repo_system_of_record_declaration",
+     "excerpt": "The Hugging Face dataset SZLHOLDINGS/frontier-55-runs is the write-locked system of record for run data; this repo is the protocol-facing public push"
+    },
+    {
+     "repo": "szl-holdings/frontier-55-runs",
+     "path": "LICENSE",
+     "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+     "at_head": "49c505e41d09e861b1ede67463a4e5f2de9556a1",
+     "url": "https://github.com/szl-holdings/frontier-55-runs/blob/49c505e41d09e861b1ede67463a4e5f2de9556a1/LICENSE",
+     "evidence_class": "repo_license_adjacent_unfilled_placeholder",
+     "excerpt": "Apache License Version 2.0 ... Copyright [yyyy] [name of copyright owner] (boilerplate placeholders unfilled)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "PINNED_HYPOTHESIS_ONLY (source_pins name-identity pin + dedicated repo README system-of-record declaration; registry contract: name match is NOT a binding; no owner signoff recorded; identity_verified false by design)",
+   "notes": "strongest binding hypothesis in the remaining-39 cohort (name-identity pin + dedicated repo + system-of-record README declaration); 13 non-context code-search hits across portal/runbook/paper/study repos are documentation mentions only; fail-closed regardless: repo LICENSE is an unfilled Apache-2.0 template and no statement expressly licenses the dataset artifacts; no backlog entry (pins section carries this name-identity pin only)"
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-54-v2-receipts",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/frontier-54-v2-receipts reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/frontier-54-v2-receipts\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/frontier-54-v2-receipts; identity_verified false (2026-11-20 provenance sweep result)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "org code search 10 hits, all registry/estate-cards audit context; no non-context references found; VGL receipt-kinship naming cohort (triang/repro/sweep siblings share the same registry state)"
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-triang-20261116",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/vgl-triang-20261116 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/vgl-triang-20261116\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/vgl-triang-20261116; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/a11oy",
+     "path": "mesh/curriculum_registry.json",
+     "sha": "99bbc9a80edf7c55829ee6770b766570963cd9d9",
+     "at_head": "3573895a9171700b15828c72cb390af66dc43474",
+     "url": "https://github.com/szl-holdings/a11oy/blob/3573895a9171700b15828c72cb390af66dc43474/mesh/curriculum_registry.json",
+     "evidence_class": "curriculum_registry_note",
+     "excerpt": "\"repo\": \"SZLHOLDINGS/vgl-triang-20261116\", (curriculum-registry mention, not a license grant)"
+    },
+    {
+     "repo": "szl-holdings/szl-khipu",
+     "path": "research/flagship55/public_dataset_index.v1.json",
+     "sha": "94139042d692fb9399c4d56efa33c8f0b304283e",
+     "at_head": "dc0bda41952106c83d53ba1611e4532bf6949f32",
+     "url": "https://github.com/szl-holdings/szl-khipu/blob/dc0bda41952106c83d53ba1611e4532bf6949f32/research/flagship55/public_dataset_index.v1.json",
+     "evidence_class": "public_dataset_index_note",
+     "excerpt": "\"id\": \"SZLHOLDINGS/vgl-triang-20261116\", (public dataset index mention)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "VGL cohort; all 15 search hits are curriculum/inventory/index context (a11oy + szl-khipu + registry); none is a license declaration"
+  },
+  {
+   "id": "SZLHOLDINGS/unified-corpus-v2",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/unified-corpus-v2 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/unified-corpus-v2\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/unified-corpus-v2; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/szl-forge",
+     "path": "chaski/frontier-op1/receipts/4b-op1.train_receipt.json",
+     "sha": "0e31baeb9c87b6f3b7004c05929ecd676a8bd4ab",
+     "at_head": "9a65eb54e9314f5de23078f8484588a9eb066f5a",
+     "url": "https://github.com/szl-holdings/szl-forge/blob/9a65eb54e9314f5de23078f8484588a9eb066f5a/chaski/frontier-op1/receipts/4b-op1.train_receipt.json",
+     "evidence_class": "training_lineage_receipt_reference",
+     "excerpt": "\"SZLHOLDINGS/unified-corpus-v2\": 1 (training-receipt provenance-count reference, not a license grant)"
+    },
+    {
+     "repo": "szl-holdings/a11oy",
+     "path": "mesh/curriculum_registry.json",
+     "sha": "99bbc9a80edf7c55829ee6770b766570963cd9d9",
+     "at_head": "3573895a9171700b15828c72cb390af66dc43474",
+     "url": "https://github.com/szl-holdings/a11oy/blob/3573895a9171700b15828c72cb390af66dc43474/mesh/curriculum_registry.json",
+     "evidence_class": "curriculum_registry_note",
+     "excerpt": "\"repo\": \"SZLHOLDINGS/unified-corpus-v2\", (curriculum-registry mention, not a license grant)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "training-lineage mention in a chaski train receipt (provenance-count), plus curriculum-registry context; neither is a license grant"
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-repro-cd-20261116",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/vgl-repro-cd-20261116 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/vgl-repro-cd-20261116\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/vgl-repro-cd-20261116; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/a11oy",
+     "path": "mesh/curriculum_registry.json",
+     "sha": "99bbc9a80edf7c55829ee6770b766570963cd9d9",
+     "at_head": "3573895a9171700b15828c72cb390af66dc43474",
+     "url": "https://github.com/szl-holdings/a11oy/blob/3573895a9171700b15828c72cb390af66dc43474/mesh/curriculum_registry.json",
+     "evidence_class": "curriculum_registry_note",
+     "excerpt": "\"repo\": \"SZLHOLDINGS/vgl-repro-cd-20261116\", (curriculum-registry mention, not a license grant)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "VGL cohort; all 15 search hits are curriculum/inventory context"
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-repro-ga-20261116",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/vgl-repro-ga-20261116 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/vgl-repro-ga-20261116\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/vgl-repro-ga-20261116; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/a11oy",
+     "path": "mesh/curriculum_registry.json",
+     "sha": "99bbc9a80edf7c55829ee6770b766570963cd9d9",
+     "at_head": "3573895a9171700b15828c72cb390af66dc43474",
+     "url": "https://github.com/szl-holdings/a11oy/blob/3573895a9171700b15828c72cb390af66dc43474/mesh/curriculum_registry.json",
+     "evidence_class": "curriculum_registry_note",
+     "excerpt": "\"repo\": \"SZLHOLDINGS/vgl-repro-ga-20261116\", (curriculum-registry mention, not a license grant)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "VGL cohort; all 15 search hits are curriculum/inventory context"
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-sweep-ga-20261116",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/vgl-sweep-ga-20261116 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/vgl-sweep-ga-20261116\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/vgl-sweep-ga-20261116; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/a11oy",
+     "path": "mesh/curriculum_registry.json",
+     "sha": "99bbc9a80edf7c55829ee6770b766570963cd9d9",
+     "at_head": "3573895a9171700b15828c72cb390af66dc43474",
+     "url": "https://github.com/szl-holdings/a11oy/blob/3573895a9171700b15828c72cb390af66dc43474/mesh/curriculum_registry.json",
+     "evidence_class": "curriculum_registry_note",
+     "excerpt": "\"repo\": \"SZLHOLDINGS/vgl-sweep-ga-20261116\", (curriculum-registry mention, not a license grant)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "VGL cohort; all 15 search hits are curriculum/inventory context"
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-sweep-cd-20261116",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/vgl-sweep-cd-20261116 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/vgl-sweep-cd-20261116\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/vgl-sweep-cd-20261116; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/a11oy",
+     "path": "mesh/curriculum_registry.json",
+     "sha": "99bbc9a80edf7c55829ee6770b766570963cd9d9",
+     "at_head": "3573895a9171700b15828c72cb390af66dc43474",
+     "url": "https://github.com/szl-holdings/a11oy/blob/3573895a9171700b15828c72cb390af66dc43474/mesh/curriculum_registry.json",
+     "evidence_class": "curriculum_registry_note",
+     "excerpt": "\"repo\": \"SZLHOLDINGS/vgl-sweep-cd-20261116\", (curriculum-registry mention, not a license grant)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "VGL cohort; all 15 search hits are curriculum/inventory context"
+  },
+  {
+   "id": "SZLHOLDINGS/distill-runs",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/distill-runs reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/distill-runs\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/distill-runs; identity_verified false (2026-11-20 provenance sweep result)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "org code search 10 hits, all registry/audit context; no non-context references found"
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-mix-v5-all-estates",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "curriculum_registry_reference_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/frontier-mix-v5-all-estates reason=card_method_deferred (pins section: no pin for this id; identity_verified false by design)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "asset_map.json",
+     "sha": "d116d2aa51ff0340a826906afcb971f2b89d13a7",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/asset_map.json",
+     "evidence_class": "registry_asset_map_state",
+     "excerpt": "asset_map entry: source estate-cards, method card (registry digest; card-issuer links excluded as source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/a11oy",
+     "path": "mesh/curriculum_registry.json",
+     "sha": "99bbc9a80edf7c55829ee6770b766570963cd9d9",
+     "at_head": "3573895a9171700b15828c72cb390af66dc43474",
+     "url": "https://github.com/szl-holdings/a11oy/blob/3573895a9171700b15828c72cb390af66dc43474/mesh/curriculum_registry.json",
+     "evidence_class": "curriculum_registry_note",
+     "excerpt": "\"repo\": \"SZLHOLDINGS/frontier-mix-v5-all-estates\", (curriculum-registry mention, not a license grant)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry backlog card_method_deferred; asset_map row source estate-cards method card; not in the 2026-11-20 unmapped-reasons sweep; identity_verified false)",
+   "notes": "eval-mix inventory mention; 9 search hits all context"
+  },
+  {
+   "id": "SZLHOLDINGS/flagship55-sft-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/flagship55-sft-v1 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/flagship55-sft-v1\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/flagship55-sft-v1; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/frontier-55-runs",
+     "path": "README.md",
+     "sha": "ab35192c3b35b4b03e086c8f92c8b0fc16cba658",
+     "at_head": "49c505e41d09e861b1ede67463a4e5f2de9556a1",
+     "url": "https://github.com/szl-holdings/frontier-55-runs/blob/49c505e41d09e861b1ede67463a4e5f2de9556a1/README.md",
+     "evidence_class": "companion_dataset_declaration",
+     "excerpt": "- Companion dataset [SZLHOLDINGS/flagship55-sft-v1](https://huggingface.co/datasets/SZLHOLDINGS/flagship55-sft-v1) created 2026-11-17T19:02Z."
+    },
+    {
+     "repo": "szl-holdings/szl-forge",
+     "path": "chaski/frontier-op1/receipts/4b-op1.train_receipt.json",
+     "sha": "0e31baeb9c87b6f3b7004c05929ecd676a8bd4ab",
+     "at_head": "9a65eb54e9314f5de23078f8484588a9eb066f5a",
+     "url": "https://github.com/szl-holdings/szl-forge/blob/9a65eb54e9314f5de23078f8484588a9eb066f5a/chaski/frontier-op1/receipts/4b-op1.train_receipt.json",
+     "evidence_class": "training_lineage_receipt_reference",
+     "excerpt": "\"SZLHOLDINGS/flagship55-sft-v1\": 7 (training-receipt provenance-count reference, not a license grant)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "explicit companion-dataset declaration by the frontier-55-runs repo (relationship/production note, not a license); training-receipt count reference"
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-mix-v6-rebalanced",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/frontier-mix-v6-rebalanced reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/frontier-mix-v6-rebalanced\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/frontier-mix-v6-rebalanced; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/szl-forge",
+     "path": "chaski/frontier-op1/receipts/4b-op1.train_receipt.json",
+     "sha": "0e31baeb9c87b6f3b7004c05929ecd676a8bd4ab",
+     "at_head": "9a65eb54e9314f5de23078f8484588a9eb066f5a",
+     "url": "https://github.com/szl-holdings/szl-forge/blob/9a65eb54e9314f5de23078f8484588a9eb066f5a/chaski/frontier-op1/receipts/4b-op1.train_receipt.json",
+     "evidence_class": "training_lineage_receipt_reference",
+     "excerpt": "\"SZLHOLDINGS/frontier-mix-v6-rebalanced\": 2 (training-receipt provenance-count reference, not a license grant)"
+    },
+    {
+     "repo": "szl-holdings/a11oy",
+     "path": "docs/ecosystem-stage-matrix.json",
+     "sha": "f3456b59b4d8ab2ad7447c63220f31bb8393d4fb",
+     "at_head": "3573895a9171700b15828c72cb390af66dc43474",
+     "url": "https://github.com/szl-holdings/a11oy/blob/3573895a9171700b15828c72cb390af66dc43474/docs/ecosystem-stage-matrix.json",
+     "evidence_class": "ecosystem_manifest_note",
+     "excerpt": "\"id\": \"SZLHOLDINGS/frontier-mix-v6-rebalanced\", (ecosystem-stage-matrix inventory mention)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "training-lineage + ecosystem-matrix mentions; not license statements"
+  },
+  {
+   "id": "SZLHOLDINGS/rag-corpus-v2",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/rag-corpus-v2 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/rag-corpus-v2\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/rag-corpus-v2; identity_verified false (2026-11-20 provenance sweep result)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "org code search 10 hits, all registry/audit context; no non-context references found"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-agentic-reflex-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/szl-agentic-reflex-v1 reason=unmapped_method_deferred"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "asset_map.json",
+     "sha": "d116d2aa51ff0340a826906afcb971f2b89d13a7",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/asset_map.json",
+     "evidence_class": "registry_asset_map_state",
+     "excerpt": "asset_map entry: repo null, method unmapped (registry digest)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/szl-agentic-reflex-v1; identity_verified false (2026-11-20 provenance sweep result)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry backlog unmapped_method_deferred; asset_map repo null; 2026-11-20 sweep NO_MATCH; identity_verified false)",
+   "notes": "appears in estate-cards private-asset audit/scan artifacts (priv_flip scans); registry keeps it unmapped; no source repo resolution"
+  },
+  {
+   "id": "SZLHOLDINGS/x402-protocol-sft-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "curriculum_registry_reference_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/x402-protocol-sft-v1 reason=card_method_deferred (pins section: no pin for this id; identity_verified false by design)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "asset_map.json",
+     "sha": "d116d2aa51ff0340a826906afcb971f2b89d13a7",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/asset_map.json",
+     "evidence_class": "registry_asset_map_state",
+     "excerpt": "asset_map entry: source estate-cards, method card (registry digest; card-issuer links excluded as source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/a11oy",
+     "path": "mesh/curriculum_registry.json",
+     "sha": "99bbc9a80edf7c55829ee6770b766570963cd9d9",
+     "at_head": "3573895a9171700b15828c72cb390af66dc43474",
+     "url": "https://github.com/szl-holdings/a11oy/blob/3573895a9171700b15828c72cb390af66dc43474/mesh/curriculum_registry.json",
+     "evidence_class": "curriculum_registry_note",
+     "excerpt": "\"repo\": \"SZLHOLDINGS/x402-protocol-sft-v1\", (curriculum-registry mention, not a license grant)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry backlog card_method_deferred; asset_map row source estate-cards method card; not in the 2026-11-20 unmapped-reasons sweep; identity_verified false)",
+   "notes": "eval-mix inventory mention; 9 search hits all context"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-structure-eval-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/khipu-structure-eval-v1 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/khipu-structure-eval-v1\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/khipu-structure-eval-v1; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/szl-khipu",
+     "path": "research/okr_value_rule/README.md",
+     "sha": "bba566be3705d2ddcd8b6f81bcef76b0add935d8",
+     "at_head": "dc0bda41952106c83d53ba1611e4532bf6949f32",
+     "url": "https://github.com/szl-holdings/szl-khipu/blob/dc0bda41952106c83d53ba1611e4532bf6949f32/research/okr_value_rule/README.md",
+     "evidence_class": "research_docs_note",
+     "excerpt": "(`SZLHOLDINGS/khipu-structure-sft-v2`, `SZLHOLDINGS/khipu-structure-eval-v1`, (research doc references its companion khipu-structure sets)"
+    },
+    {
+     "repo": "szl-holdings/szl-khipu",
+     "path": "research/okr_structure_sft/README.md",
+     "sha": "c37ddcbfcf6ea395d6c7962b9f168e40f5f4446d",
+     "at_head": "dc0bda41952106c83d53ba1611e4532bf6949f32",
+     "url": "https://github.com/szl-holdings/szl-khipu/blob/dc0bda41952106c83d53ba1611e4532bf6949f32/research/okr_structure_sft/README.md",
+     "evidence_class": "research_docs_note",
+     "excerpt": "The previous sets (`khipu-structure-sft-v2`, `khipu-structure-eval-v1` on the Hub, (research doc references prior khipu-structure sets)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "szl-khipu research docs treat it as a prior/companion research set; context-class, never a license declaration"
+  },
+  {
+   "id": "SZLHOLDINGS/stack400-runs",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "no backlog entry and no pins entry for datasets/SZLHOLDINGS/stack400-runs in source_pins.json at registry head f7efb7c9 (registry digest: NO_BACKLOG_ENTRY)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "asset_map.json",
+     "sha": "d116d2aa51ff0340a826906afcb971f2b89d13a7",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/asset_map.json",
+     "evidence_class": "registry_asset_map_state",
+     "excerpt": "no asset_map entry for the id (registry digest: empty/unmapped)"
+    },
+    {
+     "repo": "szl-holdings/platform",
+     "path": "mistral/szl-dream-lane/dream-mc/mc2/mc2_brief.txt",
+     "sha": "ad13380e4c2ece3bb0d0a8c7d838f6e2250485bf",
+     "at_head": "0c204a326d0c9a7991a10aa45505f429f46bad5d",
+     "url": "https://github.com/szl-holdings/platform/blob/0c204a326d0c9a7991a10aa45505f429f46bad5d/mistral/szl-dream-lane/dream-mc/mc2/mc2_brief.txt",
+     "evidence_class": "governance_admission_note",
+     "excerpt": "C. Standing owner-blockers: F5 scoped HF token (write:SZLHOLDINGS/stack400-runs) not minted; no ratification sentence binding registry hash + numeric ceiling; [excerpt truncated at capture]"
+    },
+    {
+     "repo": "szl-holdings/szl-gpu-bridge",
+     "path": "docs/training-admission/STACK400_CANARY_54H_OWNER_GATE_20261120.md",
+     "sha": "4efd2c356cce92f99e8baba4d37dd1a21a54b404",
+     "at_head": "2e9b818c3cbee7bb7236e3dab4cad607dd174543",
+     "url": "https://github.com/szl-holdings/szl-gpu-bridge/blob/2e9b818c3cbee7bb7236e3dab4cad607dd174543/docs/training-admission/STACK400_CANARY_54H_OWNER_GATE_20261120.md",
+     "evidence_class": "producer_side_governance_note",
+     "excerpt": "paid GPU usage. A repository named `SZLHOLDINGS/stack400-runs` already exists."
+    },
+    {
+     "repo": "szl-holdings/szl-gpu-bridge",
+     "path": "tools/salad/stack400_receipt_verifier.py",
+     "sha": "0a2c32e444255268f8b6ef8065e42fc25acd4621",
+     "at_head": "2e9b818c3cbee7bb7236e3dab4cad607dd174543",
+     "url": "https://github.com/szl-holdings/szl-gpu-bridge/blob/2e9b818c3cbee7bb7236e3dab4cad607dd174543/tools/salad/stack400_receipt_verifier.py",
+     "evidence_class": "producer_pipeline_declaration",
+     "excerpt": "REPO = \"SZLHOLDINGS/stack400-runs\" (receipt-verifier tool target declaration)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry: no backlog or pins entry beyond pattern D digest, no asset_map entry; not in the 2026-11-20 unmapped-reasons sweep; identity_verified false)",
+   "notes": "governance/admission docs record the dataset as existing and write-scope-gated (F5 scoped HF token NOT minted); receipt-verifier names it as its target repo; all governance/producer references, not license grants"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-frontier-sft-mix-v4",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/szl-frontier-sft-mix-v4 reason=card_method_deferred (pins section: no pin for this id; identity_verified false by design)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "asset_map.json",
+     "sha": "d116d2aa51ff0340a826906afcb971f2b89d13a7",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/asset_map.json",
+     "evidence_class": "registry_asset_map_state",
+     "excerpt": "asset_map entry: source estate-cards, method card (registry digest; card-issuer links excluded as source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/frontier-54-runs",
+     "path": "collaboration/vgl-b1-exports/salad-frontier-v5-r1/receipts/salad-v5-frontier-r1-bench/result.json",
+     "sha": "2d727c7940a102867210da3ab9108d15a48e1e1e",
+     "at_head": "bdf787decb8a7bfe44408af4342c9a9c2b7ff016",
+     "url": "https://github.com/szl-holdings/frontier-54-runs/blob/bdf787decb8a7bfe44408af4342c9a9c2b7ff016/collaboration/vgl-b1-exports/salad-frontier-v5-r1/receipts/salad-v5-frontier-r1-bench/result.json",
+     "evidence_class": "bench_receipt_usage_reference",
+     "excerpt": "\"dataset\": \"SZLHOLDINGS/szl-frontier-sft-mix-v4\", (bench receipt records the dataset as eval input)"
+    },
+    {
+     "repo": "szl-holdings/szl-forge",
+     "path": "docs/salad-eval-selection-20261116.md",
+     "sha": "d9ef4c3999228dcc899b7ac0f95ba8707f99d9b3",
+     "at_head": "9a65eb54e9314f5de23078f8484588a9eb066f5a",
+     "url": "https://github.com/szl-holdings/szl-forge/blob/9a65eb54e9314f5de23078f8484588a9eb066f5a/docs/salad-eval-selection-20261116.md",
+     "evidence_class": "eval_selection_doc_reference",
+     "excerpt": "The source is the private Hugging Face dataset SZLHOLDINGS/szl-frontier-sft-mix-v4, revision 12a26b44303299624592084c025e344d260aa7bf. Download data/sft_train.jsonl and data/eval_repo.jsonl at that revision [excerpt truncated at capture]"
+    },
+    {
+     "repo": "szl-holdings/szl-gpu-bridge",
+     "path": "FRONTIER.md",
+     "sha": "399329163ddc14607e7a110bfada44db946d08f2",
+     "at_head": "2e9b818c3cbee7bb7236e3dab4cad607dd174543",
+     "url": "https://github.com/szl-holdings/szl-gpu-bridge/blob/2e9b818c3cbee7bb7236e3dab4cad607dd174543/FRONTIER.md",
+     "evidence_class": "docs_training_note",
+     "excerpt": "- **Root-cause direction: data, not kernels.** v5 cloned v4 recipe exactly, including the szl-frontier-sft-mix-v4 SFT mix (26.7K rows, source labels), so the over-refusal lives in the mix. [excerpt truncated at capture]"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry backlog card_method_deferred; asset_map row source estate-cards method card; not in the 2026-11-20 unmapped-reasons sweep; identity_verified false)",
+   "notes": "most-referenced dataset in the cohort (27 search hits: bench receipts, eval-selection docs, troubleshooting docs); eval-selection doc pins a dataset revision with dataset sha; NOTE the same doc calls it the private Hugging Face dataset while the lap-2 census read it as a public NO_LICENSE dataset, a visibility discrepancy recorded fail-closed; none of these usage/lineage references is a license grant"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-scholars-sft-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/khipu-scholars-sft-v1 reason=card_method_deferred (pins section: no pin for this id; identity_verified false by design)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "asset_map.json",
+     "sha": "d116d2aa51ff0340a826906afcb971f2b89d13a7",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/asset_map.json",
+     "evidence_class": "registry_asset_map_state",
+     "excerpt": "asset_map entry: source estate-cards, method card (registry digest; card-issuer links excluded as source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-khipu-scholar",
+     "path": "README.md",
+     "sha": "0d3faef4630ff43b9cdd9fe527066ffc8882eed5",
+     "at_head": "573eb48514133183bc892461dffb3da0cf155c13",
+     "url": "https://github.com/szl-holdings/szl-khipu-scholar/blob/573eb48514133183bc892461dffb3da0cf155c13/README.md",
+     "evidence_class": "dedicated_project_repo_declaration",
+     "excerpt": "| SFT dataset (770 rows: 516 corpus-text, 250 OKR-derived QA, 4 doctrine, per its sft_manifest.json; OKR khipu_main holds 619 khipus / 54,403 cords / 110,677 knots) | LIVE | [SZLHOLDINGS/khipu-scholars-sft-v1]"
+    },
+    {
+     "repo": "szl-holdings/szl-khipu-scholar",
+     "path": "specs/unsloth-next-lane-v1.md",
+     "sha": "45453ddc7363be2060645c75a753dc698621725f",
+     "at_head": "573eb48514133183bc892461dffb3da0cf155c13",
+     "url": "https://github.com/szl-holdings/szl-khipu-scholar/blob/573eb48514133183bc892461dffb3da0cf155c13/specs/unsloth-next-lane-v1.md",
+     "evidence_class": "spec_pinned_sha_reference",
+     "excerpt": "| Dataset | SZLHOLDINGS/khipu-scholars-sft-v1 (corpus sha256 0a32769c0d56f11510abdf4f7e83dfaacabc99db3284384b6cf690abf42f7e43, pinned) |"
+    },
+    {
+     "repo": "szl-holdings/szl-khipu-scholar",
+     "path": "LICENSE",
+     "sha": "fbf89e5ffae10c8b9200a47ae829c90b30d1658e",
+     "at_head": "573eb48514133183bc892461dffb3da0cf155c13",
+     "url": "https://github.com/szl-holdings/szl-khipu-scholar/blob/573eb48514133183bc892461dffb3da0cf155c13/LICENSE",
+     "evidence_class": "repo_license_adjacent_not_dataset_coverage",
+     "excerpt": "Apache License Version 2.0 ... END OF TERMS AND CONDITIONS / Copyright 2026 SZL Holdings"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement_for_dataset_artifacts; adjacent repo license names \"SZL Holdings\"",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read)); adjacent repo LICENSE: Apache-2.0 (filled, Copyright 2026 SZL Holdings)",
+   "coverage": "dedicated project repo (szl-khipu-scholar) declares the dataset as its SFT dataset with pinned corpus sha256; the repo LICENSE covers repo contents, no express statement covers the separately published HF dataset artifacts",
+   "binding_status": "UNBOUND_by_registry (registry backlog card_method_deferred + asset_map row source szl-khipu-scholar method card, a card-issuer-adjacent hypothesis excluded as source-identity evidence per registry contract; identity_verified false)",
+   "notes": "second-strongest linkage in the remaining-39 cohort (dedicated repo + pinned corpus sha); still fail-closed: no license grant for the dataset artifacts (amendment 4)"
+  },
+  {
+   "id": "SZLHOLDINGS/lean-math-sft-v2",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/lean-math-sft-v2 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/lean-math-sft-v2\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/lean-math-sft-v2; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/szl-gpu-bridge",
+     "path": "tests/test_complete_record.py",
+     "sha": "a538d98f091a16fed7d2965d8591c92859eccbcd",
+     "at_head": "2e9b818c3cbee7bb7236e3dab4cad607dd174543",
+     "url": "https://github.com/szl-holdings/szl-gpu-bridge/blob/2e9b818c3cbee7bb7236e3dab4cad607dd174543/tests/test_complete_record.py",
+     "evidence_class": "test_usage_reference",
+     "excerpt": "\"repo\": \"SZLHOLDINGS/lean-math-sft-v2\", (admission-record test names it as target dataset)"
+    },
+    {
+     "repo": "szl-holdings/a11oy",
+     "path": "mesh/curriculum_registry.json",
+     "sha": "99bbc9a80edf7c55829ee6770b766570963cd9d9",
+     "at_head": "3573895a9171700b15828c72cb390af66dc43474",
+     "url": "https://github.com/szl-holdings/a11oy/blob/3573895a9171700b15828c72cb390af66dc43474/mesh/curriculum_registry.json",
+     "evidence_class": "curriculum_registry_note",
+     "excerpt": "\"repo\": \"SZLHOLDINGS/lean-math-sft-v2\", (curriculum-registry mention, not a license grant)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "test + curriculum-registry mentions; usage references, not license grants"
+  },
+  {
+   "id": "SZLHOLDINGS/cram-sudoku-extreme-sft-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/cram-sudoku-extreme-sft-v1 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/cram-sudoku-extreme-sft-v1\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/cram-sudoku-extreme-sft-v1; identity_verified false (2026-11-20 provenance sweep result)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "org code search 10 hits, all registry/audit context; no non-context references found"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-structure-sft-v2",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/khipu-structure-sft-v2 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/khipu-structure-sft-v2\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/khipu-structure-sft-v2; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/szl-khipu",
+     "path": "research/okr_structure_sft/README.md",
+     "sha": "c37ddcbfcf6ea395d6c7962b9f168e40f5f4446d",
+     "at_head": "dc0bda41952106c83d53ba1611e4532bf6949f32",
+     "url": "https://github.com/szl-holdings/szl-khipu/blob/dc0bda41952106c83d53ba1611e4532bf6949f32/research/okr_structure_sft/README.md",
+     "evidence_class": "research_docs_note",
+     "excerpt": "The previous sets (`khipu-structure-sft-v2`, `khipu-structure-eval-v1` on the Hub, (research doc references prior khipu-structure sets)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "research-doc context mention only"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-yachay-research-v0",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/khipu-yachay-research-v0 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/khipu-yachay-research-v0\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/khipu-yachay-research-v0; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/szl-khipu",
+     "path": "research/khipu_yachay/docs/HF_PUBLICATION_HANDOFF.md",
+     "sha": "a09e712f7def592fd347e461cd8216b7b2dcb99c",
+     "at_head": "dc0bda41952106c83d53ba1611e4532bf6949f32",
+     "url": "https://github.com/szl-holdings/szl-khipu/blob/dc0bda41952106c83d53ba1611e4532bf6949f32/research/khipu_yachay/docs/HF_PUBLICATION_HANDOFF.md",
+     "evidence_class": "publication_handoff_declaration",
+     "excerpt": "- Dataset: `SZLHOLDINGS/khipu-yachay-research-v0` (540/80 synthetic intent examples; 702 pinned OKR archival-ID references; 14 attributed source registry entries; rights and caveats)."
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "publication handoff describes the dataset and mentions rights and caveats but cites NO license artifact; closest-to-rights mention in the cohort, still fail-closed"
+  },
+  {
+   "id": "SZLHOLDINGS/lean-math-sft-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/lean-math-sft-v1 reason=card_method_deferred (pins section: no pin for this id; identity_verified false by design)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "asset_map.json",
+     "sha": "d116d2aa51ff0340a826906afcb971f2b89d13a7",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/asset_map.json",
+     "evidence_class": "registry_asset_map_state",
+     "excerpt": "asset_map entry: source estate-cards, method card (registry digest; card-issuer links excluded as source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-forge",
+     "path": "docs/frontier-20261115/flagship55-curriculum-spec.md",
+     "sha": "0a88fef4d46a46cc5b0e0ed41790aac5607032a9",
+     "at_head": "9a65eb54e9314f5de23078f8484588a9eb066f5a",
+     "url": "https://github.com/szl-holdings/szl-forge/blob/9a65eb54e9314f5de23078f8484588a9eb066f5a/docs/frontier-20261115/flagship55-curriculum-spec.md",
+     "evidence_class": "curriculum_spec_reference",
+     "excerpt": "2. Add [SZLHOLDINGS/lean-math-sft-v1](https://huggingface.co/datasets/SZLHOLDINGS/lean-math-sft-v1) (2,126 sorry-free blocks; train_file_sha256 3e02f8f9 [excerpt truncated at capture])"
+    },
+    {
+     "repo": "szl-holdings/szl-forge",
+     "path": "docs/frontier-20261115/flagship55-run-manifest-v0.md",
+     "sha": "0958beb07e18f816ac3f0e0507a1184a9010f3ba",
+     "at_head": "9a65eb54e9314f5de23078f8484588a9eb066f5a",
+     "url": "https://github.com/szl-holdings/szl-forge/blob/9a65eb54e9314f5de23078f8484588a9eb066f5a/docs/frontier-20261115/flagship55-run-manifest-v0.md",
+     "evidence_class": "run_manifest_reference",
+     "excerpt": "| [lean-math-sft-v1](https://huggingface.co/datasets/SZLHOLDINGS/lean-math-sft-v1) | corpus e80aebb2 [excerpt truncated at capture]; train_file sha256 3e02f8f9e695bb5885fda1ea2c73495cc4926c5ec14a9356ceb59e96665fbcad | 20% |"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry backlog card_method_deferred; asset_map row source estate-cards method card; not in the 2026-11-20 unmapped-reasons sweep; identity_verified false)",
+   "notes": "curriculum docs pin the dataset train_file sha256 for mixture lineage; content provenance only, not a license grant"
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-doubt-claude-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/absrl-doubt-claude-v1 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/absrl-doubt-claude-v1\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/absrl-doubt-claude-v1; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/szl-hf-frontier",
+     "path": "docs/massed/registry/exact400_source_to_row_map.json",
+     "sha": "b58a17048ccfc9f7a2afd8eb1a67816e3874886c",
+     "at_head": "ec2122d6fda58cff4c7b79383542a53b42957cf4",
+     "url": "https://github.com/szl-holdings/szl-hf-frontier/blob/ec2122d6fda58cff4c7b79383542a53b42957cf4/docs/massed/registry/exact400_source_to_row_map.json",
+     "evidence_class": "source_to_row_map_reference",
+     "excerpt": "\"SZLHOLDINGS/absrl-doubt-claude-v1\", (exact400 source-to-row map entry, inventory reference)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "exact400 source-to-row map inventory entry only"
+  },
+  {
+   "id": "SZLHOLDINGS/materials-frontier-sft-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/materials-frontier-sft-v1 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/materials-frontier-sft-v1\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/materials-frontier-sft-v1; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/szl-eval-harness",
+     "path": "ledger/blocking_ledger_v1.json",
+     "sha": "13d1cee4f1da68cee014cce1f6871ecaf2b8ff61",
+     "at_head": "713d8ca320bf3bd7ec62a5aa98ef45105f47ac8f",
+     "url": "https://github.com/szl-holdings/szl-eval-harness/blob/713d8ca320bf3bd7ec62a5aa98ef45105f47ac8f/ledger/blocking_ledger_v1.json",
+     "evidence_class": "blocking_ledger_reference",
+     "excerpt": "\"corpus\": \"SZLHOLDINGS/materials-frontier-sft-v1\" (eval-harness blocking-ledger row names it as corpus)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "the szl-eval-harness repo resolves only with authenticated access (404 unauthenticated; evidence fetched via the devices authed gh CLI at its main head); ledger row is a usage reference, not a license grant"
+  },
+  {
+   "id": "SZLHOLDINGS/unified-corpus-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/unified-corpus-v1 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/unified-corpus-v1\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/unified-corpus-v1; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/szl-forge",
+     "path": "chaski/frontier-op1/receipts/4b-op1.train_receipt.json",
+     "sha": "0e31baeb9c87b6f3b7004c05929ecd676a8bd4ab",
+     "at_head": "9a65eb54e9314f5de23078f8484588a9eb066f5a",
+     "url": "https://github.com/szl-holdings/szl-forge/blob/9a65eb54e9314f5de23078f8484588a9eb066f5a/chaski/frontier-op1/receipts/4b-op1.train_receipt.json",
+     "evidence_class": "training_lineage_receipt_reference",
+     "excerpt": "\"SZLHOLDINGS/unified-corpus-v1\": 3 (training-receipt provenance-count reference, not a license grant)"
+    },
+    {
+     "repo": "szl-holdings/szl-gpu-bridge",
+     "path": "tests/test_salad_admission_budget_floor.py",
+     "sha": "d7dd0660f755c64f77ec281a32e4129835381cdc",
+     "at_head": "2e9b818c3cbee7bb7236e3dab4cad607dd174543",
+     "url": "https://github.com/szl-holdings/szl-gpu-bridge/blob/2e9b818c3cbee7bb7236e3dab4cad607dd174543/tests/test_salad_admission_budget_floor.py",
+     "evidence_class": "test_usage_reference",
+     "excerpt": "GROUP = \"szl-train-unified-corpus-v1\" (admission-group test references the corpus train group)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "training-lineage + test mentions; usage references, not license grants"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-scholar-eval-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/khipu-scholar-eval-v1 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/khipu-scholar-eval-v1\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/khipu-scholar-eval-v1; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/frontier-console",
+     "path": "app.py",
+     "sha": "cf8822997b7dd8fab071acf26c7cf0a1a97514af",
+     "at_head": "e17b22da76039ea4070c31aebbf62b669f29e7bd",
+     "url": "https://github.com/szl-holdings/frontier-console/blob/e17b22da76039ea4070c31aebbf62b669f29e7bd/app.py",
+     "evidence_class": "eval_console_reference",
+     "excerpt": "\"datasets\": [\"khipu-scholars-corpus-v1\", \"khipu-scholar-runs\", \"khipu-scholar-eval-v1\", \"frontier-54-runs\", \"killinchu-osint-corpus\", \"szl-lake\", ... [excerpt truncated at capture] (console lists it as an eval datasource)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "eval-console datasource list mention only"
+  },
+  {
+   "id": "SZLHOLDINGS/axiom-invariants-sft-v2",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/axiom-invariants-sft-v2 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/axiom-invariants-sft-v2\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/axiom-invariants-sft-v2; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/szl-hf-frontier",
+     "path": "docs/massed/registry/exact400_source_to_row_map.json",
+     "sha": "b58a17048ccfc9f7a2afd8eb1a67816e3874886c",
+     "at_head": "ec2122d6fda58cff4c7b79383542a53b42957cf4",
+     "url": "https://github.com/szl-holdings/szl-hf-frontier/blob/ec2122d6fda58cff4c7b79383542a53b42957cf4/docs/massed/registry/exact400_source_to_row_map.json",
+     "evidence_class": "source_to_row_map_reference",
+     "excerpt": "\"SZLHOLDINGS/axiom-invariants-sft-v2\", (exact400 source-to-row map entry, inventory reference)"
+    },
+    {
+     "repo": "szl-holdings/szl-forge",
+     "path": "chaski/frontier-op1/receipts/4b-op1.train_receipt.json",
+     "sha": "0e31baeb9c87b6f3b7004c05929ecd676a8bd4ab",
+     "at_head": "9a65eb54e9314f5de23078f8484588a9eb066f5a",
+     "url": "https://github.com/szl-holdings/szl-forge/blob/9a65eb54e9314f5de23078f8484588a9eb066f5a/chaski/frontier-op1/receipts/4b-op1.train_receipt.json",
+     "evidence_class": "training_lineage_receipt_reference",
+     "excerpt": "\"SZLHOLDINGS/axiom-invariants-sft-v2\": 1 (training-receipt provenance-count reference, not a license grant)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "inventory + training-receipt count references only"
+  },
+  {
+   "id": "SZLHOLDINGS/axiom-invariant-corpus-v2",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/axiom-invariant-corpus-v2 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/axiom-invariant-corpus-v2\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/axiom-invariant-corpus-v2; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/szl-forge",
+     "path": "docs/frontier-20261115/flagship55-curriculum-spec.md",
+     "sha": "0a88fef4d46a46cc5b0e0ed41790aac5607032a9",
+     "at_head": "9a65eb54e9314f5de23078f8484588a9eb066f5a",
+     "url": "https://github.com/szl-holdings/szl-forge/blob/9a65eb54e9314f5de23078f8484588a9eb066f5a/docs/frontier-20261115/flagship55-curriculum-spec.md",
+     "evidence_class": "curriculum_spec_reference",
+     "excerpt": "3. Add [SZLHOLDINGS/axiom-invariant-corpus-v2](https://huggingface.co/datasets/SZLHOLDINGS/axiom-invariant-corpus-v2) (94 verbatim axiom/invariant declarations from lutar-lean @ c2ca813; jsonl sha256 c34c9f24 [excerpt truncated at capture])"
+    },
+    {
+     "repo": "szl-holdings/szl-forge",
+     "path": "training/LUTAR_AXIOM_INTAKE.md",
+     "sha": "da6f0064052e20119eb3a8a9befce92dd1f0a7e4",
+     "at_head": "9a65eb54e9314f5de23078f8484588a9eb066f5a",
+     "url": "https://github.com/szl-holdings/szl-forge/blob/9a65eb54e9314f5de23078f8484588a9eb066f5a/training/LUTAR_AXIOM_INTAKE.md",
+     "evidence_class": "intake_doc_reference",
+     "excerpt": "already pins `SZLHOLDINGS/axiom-invariant-corpus-v2` (94 declaration [excerpt truncated at capture]"
+    },
+    {
+     "repo": "szl-holdings/szl-hf-frontier",
+     "path": "docs/massed/registry/exact400_source_to_row_map.json",
+     "sha": "b58a17048ccfc9f7a2afd8eb1a67816e3874886c",
+     "at_head": "ec2122d6fda58cff4c7b79383542a53b42957cf4",
+     "url": "https://github.com/szl-holdings/szl-hf-frontier/blob/ec2122d6fda58cff4c7b79383542a53b42957cf4/docs/massed/registry/exact400_source_to_row_map.json",
+     "evidence_class": "source_to_row_map_reference",
+     "excerpt": "\"SZLHOLDINGS/axiom-invariant-corpus-v2\", (exact400 source-to-row map entry, inventory reference)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "curriculum-spec pins corpus jsonl sha256 with source repo commit (content lineage); intake + inventory references; none is a license grant"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-scholars-corpus-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/khipu-scholars-corpus-v1 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/khipu-scholars-corpus-v1\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/khipu-scholars-corpus-v1; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/szl-khipu-scholar",
+     "path": "README.md",
+     "sha": "0d3faef4630ff43b9cdd9fe527066ffc8882eed5",
+     "at_head": "573eb48514133183bc892461dffb3da0cf155c13",
+     "url": "https://github.com/szl-holdings/szl-khipu-scholar/blob/573eb48514133183bc892461dffb3da0cf155c13/README.md",
+     "evidence_class": "dedicated_project_repo_declaration",
+     "excerpt": "| Corpus (42 open-access docs, sha256 hash-pinned) | LIVE | [SZLHOLDINGS/khipu-scholars-corpus-v1](https://huggingface.co/datasets/SZLHOLDINGS/khipu-scholars-corpus-v1) |"
+    },
+    {
+     "repo": "szl-holdings/szl-khipu-scholar",
+     "path": "server/app.py",
+     "sha": "c1403360a66af9044e90f92e52e71497961211c5",
+     "at_head": "573eb48514133183bc892461dffb3da0cf155c13",
+     "url": "https://github.com/szl-holdings/szl-khipu-scholar/blob/573eb48514133183bc892461dffb3da0cf155c13/server/app.py",
+     "evidence_class": "producer_pipeline_declaration",
+     "excerpt": "CORPUS_REPO = os.environ.get(\"KHIPU_CORPUS_REPO\", \"SZLHOLDINGS/khipu-scholars-corpus-v1\")"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement_for_dataset_artifacts; adjacent repo license names \"SZL Holdings\"",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read)); adjacent repo LICENSE: Apache-2.0 (filled, Copyright 2026 SZL Holdings)",
+   "coverage": "dedicated project repo declares the corpus dataset as its live corpus with hash-pinned docs; the repo LICENSE covers repo contents only, no express statement covers the separately published HF dataset artifacts",
+   "binding_status": "UNBOUND_by_registry (registry override source=estate-cards + 2026-11-20 sweep NO_MATCH; the szl-khipu-scholar declaration is a same-session adjacent linkage, not a registry binding; identity_verified false)",
+   "notes": "project-repo pipeline declaration is the strongest linkage for this candidate; still fail-closed per amendment 4"
+  },
+  {
+   "id": "SZLHOLDINGS/axiom-invariants-sft-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "inventory_reference_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/axiom-invariants-sft-v1 reason=card_method_deferred (pins section: no pin for this id; identity_verified false by design)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "asset_map.json",
+     "sha": "d116d2aa51ff0340a826906afcb971f2b89d13a7",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/asset_map.json",
+     "evidence_class": "registry_asset_map_state",
+     "excerpt": "asset_map entry: source estate-cards, method card (registry digest; card-issuer links excluded as source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-hf-frontier",
+     "path": "docs/massed/registry/exact400_source_to_row_map.json",
+     "sha": "b58a17048ccfc9f7a2afd8eb1a67816e3874886c",
+     "at_head": "ec2122d6fda58cff4c7b79383542a53b42957cf4",
+     "url": "https://github.com/szl-holdings/szl-hf-frontier/blob/ec2122d6fda58cff4c7b79383542a53b42957cf4/docs/massed/registry/exact400_source_to_row_map.json",
+     "evidence_class": "source_to_row_map_reference",
+     "excerpt": "\"SZLHOLDINGS/axiom-invariants-sft-v1\", (exact400 source-to-row map entry, inventory reference)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry backlog card_method_deferred; asset_map row source estate-cards method card; not in the 2026-11-20 unmapped-reasons sweep; identity_verified false)",
+   "notes": "exact400 inventory entry only"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-structure-sft-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/khipu-structure-sft-v1 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/khipu-structure-sft-v1\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/khipu-structure-sft-v1; identity_verified false (2026-11-20 provenance sweep result)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "org code search 10 hits, all registry/audit context; no non-context references found"
+  },
+  {
+   "id": "SZLHOLDINGS/estate-telemetry",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/estate-telemetry reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/estate-telemetry\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/estate-telemetry; identity_verified false (2026-11-20 provenance sweep result)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "org code search 10 hits, all registry/audit context; no non-context references found"
+  },
+  {
+   "id": "SZLHOLDINGS/ring-ouro-curriculum-v1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/ring-ouro-curriculum-v1 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/ring-ouro-curriculum-v1\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/ring-ouro-curriculum-v1; identity_verified false (2026-11-20 provenance sweep result)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "ring-family sibling; ring-curriculum-v3 was adjudicated in the pilot-5 pass with the same NO_LICENSE/UNBOUND state; v1/v2 siblings share the cohort census state"
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-reward-pool-v2",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/absrl-reward-pool-v2 reason=card_method_deferred (pins section: no pin for this id; identity_verified false by design)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "asset_map.json",
+     "sha": "d116d2aa51ff0340a826906afcb971f2b89d13a7",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/asset_map.json",
+     "evidence_class": "registry_asset_map_state",
+     "excerpt": "asset_map entry: source estate-cards, method card (registry digest; card-issuer links excluded as source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-hf-frontier",
+     "path": "docs/massed/registry/exact400_source_to_row_map.json",
+     "sha": "b58a17048ccfc9f7a2afd8eb1a67816e3874886c",
+     "at_head": "ec2122d6fda58cff4c7b79383542a53b42957cf4",
+     "url": "https://github.com/szl-holdings/szl-hf-frontier/blob/ec2122d6fda58cff4c7b79383542a53b42957cf4/docs/massed/registry/exact400_source_to_row_map.json",
+     "evidence_class": "source_to_row_map_reference",
+     "excerpt": "\"SZLHOLDINGS/absrl-reward-pool-v2\", (exact400 source-to-row map entry, inventory reference)"
+    },
+    {
+     "repo": "szl-holdings/szl-forge",
+     "path": "chaski/frontier-op1/receipts/4b-op1.train_receipt.json",
+     "sha": "0e31baeb9c87b6f3b7004c05929ecd676a8bd4ab",
+     "at_head": "9a65eb54e9314f5de23078f8484588a9eb066f5a",
+     "url": "https://github.com/szl-holdings/szl-forge/blob/9a65eb54e9314f5de23078f8484588a9eb066f5a/chaski/frontier-op1/receipts/4b-op1.train_receipt.json",
+     "evidence_class": "training_lineage_receipt_reference",
+     "excerpt": "\"SZLHOLDINGS/absrl-reward-pool-v2\": 21 (training-receipt provenance-count reference, not a license grant)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry backlog card_method_deferred; asset_map row source estate-cards method card; not in the 2026-11-20 unmapped-reasons sweep; identity_verified false)",
+   "notes": "inventory + training-receipt count references only"
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-reward-pool-v2-1",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "backlog entry datasets/SZLHOLDINGS/absrl-reward-pool-v2-1 reason=override_method_deferred (verified by direct read of source_pins.json at registry head this pass; pins section: no pin for this id)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "overrides.json",
+     "sha": "a5fdd3d783da6f0a31492ea901fc4561bf2d9c99",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/overrides.json",
+     "evidence_class": "card_issuer_mapping_excluded",
+     "excerpt": "\"SZLHOLDINGS/absrl-reward-pool-v2-1\": \"estate-cards\" (source_repo = card issuer; registry unmapped-reasons contract: card-issuer links are NOT source-identity evidence)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/asset_map_unmapped_reasons_20261120.json",
+     "sha": "82d7eea7d0e0223784595fb19ecbba53560baf4e",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/asset_map_unmapped_reasons_20261120.json",
+     "evidence_class": "registry_sweep_nomatch",
+     "excerpt": "NO_MATCH reason recorded for SZLHOLDINGS/absrl-reward-pool-v2-1; identity_verified false (2026-11-20 provenance sweep result)"
+    },
+    {
+     "repo": "szl-holdings/szl-hf-frontier",
+     "path": "docs/massed/registry/exact400_source_to_row_map.json",
+     "sha": "b58a17048ccfc9f7a2afd8eb1a67816e3874886c",
+     "at_head": "ec2122d6fda58cff4c7b79383542a53b42957cf4",
+     "url": "https://github.com/szl-holdings/szl-hf-frontier/blob/ec2122d6fda58cff4c7b79383542a53b42957cf4/docs/massed/registry/exact400_source_to_row_map.json",
+     "evidence_class": "source_to_row_map_reference",
+     "excerpt": "\"SZLHOLDINGS/absrl-reward-pool-v2-1\", (exact400 source-to-row map entry, inventory reference)"
+    },
+    {
+     "repo": "szl-holdings/szl-forge",
+     "path": "chaski/frontier-op1/receipts/4b-op1.train_receipt.json",
+     "sha": "0e31baeb9c87b6f3b7004c05929ecd676a8bd4ab",
+     "at_head": "9a65eb54e9314f5de23078f8484588a9eb066f5a",
+     "url": "https://github.com/szl-holdings/szl-forge/blob/9a65eb54e9314f5de23078f8484588a9eb066f5a/chaski/frontier-op1/receipts/4b-op1.train_receipt.json",
+     "evidence_class": "training_lineage_receipt_reference",
+     "excerpt": "\"SZLHOLDINGS/absrl-reward-pool-v2-1\": 20 (training-receipt provenance-count reference, not a license grant)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry override source=estate-cards; 2026-11-20 sweep NO_MATCH: 0 candidate source repos; identity_verified false)",
+   "notes": "inventory + training-receipt count references only; absrl-reward-pool-v2/v2-1 pair recorded separately, both fail-closed"
+  },
+  {
+   "id": "SZLHOLDINGS/estate-receipts-index",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "no backlog entry and no pins entry for datasets/SZLHOLDINGS/estate-receipts-index in source_pins.json at registry head f7efb7c9 (registry digest: NO_BACKLOG_ENTRY)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "asset_map.json",
+     "sha": "d116d2aa51ff0340a826906afcb971f2b89d13a7",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/asset_map.json",
+     "evidence_class": "registry_asset_map_state",
+     "excerpt": "no asset_map entry for the id (registry digest: empty/unmapped)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry: no backlog or pins entry beyond pattern D digest, no asset_map entry; not in the 2026-11-20 unmapped-reasons sweep; identity_verified false)",
+   "notes": "only estate-cards audit artifacts reference it (2 search hits); expected role: estates receipts index; no source repo resolution"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-runs",
+   "finding": "NO_AUTHORITATIVE_UPSTREAM_EVIDENCE",
+   "evidence_class": "adjacent_research_only",
+   "sources": [
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "data/source_pins.json",
+     "sha": "fd1a12eb0c0ddcbff30f45bb562c321501f96ae9",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/data/source_pins.json",
+     "evidence_class": "registry_backlog_unbound",
+     "excerpt": "no backlog entry and no pins entry for datasets/SZLHOLDINGS/szl-runs in source_pins.json at registry head f7efb7c9 (registry digest: NO_BACKLOG_ENTRY)"
+    },
+    {
+     "repo": "szl-holdings/szl-asset-registry",
+     "path": "asset_map.json",
+     "sha": "d116d2aa51ff0340a826906afcb971f2b89d13a7",
+     "at_head": "f7efb7c995cd1efe2f8461759c20d514259b17fd",
+     "url": "https://github.com/szl-holdings/szl-asset-registry/blob/f7efb7c995cd1efe2f8461759c20d514259b17fd/asset_map.json",
+     "evidence_class": "registry_asset_map_state",
+     "excerpt": "no asset_map entry for the id (registry digest: empty/unmapped)"
+    },
+    {
+     "repo": "szl-holdings/szl-hf-frontier",
+     "path": "docs/LAPTOP_PAYLOAD.md",
+     "sha": "bb622c517bc6e3beec53077396d5bfe295a4e84b",
+     "at_head": "ec2122d6fda58cff4c7b79383542a53b42957cf4",
+     "url": "https://github.com/szl-holdings/szl-hf-frontier/blob/ec2122d6fda58cff4c7b79383542a53b42957cf4/docs/LAPTOP_PAYLOAD.md",
+     "evidence_class": "path_string_collision_not_dataset_reference",
+     "excerpt": "PRE = HOME / \"szl-runs\" / \"receiptagent-v3\" / \"runtime-preflight.json\" (host filesystem path string)"
+    },
+    {
+     "repo": "szl-holdings/szl-forge",
+     "path": "frontier/qwen35-receiptagent-v3/README.md",
+     "sha": "3cff084a16904fab302b4190605cc04bf55a4ed1",
+     "at_head": "9a65eb54e9314f5de23078f8484588a9eb066f5a",
+     "url": "https://github.com/szl-holdings/szl-forge/blob/9a65eb54e9314f5de23078f8484588a9eb066f5a/frontier/qwen35-receiptagent-v3/README.md",
+     "evidence_class": "path_string_collision_not_dataset_reference",
+     "excerpt": "--report /home/rosie/szl-runs/receiptagent-v3/runtime-preflight.json (host filesystem path string)"
+    }
+   ],
+   "rights_holder": "unknown_by_measurement",
+   "license_or_spdx": "none for the dataset (census NO_LICENSE; HF stub card: License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+   "coverage": "no express license statement covering the HF dataset artifacts found anywhere in the org code index",
+   "binding_status": "UNBOUND (registry: no backlog or pins entry beyond pattern D digest, no asset_map entry; not in the 2026-11-20 unmapped-reasons sweep; identity_verified false)",
+   "notes": "ALL 7 code-search hits are host filesystem path strings (/home/rosie/szl-runs/...), NOT references to the HF dataset; classified as name collision and recorded fail-closed; zero genuine dataset references found"
+  }
+ ],
+ "results_summary": {
+  "candidates_examined": 39,
+  "with_authoritative_upstream_license_evidence": 0,
+  "no_authoritative_upstream_evidence": 39,
+  "dataset_side": "all 39 are among the 44 census NO_LICENSE datasets; HF READMEs are stub cards (License evidence: UNKNOWN - no license tag set at census; owner-gated (HF README stub measured at lap-2 census read))",
+  "registry_side": "registry pattern digest at head f7efb7c9: 27 candidates carry override source=estate-cards + 2026-11-20 sweep NO_MATCH (identity_verified false); 7 carry backlog card_method_deferred + asset_map card row (absrl-reward-pool-v2 and khipu-scholars-sft-v1 variants noted per candidate); 1 (szl-agentic-reflex-v1) unmapped_method_deferred + asset_map repo null; 4 have NO_BACKLOG_ENTRY and no asset_map row (frontier-55-runs carries a source_pins name-identity pin: PINNED_HYPOTHESIS_ONLY)",
+  "adjacent_repos_with_filled_license_copyright": [
+   "szl-khipu-scholar (Apache-2.0, Copyright 2026 SZL Holdings)",
+   "estate-cards (MIT, Copyright (c) 2026 SZL Holdings)"
+  ],
+  "adjacent_repos_with_unfilled_license_placeholder": [
+   "frontier-55-runs (Apache-2.0 template, [yyyy] [name of copyright owner] unfilled, measured this pass at head 49c505e4 blob 261eeb9e)",
+   "a11oy (Apache-2.0 template unfilled, as measured in the pilot-5 pass)",
+   "anatomy (same, as measured in the pilot-5 pass)"
+  ],
+  "coverage_caveat": "adjacent repo licenses cover repository contents as measured; none contains an express statement covering the separately published HF dataset artifacts; per amendments 4/5 this is fail-closed recorded, never promoted to evidence"
+ },
+ "honesty_notes": [
+  "only one council seat fired for this ruling: Kimi (governing) via device ollama rail, nonce-verified (DSK-KIMI-RANK1-EXT39-20261125-T0200Z echoed); kimi-pro rail receipts from the same session are separate (wake + ops sample published to HF mesh/2026-11-25/ouroboros/kimi-pro-rail-20261125/); no other seat claimed",
+  "tool-call provenance: every candidate was searched by name on the device gh CLI (per-name queries); fragments and blob SHAs for cited files captured in the four device receipts named in method; per-candidate search hit counts recorded in notes/context of the receipts",
+  "OR-grouped GitHub code searches UNDER-RETURN (a 6-name OR group returned 0 hits despite known registry mentions); per-name searches are mandatory; the first unpaced search pass 403-rate-limited after 3 names (results kept, receipt gh_search39) and the paced rerun covered the remaining 36 (receipt gh_search39b); all 39 names have completed searches",
+  "the szl-eval-harness repo resolves only with authenticated access (404 unauthenticated); its ledger citation was fetched and blob-sha pinned via the authed gh API on device",
+  "for szl-runs, all 7 code-search hits are host filesystem path strings, not references to the HF dataset; classified as a name collision and recorded fail-closed",
+  "for szl-frontier-sft-mix-v4, the eval-selection doc calls it the private Hugging Face dataset while the lap-2 census read it as a public NO_LICENSE dataset; this visibility discrepancy is recorded, not adjudicated",
+  "excerpts are single matching lines captured at fetch time, capped at 220 chars (truncations marked inline with [excerpt truncated at capture]); sources with multi-byte characters cut at capture are marked the same way",
+  "frontier-55-runs is the strongest binding hypothesis in the remaining-39 cohort (source_pins name-identity pin + dedicated repo + system-of-record README declaration), but its LICENSE is an unfilled Apache-2.0 template and name-match is not a binding (amendment 3 analog); it remains fail-closed",
+  "this record asserts NO license for any dataset; it inventories adjacent evidence only; the signature-mint owner gate stands before any license remediation; PR#37 remains DRAFT and unmerged; no pilot-5 artifact, census, packet, or ordering was modified",
+  "amendment push (commit after e573fa82, same single file): corrected the frontier-55-runs pin excerpt to the exact registry-stored readme_sha256 (63 hex chars as stored) and filled its notes; added verified backlog reasons (override_method_deferred) as first sources for the 27 override-pattern candidates, all verified by a direct read of source_pins.json at registry head f7efb7c995cd1efe2f8461759c20d514259b17fd during this pass; no findings, verdicts, ordering, or other fields changed"
+ ]
+}

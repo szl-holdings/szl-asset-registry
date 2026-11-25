@@ -1,0 +1,37 @@
+{
+ "schema": "szl.receipt/datasets-leg-lap2-20261124",
+ "subject": "Datasets-axis lap-2: measured license census + DT10 rank-1 propose-only remediation package",
+ "lane": "Vibe datasets-axis leg (web seat, owner tap EXECUTE 2026-11-24 ~21:00Z ET)",
+ "measured_truth": {
+  "datasets_n": 176,
+  "license_missing_n": 44,
+  "licensed_n": 132,
+  "unmeasured_n": 0,
+  "method": "hf_fs ls roster (downloads/likes/updated) + license axis via hub_repo_search top-51 slice + hub_repo_details overview batches over the 125-id tail (batch<=9, per-batch retry, 0 final misses)",
+  "known_offset_api_defect_standing": "HF list API ignores offset (reverified 2026-11-24); do not paginate it without cursor"
+ },
+ "deliverables": [
+  "tools/dt10_rank1_ordering.py (pure-python deterministic ordering + fail-closed exclusions; sha256 e0b823482978bf1b8c3bdd8da1a40f46099fd3a5b06cecbd5ddcbb62383e687f)",
+  "data/hf_dataset_census_leg-lap2_20261124.json (sha256 0fc1a9ea4070e4d7adc4ce15796319e31e0f80928c784acc6615e11014e0b958)",
+  "data/dt10_rank1_packet_20261124.json (sha256 0cc56e7d00047b1334b63930cf3abaed9d39aa574139014e72374f0edcb34a52)"
+ ],
+ "deterministic_ordering_rule": "downloads desc, likes desc, id asc (estate convention, disclosed)",
+ "pilot_top5": [
+  "SZLHOLDINGS/khipu-scholar-runs",
+  "SZLHOLDINGS/w29-runs",
+  "SZLHOLDINGS/frontier-rewards",
+  "SZLHOLDINGS/proving-ground-54h-mesh",
+  "SZLHOLDINGS/ring-curriculum-v3"
+ ],
+ "governance": "Kimi DT10-DATASET-BACKLOG-20261124 rank-1 workstream; schema v2 DT10-SCHEMA2; propose-only; NO HF writes this lap; apply gates: per-candidate license_evidence_receipt + owner_gate_receipt; no inferred licenses",
+ "honesty": "No model seats fired this lap (device/ollama rails unreachable from web seat); no seat outputs fabricated; sha axis disclosed as standing r2 evidence, re-verify at apply; readme axis is a description-surface proxy, cardData completeness NOT asserted",
+ "wave_logs_note": "Sandbox OAuth cannot write wave-logs (write-protected; put and --create-pr rejected, reconfirmed 2026-11-24); receipt carried in-repo per estate convention until the next device session publishes mesh/2026-11-24/ouroboros/datasets-leg-lap2/ (additive, distinct path)",
+ "markers": [
+  "DATASETS_LEG_LAP2_DONE",
+  "CENSUS_176_LICENSE_44_132_0",
+  "DT10_RANK1_PACKET_PROPOSE_ONLY",
+  "NO_STOMP_VERIFIED_ZERO_OPEN_PRS",
+  "NO_KIMI_THIS_LEG_DISCLOSED",
+  "ZERO_HF_WRITES"
+ ]
+}

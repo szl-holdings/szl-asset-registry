@@ -1,0 +1,1219 @@
+{
+ "schema": "szl.dt10_rank1_packet/v1",
+ "generated_from_census": "data/hf_dataset_census_leg-lap2_20261124.json",
+ "ordering_rule": "downloads_all_time desc, likes desc, id asc (final tiebreaker id asc; disclosed)",
+ "workstream": "license_metadata_remediation (DT10 rank 1)",
+ "fail_closed_note": "no inferred licenses; unmeasured rows abort; apply requires owner gate",
+ "candidate_count": 44,
+ "pilot_top": [
+  {
+   "id": "SZLHOLDINGS/khipu-scholar-runs",
+   "downloads_all_time": 7221,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/w29-runs",
+   "downloads_all_time": 1787,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-rewards",
+   "downloads_all_time": 847,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/proving-ground-54h-mesh",
+   "downloads_all_time": 737,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/ring-curriculum-v3",
+   "downloads_all_time": 626,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  }
+ ],
+ "candidates_all": [
+  {
+   "id": "SZLHOLDINGS/khipu-scholar-runs",
+   "downloads_all_time": 7221,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/w29-runs",
+   "downloads_all_time": 1787,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-rewards",
+   "downloads_all_time": 847,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/proving-ground-54h-mesh",
+   "downloads_all_time": 737,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/ring-curriculum-v3",
+   "downloads_all_time": 626,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-55-runs",
+   "downloads_all_time": 518,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-54-v2-receipts",
+   "downloads_all_time": 513,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-triang-20261116",
+   "downloads_all_time": 344,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/unified-corpus-v2",
+   "downloads_all_time": 325,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-repro-cd-20261116",
+   "downloads_all_time": 321,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-repro-ga-20261116",
+   "downloads_all_time": 320,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-sweep-ga-20261116",
+   "downloads_all_time": 320,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-sweep-cd-20261116",
+   "downloads_all_time": 318,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/distill-runs",
+   "downloads_all_time": 288,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-mix-v5-all-estates",
+   "downloads_all_time": 283,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/flagship55-sft-v1",
+   "downloads_all_time": 260,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-mix-v6-rebalanced",
+   "downloads_all_time": 260,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/rag-corpus-v2",
+   "downloads_all_time": 255,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/szl-agentic-reflex-v1",
+   "downloads_all_time": 240,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/x402-protocol-sft-v1",
+   "downloads_all_time": 234,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-structure-eval-v1",
+   "downloads_all_time": 231,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/stack400-runs",
+   "downloads_all_time": 214,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/szl-frontier-sft-mix-v4",
+   "downloads_all_time": 214,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-scholars-sft-v1",
+   "downloads_all_time": 213,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/lean-math-sft-v2",
+   "downloads_all_time": 185,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/cram-sudoku-extreme-sft-v1",
+   "downloads_all_time": 179,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-structure-sft-v2",
+   "downloads_all_time": 168,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-yachay-research-v0",
+   "downloads_all_time": 163,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/lean-math-sft-v1",
+   "downloads_all_time": 162,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-doubt-claude-v1",
+   "downloads_all_time": 157,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/materials-frontier-sft-v1",
+   "downloads_all_time": 152,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/unified-corpus-v1",
+   "downloads_all_time": 152,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-scholar-eval-v1",
+   "downloads_all_time": 149,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/axiom-invariants-sft-v2",
+   "downloads_all_time": 146,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/axiom-invariant-corpus-v2",
+   "downloads_all_time": 145,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-scholars-corpus-v1",
+   "downloads_all_time": 145,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/axiom-invariants-sft-v1",
+   "downloads_all_time": 144,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-structure-sft-v1",
+   "downloads_all_time": 143,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/estate-telemetry",
+   "downloads_all_time": 134,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/ring-ouro-curriculum-v1",
+   "downloads_all_time": 134,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-reward-pool-v2",
+   "downloads_all_time": 123,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-reward-pool-v2-1",
+   "downloads_all_time": 122,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/estate-receipts-index",
+   "downloads_all_time": 73,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  },
+  {
+   "id": "SZLHOLDINGS/szl-runs",
+   "downloads_all_time": 3,
+   "likes": 0,
+   "evidence_required": [
+    "authoritative upstream license evidence (named source repo/file + verbatim license text)",
+    "source_sha_recheck at apply time",
+    "license_evidence_receipt",
+    "owner_gate_receipt before any apply"
+   ]
+  }
+ ],
+ "exclusion_count": 132,
+ "exclusions_all": [
+  {
+   "id": "SZLHOLDINGS/a11oy-code-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/a11oy-state",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/a11oy-verifiable-corpus",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-reward-squad2-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/abstention-curriculum-v2",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/abstention-doctrine-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/acoustic-governance-sft-api-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/acoustic-governance-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/alloy-sovereign-eval-runs",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/anatomy-alive-harness",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/anatomy-brain-datasets-corpus-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/ancient-math-reasoning-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/axiom-invariant-corpus-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/brain-synthesized-corpus",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/canonical-formulas-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/certified-puzzles-frontier-bank-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/clinical-abstention-corpus-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/clinical-abstention-sft-api-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/clinical-abstention-sft-api-v2",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/cookie-dpo-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/cram-sudoku-extreme",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/creativity-sft-api-v2",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/creativity-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/david-leads-data",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/doctrine-abstention-dpo-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/doctrine-abstention-dpo-v2",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/doctrine-corpus-v2",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/doctrine-v10-v11",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/energy-attested-runs",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/estate-graph",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/estate-knowledge-corpus-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/estate-release-cards",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/formula-proving-ground",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/free-energy-reasoning-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-54-runs",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-agent-bench",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-distill-4b-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-distill-4b-sft-v2",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-distill-4b-sft-v3",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-distill-4b-sft-v3-topup",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-distill-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-grounded-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-receipts-bench",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-sft-mix-v2",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/high-value-systems-corpus-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/k-verify-benchmark-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/kamachikuna",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/kernel-receipt-regression-attn-maskmod-blockkv-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-heritage-eval-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-scholars-sft-v2",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-structure-sft-v3",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-v2-abstention-curriculum",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/killinchu-osint-corpus",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/killinchu-osint-sft-api-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/lean-invariants-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/lean-proof-corpus-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/lean-proofs-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/lean-theorem-tree",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/legacy-archive",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/lutar-axioms-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/measurement-honesty-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/mesh-liveness",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/model-bom",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/model-eval-receipts",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/muhu-methodology-sft-v2",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/muhu-methodology-sft-v3",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/oac-clinical-transport-observability-synthetic",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/ouroboros-arxiv-preprint",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/papers-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/physics-bench-micro",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/physics-curriculum-train",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/physics-tutor-sft-api-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/prime-principle",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/provenance-native-corpus-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/puriq-market-data",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/quant-curriculum-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/rag-corpus-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/readiness-runs",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/reasoning-puzzles-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/receipt-of-doubt-math-unanswerables-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/receipted-unsloth",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/release-assets",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/ring-curriculum-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/ring-curriculum-v2",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/sorry-discharge-challenges-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/specialized-domains-corpus-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-1-doctrine-sft",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-artifacts",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-distill-abstention-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-distill-abstention-v1-sft",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-distill-abstention-v2-sft",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-distill-abstention-v3-calib",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-distill-v4-calib",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-estate-graph",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-evidence",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-frontier-covenant",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-frontier-evaluation-receipts",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-frontier-openprob-mix-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-frontier-sft-mix-v2",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-frontier-sft-mix-v3",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-lake",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-marketing-factbase",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-open-problems-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-org-infra",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-papers-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-quant-abstention-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-quant-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-science-forum-corpus",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-second-brain-frontier-candidates",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-second-brain-inrepo",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-seismic-review-state",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-skills-ci-evidence",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-training-receipts",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-x402-seller-card",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/SZLHOLDINGS",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/test-results",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/thesis-corpus-v18",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/thesis-formula-index",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/thesis-v18-formal-verification",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/training-ledger",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/uds-bundles-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/uds-governance-receipts",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/uds-spans-receipts",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/vault-artifacts",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/verticals-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-sft-certified-puzzles-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/wave-logs",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/why-we-lead",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/wink-observatory-data",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/world-science-sft-api-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/world-science-sft-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  },
+  {
+   "id": "SZLHOLDINGS/yuyay-v3-axis-labels-v1",
+   "reason": "LICENSE_PRESENT",
+   "rule": "not in rank-1 cohort"
+  }
+ ],
+ "owner_gate": "PROPOSE_ONLY",
+ "expected_receipts_owed_at_apply": [
+  "license_evidence_receipt (per candidate)",
+  "owner_gate_receipt (one owner sentence naming the cohort and the apply)"
+ ]
+}

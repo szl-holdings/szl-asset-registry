@@ -1,0 +1,1419 @@
+{
+ "schema": "szl.dataset_census/lap2-v1",
+ "measured_at": "2026-11-24T21:10Z",
+ "method": "sandbox hf_fs ls roster (176 repos, downloads/likes/updated) + license axis via hub_repo_search top-slice and hub_repo_details overview batches (125 tail ids, per-repo license: tag or cardData license); 176/176 measured, 0 unmeasured",
+ "sha_axis_disclosure": "HF revision sha presence not re-measured this lap; standing estate evidence r2 pass 2026-11-22 measured sha 174/174 (ledger COMMIT_2DD0D164); re-verify at apply time",
+ "readme_axis_note": "readme_present is a description-surface proxy for card presence from hub overview; cardData key-completeness per DT10 SCHEMA2 is NOT asserted here and is a gate at apply time",
+ "n": 176,
+ "license_missing_n": 44,
+ "datasets": [
+  {
+   "id": "SZLHOLDINGS/killinchu-osint-corpus",
+   "downloads_all_time": 118630,
+   "likes": 23,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-54-runs",
+   "downloads_all_time": 27923,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/readiness-runs",
+   "downloads_all_time": 19235,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/a11oy-state",
+   "downloads_all_time": 8841,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/a11oy-verifiable-corpus",
+   "downloads_all_time": 7875,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-scholar-runs",
+   "downloads_all_time": 7221,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/wave-logs",
+   "downloads_all_time": 7170,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-lake",
+   "downloads_all_time": 5331,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/mesh-liveness",
+   "downloads_all_time": 3502,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/w29-runs",
+   "downloads_all_time": 1787,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/uds-spans-receipts",
+   "downloads_all_time": 1542,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/uds-bundles-v1",
+   "downloads_all_time": 1297,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/uds-governance-receipts",
+   "downloads_all_time": 1167,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/rag-corpus-v1",
+   "downloads_all_time": 1121,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-quant-sft-v1",
+   "downloads_all_time": 1104,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-artifacts",
+   "downloads_all_time": 1090,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-agent-bench",
+   "downloads_all_time": 1060,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/thesis-corpus-v18",
+   "downloads_all_time": 1051,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/ancient-math-reasoning-sft-v1",
+   "downloads_all_time": 1047,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/thesis-v18-formal-verification",
+   "downloads_all_time": 1030,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-frontier-evaluation-receipts",
+   "downloads_all_time": 980,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/lean-proofs-v1",
+   "downloads_all_time": 978,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/abstention-doctrine-sft-v1",
+   "downloads_all_time": 962,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/oac-clinical-transport-observability-synthetic",
+   "downloads_all_time": 939,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/canonical-formulas-v1",
+   "downloads_all_time": 930,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/formula-proving-ground",
+   "downloads_all_time": 925,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/why-we-lead",
+   "downloads_all_time": 919,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/SZLHOLDINGS",
+   "downloads_all_time": 916,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-17-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/energy-attested-runs",
+   "downloads_all_time": 912,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/doctrine-v10-v11",
+   "downloads_all_time": 890,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/measurement-honesty-v1",
+   "downloads_all_time": 890,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-science-forum-corpus",
+   "downloads_all_time": 882,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/free-energy-reasoning-sft-v1",
+   "downloads_all_time": 881,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-1-doctrine-sft",
+   "downloads_all_time": 881,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-receipts-bench",
+   "downloads_all_time": 864,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/lean-proof-corpus-v1",
+   "downloads_all_time": 855,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-rewards",
+   "downloads_all_time": 847,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-distill-4b-sft-v3",
+   "downloads_all_time": 846,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/ouroboros-arxiv-preprint",
+   "downloads_all_time": 842,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-frontier-covenant",
+   "downloads_all_time": 839,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/lean-theorem-tree",
+   "downloads_all_time": 829,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/receipted-unsloth",
+   "downloads_all_time": 824,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/alloy-sovereign-eval-runs",
+   "downloads_all_time": 793,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/physics-tutor-sft-api-v1",
+   "downloads_all_time": 787,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/model-bom",
+   "downloads_all_time": 778,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-estate-graph",
+   "downloads_all_time": 775,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/k-verify-benchmark-v1",
+   "downloads_all_time": 769,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/release-assets",
+   "downloads_all_time": 763,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/test-results",
+   "downloads_all_time": 763,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-second-brain-inrepo",
+   "downloads_all_time": 762,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-marketing-factbase",
+   "downloads_all_time": 751,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/proving-ground-54h-mesh",
+   "downloads_all_time": 737,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-skills-ci-evidence",
+   "downloads_all_time": 733,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-second-brain-frontier-candidates",
+   "downloads_all_time": 732,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/reasoning-puzzles-sft-v1",
+   "downloads_all_time": 728,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-frontier-sft-mix-v3",
+   "downloads_all_time": 711,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-frontier-sft-mix-v2",
+   "downloads_all_time": 709,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/creativity-sft-api-v2",
+   "downloads_all_time": 663,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-distill-4b-sft-v3-topup",
+   "downloads_all_time": 660,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/david-leads-data",
+   "downloads_all_time": 654,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/world-science-sft-v1",
+   "downloads_all_time": 654,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/a11oy-code-sft-v1",
+   "downloads_all_time": 653,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/brain-synthesized-corpus",
+   "downloads_all_time": 650,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/lean-invariants-sft-v1",
+   "downloads_all_time": 643,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/papers-sft-v1",
+   "downloads_all_time": 640,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/verticals-sft-v1",
+   "downloads_all_time": 636,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/physics-bench-micro",
+   "downloads_all_time": 630,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/kernel-receipt-regression-attn-maskmod-blockkv-v1",
+   "downloads_all_time": 628,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/ring-curriculum-v3",
+   "downloads_all_time": 626,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-training-receipts",
+   "downloads_all_time": 623,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/kamachikuna",
+   "downloads_all_time": 622,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/creativity-sft-v1",
+   "downloads_all_time": 618,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/acoustic-governance-sft-v1",
+   "downloads_all_time": 614,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/physics-curriculum-train",
+   "downloads_all_time": 614,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/estate-graph",
+   "downloads_all_time": 606,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/abstention-curriculum-v2",
+   "downloads_all_time": 603,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/prime-principle",
+   "downloads_all_time": 602,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-sft-mix-v2",
+   "downloads_all_time": 582,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/quant-curriculum-v1",
+   "downloads_all_time": 578,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/clinical-abstention-corpus-v1",
+   "downloads_all_time": 551,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/provenance-native-corpus-v1",
+   "downloads_all_time": 528,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-55-runs",
+   "downloads_all_time": 518,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-54-v2-receipts",
+   "downloads_all_time": 513,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/clinical-abstention-sft-api-v2",
+   "downloads_all_time": 501,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-reward-squad2-v1",
+   "downloads_all_time": 449,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-frontier-openprob-mix-v1",
+   "downloads_all_time": 447,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-x402-seller-card",
+   "downloads_all_time": 446,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/acoustic-governance-sft-api-v1",
+   "downloads_all_time": 432,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/killinchu-osint-sft-api-v1",
+   "downloads_all_time": 419,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/axiom-invariant-corpus-v1",
+   "downloads_all_time": 389,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-distill-abstention-v1",
+   "downloads_all_time": 378,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-distill-abstention-v1-sft",
+   "downloads_all_time": 374,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/world-science-sft-api-v1",
+   "downloads_all_time": 365,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/clinical-abstention-sft-api-v1",
+   "downloads_all_time": 364,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/estate-release-cards",
+   "downloads_all_time": 346,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-triang-20261116",
+   "downloads_all_time": 344,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/unified-corpus-v2",
+   "downloads_all_time": 325,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-repro-cd-20261116",
+   "downloads_all_time": 321,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-repro-ga-20261116",
+   "downloads_all_time": 320,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-sweep-ga-20261116",
+   "downloads_all_time": 320,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-sweep-cd-20261116",
+   "downloads_all_time": 318,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/wink-observatory-data",
+   "downloads_all_time": 318,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/muhu-methodology-sft-v3",
+   "downloads_all_time": 302,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/distill-runs",
+   "downloads_all_time": 288,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-mix-v5-all-estates",
+   "downloads_all_time": 283,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-evidence",
+   "downloads_all_time": 279,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-v2-abstention-curriculum",
+   "downloads_all_time": 275,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/certified-puzzles-frontier-bank-v1",
+   "downloads_all_time": 260,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/flagship55-sft-v1",
+   "downloads_all_time": 260,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-mix-v6-rebalanced",
+   "downloads_all_time": 260,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/rag-corpus-v2",
+   "downloads_all_time": 255,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/training-ledger",
+   "downloads_all_time": 245,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/muhu-methodology-sft-v2",
+   "downloads_all_time": 244,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-distill-sft-v1",
+   "downloads_all_time": 241,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-agentic-reflex-v1",
+   "downloads_all_time": 240,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-org-infra",
+   "downloads_all_time": 238,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/x402-protocol-sft-v1",
+   "downloads_all_time": 234,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-structure-eval-v1",
+   "downloads_all_time": 231,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/vgl-sft-certified-puzzles-v1",
+   "downloads_all_time": 229,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/puriq-market-data",
+   "downloads_all_time": 220,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/anatomy-brain-datasets-corpus-v1",
+   "downloads_all_time": 217,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/lutar-axioms-sft-v1",
+   "downloads_all_time": 214,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/stack400-runs",
+   "downloads_all_time": 214,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-frontier-sft-mix-v4",
+   "downloads_all_time": 214,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-scholars-sft-v1",
+   "downloads_all_time": 213,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/doctrine-corpus-v2",
+   "downloads_all_time": 212,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-distill-abstention-v2-sft",
+   "downloads_all_time": 207,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/cram-sudoku-extreme",
+   "downloads_all_time": 204,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/model-eval-receipts",
+   "downloads_all_time": 204,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-seismic-review-state",
+   "downloads_all_time": 201,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-distill-4b-sft-v1",
+   "downloads_all_time": 198,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/ring-curriculum-v1",
+   "downloads_all_time": 197,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-distill-4b-sft-v2",
+   "downloads_all_time": 195,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/estate-knowledge-corpus-v1",
+   "downloads_all_time": 191,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/lean-math-sft-v2",
+   "downloads_all_time": 185,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-papers-sft-v1",
+   "downloads_all_time": 181,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/cram-sudoku-extreme-sft-v1",
+   "downloads_all_time": 179,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-quant-abstention-sft-v1",
+   "downloads_all_time": 178,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-structure-sft-v3",
+   "downloads_all_time": 175,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/anatomy-alive-harness",
+   "downloads_all_time": 169,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/high-value-systems-corpus-v1",
+   "downloads_all_time": 168,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-structure-sft-v2",
+   "downloads_all_time": 168,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/cookie-dpo-v1",
+   "downloads_all_time": 166,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-yachay-research-v0",
+   "downloads_all_time": 163,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/lean-math-sft-v1",
+   "downloads_all_time": 162,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/specialized-domains-corpus-v1",
+   "downloads_all_time": 158,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-doubt-claude-v1",
+   "downloads_all_time": 157,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-scholars-sft-v2",
+   "downloads_all_time": 156,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/ring-curriculum-v2",
+   "downloads_all_time": 154,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/sorry-discharge-challenges-v1",
+   "downloads_all_time": 154,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/materials-frontier-sft-v1",
+   "downloads_all_time": 152,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/unified-corpus-v1",
+   "downloads_all_time": 152,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/doctrine-abstention-dpo-v2",
+   "downloads_all_time": 151,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/legacy-archive",
+   "downloads_all_time": 150,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/receipt-of-doubt-math-unanswerables-v1",
+   "downloads_all_time": 150,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-grounded-sft-v1",
+   "downloads_all_time": 149,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-scholar-eval-v1",
+   "downloads_all_time": 149,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/yuyay-v3-axis-labels-v1",
+   "downloads_all_time": 149,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/thesis-formula-index",
+   "downloads_all_time": 147,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/axiom-invariants-sft-v2",
+   "downloads_all_time": 146,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-heritage-eval-v1",
+   "downloads_all_time": 146,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/axiom-invariant-corpus-v2",
+   "downloads_all_time": 145,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-scholars-corpus-v1",
+   "downloads_all_time": 145,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-open-problems-v1",
+   "downloads_all_time": 145,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/axiom-invariants-sft-v1",
+   "downloads_all_time": 144,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-structure-sft-v1",
+   "downloads_all_time": 143,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-distill-abstention-v3-calib",
+   "downloads_all_time": 141,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/doctrine-abstention-dpo-v1",
+   "downloads_all_time": 139,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/vault-artifacts",
+   "downloads_all_time": 138,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-20-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-distill-v4-calib",
+   "downloads_all_time": 136,
+   "likes": 0,
+   "license_state": "LICENSED",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/estate-telemetry",
+   "downloads_all_time": 134,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/ring-ouro-curriculum-v1",
+   "downloads_all_time": 134,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-reward-pool-v2",
+   "downloads_all_time": 123,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-reward-pool-v2-1",
+   "downloads_all_time": 122,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/estate-receipts-index",
+   "downloads_all_time": 73,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-23-2026"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-runs",
+   "downloads_all_time": 3,
+   "likes": 0,
+   "license_state": "NO_LICENSE",
+   "readme_present": true,
+   "last_updated": "11-24-2026"
+  }
+ ]
+}
