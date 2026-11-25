@@ -1,0 +1,19 @@
+name: receipts-ruler-selftest
+
+on:
+  pull_request:
+    paths:
+      - "docs/model-receipts-ruler/**"
+  workflow_dispatch:
+
+jobs:
+  selftest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Ruler validator selftest (fail-closed, stdlib only)
+        run: |
+          python docs/model-receipts-ruler/verify_receipts_ruler.py --selftest
