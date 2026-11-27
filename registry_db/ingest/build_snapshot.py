@@ -136,10 +136,16 @@ def main(out_path, quiet=False):
         files = p.get("files") or []
         sd = [f for f in files if f["filename"].endswith(".tar.gz")]; wh = [f for f in files if f["filename"].endswith(".whl")]
         pick = (sd or sorted(wh, key=lambda f: f["filename"]) or [None])[0]
-        in_org = bool(p.get("org_linked"))
+        # Inventory org_linked means metadata mentions szl-holdings (GitHub URL etc.), not
+        # official PyPI org membership. When pypi_alignment_v3 (or similar) provides in_org, that wins.
+        att_pre = pypi_align.get(name) or {}
+        if "in_org" in att_pre:
+            in_org = bool(att_pre.get("in_org"))
+        else:
+            in_org = bool(p.get("org_linked"))
         life = "PRESENT" if in_org else "COVERAGE_GAP"
         facts = {"latest": p["latest"], "n_releases": p["n_releases"], "recent_versions": p.get("versions"), "summary": p.get("summary"), "license": p.get("license"), "author": p.get("author"),
-                 "project_urls": p.get("project_urls"), "org_linked": in_org, "ownership": "szl-holdings" if in_org else "UNKNOWN",
+                 "project_urls": p.get("project_urls"), "org_linked": bool(p.get("org_linked")), "in_org": in_org, "ownership": "szl-holdings" if in_org else "UNKNOWN",
                  "files": [{"filename": f["filename"], "sha256": f["sha256"], "upload_time": f.get("upload_time")} for f in files], "yanked": p.get("yanked")}
         aid = f"pypi_project:pypi/{name}"
         add(aid, "pypi_project", "pypi", name, pep503_name(name), "public", p["observed_at"], f"pypi/pypi_inventory.json#projects.{name}", facts,
