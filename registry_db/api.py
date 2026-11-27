@@ -13,7 +13,7 @@ def connect_ro(path):
 
 def _rows(cur): return [dict(r) for r in cur.fetchall()]
 
-def query_assets(conn, asset_type=None, alignment_state=None, visibility=None, name_like=None, lifecycle="present", limit=100, offset=0):
+def query_assets(conn, asset_type=None, alignment_state=None, visibility=None, name_like=None, lifecycle="PRESENT", limit=100, offset=0):
     limit = max(1, min(int(limit), 500)); offset = max(0, int(offset))
     where, args = [], []
     for col, v in (("asset_type", asset_type), ("alignment_state", alignment_state), ("visibility", visibility), ("lifecycle", lifecycle)):

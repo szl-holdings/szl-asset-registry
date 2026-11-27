@@ -48,5 +48,21 @@ def write_raw(root, hf_pin=H1, repo_head=H2, with_compare=True):
                      "home_page": None, "author": "a", "license": "Apache-2.0", "yanked": False, "org_linked": True, "observed_at": obs,
                      "files": [{"filename": "szl_core-0.2.0.tar.gz", "sha256": "e" * 64, "upload_time": obs}, {"filename": "szl_core-0.2.0-py3-none-any.whl", "sha256": "f" * 64, "upload_time": obs}]},
         "not-published": {"exists": False, "http": 404, "observed_at": obs}}})
+    _w(root, "hf/hf_source_bindings.json", {"items": {
+        "space:SZLHOLDINGS/core-space": {
+            "observed_at": obs,
+            "evidence_path": "hf/hf_source_bindings.json#items.space:SZLHOLDINGS/core-space",
+            "doc": {"schema": "szl.hf-card-source-binding/v1",
+                    "source": {"repository": "szl-holdings/core", "revision": hf_pin,
+                               "assets": {"app.py": {"bytes": 1, "sha256": "a" * 64}}},
+                    "target": {"repo_id": "SZLHOLDINGS/core-space", "repo_type": "space"}}
+        }
+    }})
     _w(root, "cloudflare/cf_inventory.json", {"observed_at": obs, "gaps": [], "accounts": [{"id": "acct", "name": "a"}], "zones": [],
-        "per_account": {"acct": {"workers_scripts": [{"id": "core-worker", "etag": "0" * 64, "modified_on": obs, "handlers": ["fetch"]}, {"id": "stray-worker", "etag": "1" * 64}], "d1": [], "r2_buckets": [], "kv": [], "tunnels": [], "access_apps": [], "workers_domains": []}}, "per_zone": {}})
+        "per_account": {"acct": {"workers_scripts": [{"id": "core-worker", "tag": "tag-core-worker", "etag": "0" * 64, "modified_on": obs, "handlers": ["fetch"]}, {"id": "stray-worker", "tag": "tag-stray-worker", "etag": "1" * 64}],
+                                 "d1": [], "r2_buckets": [], "kv": [], "tunnels": [], "access_apps": [], "workers_domains": [],
+                                 "pages_projects": [{"name": "szl-portal", "id": "page-uuid-1", "subdomain": "szl-portal.pages.dev", "production_branch": "main", "created_on": obs}]}}, "per_zone": {}})
+    # PEP 740 attested pin for szl-core (H1 ancestor of repo_head when they differ)
+    _w(root, "github/pypi_pin_compare.json", {f"szl-holdings/core@{hf_pin}": {"head": repo_head, "http_ok": True,
+        "result": {"status": "identical" if hf_pin == repo_head else "ahead", "ahead_by": 0 if hf_pin == repo_head else 1, "behind_by": 0},
+        "err": None, "observed_at": obs}})

@@ -19,13 +19,13 @@ class ApiMcpTest(unittest.TestCase):
 
     def test_query_filters_and_pagination(self):
         r = api.query_assets(self.ro, asset_type="hf_model"); self.assertEqual(r["total"], 3)
-        r = api.query_assets(self.ro, alignment_state="untraceable"); self.assertEqual({i["asset_id"] for i in r["items"]}, {"hf_model:SZLHOLDINGS/no-source", "cf_worker:cloudflare/stray-worker"})
+        r = api.query_assets(self.ro, alignment_state="UNTRACEABLE"); self.assertEqual({i["asset_id"] for i in r["items"]}, {"hf_model:SZLHOLDINGS/no-source", "cf_worker:cloudflare/stray-worker", "cf_pages_project:cloudflare/szl-portal"})
         r = api.query_assets(self.ro, limit=2); self.assertEqual((len(r["items"]), r["total"] > 2), (2, True))
         self.assertEqual(api.query_assets(self.ro, name_like="%")["total"], 0)       # LIKE wildcards are escaped
 
     def test_get_asset_returns_facts_with_evidence_and_bindings(self):
         a = api.get_asset(self.ro, "hf_space:SZLHOLDINGS/core-space")
-        self.assertEqual(a["asset"]["alignment_state"], "behind")
+        self.assertEqual(a["asset"]["alignment_state"], "BEHIND")
         self.assertTrue(all(f["evidence_path"] and f["observed_at"] for f in a["facts"].values()))
         self.assertEqual(a["bindings"][0]["pin_comparison"], "upstream_ahead")
         self.assertIsNone(api.get_asset(self.ro, "nope"))

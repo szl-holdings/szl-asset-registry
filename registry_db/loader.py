@@ -32,17 +32,20 @@ def load(db_path, snapshot, *, actor="ingest:registry_db.loader", reason=None, s
         obs_max = max([v for v in snapshot["meta"]["observed"].values() if v] or [started])
         conn.execute("INSERT INTO ingest_runs (run_id, source, started_at, snapshot_sha256, snapshot_path, tool_version, status) VALUES (?,?,?,?,?,?,?)",
                      (run_id, "all", started, sha, snapshot_path, __version__, "running"))
-        stats = {"assets_new": 0, "assets_updated": 0, "assets_absent": 0, "facts_changed": 0}
+        stats = {"assets_new": 0, "assets_updated": 0, "assets_absent": 0, "assets_coverage_gap": 0, "facts_changed": 0}
         seen = set()
         types_in_snapshot = {a["asset_type"] for a in snapshot["assets"]}
+        coverage_by_type = {c["asset_type"]: c for c in snapshot.get("coverage") or []}
         for a in snapshot["assets"]:
             seen.add(a["asset_id"])
             old = conn.execute("SELECT 1 FROM assets WHERE asset_id=?", (a["asset_id"],)).fetchone()
+            life = alignment.norm_lifecycle(a.get("lifecycle") or "PRESENT")
+            vis = alignment.norm_visibility(a["visibility"])
             conn.execute("""INSERT INTO assets (asset_id, asset_type, namespace, name, external_id, visibility, lifecycle, first_seen_at, last_seen_at, observed_at, evidence_path, run_id)
-                            VALUES (?,?,?,?,?,?, 'present', ?,?,?,?,?)
-                            ON CONFLICT(asset_id) DO UPDATE SET external_id=excluded.external_id, visibility=excluded.visibility, lifecycle='present',
+                            VALUES (?,?,?,?,?,?,?, ?,?,?,?,?)
+                            ON CONFLICT(asset_id) DO UPDATE SET external_id=excluded.external_id, visibility=excluded.visibility, lifecycle=excluded.lifecycle,
                               last_seen_at=excluded.last_seen_at, observed_at=excluded.observed_at, evidence_path=excluded.evidence_path, run_id=excluded.run_id""",
-                         (a["asset_id"], a["asset_type"], a["namespace"], a["name"], a["external_id"], a["visibility"], a["observed_at"], a["observed_at"], a["observed_at"], a["evidence_path"], run_id))
+                         (a["asset_id"], a["asset_type"], a["namespace"], a["name"], a["external_id"], vis, life, a["observed_at"], a["observed_at"], a["observed_at"], a["evidence_path"], run_id))
             stats["assets_updated" if old else "assets_new"] += 1
             for k, v in a["facts"].items():
                 before = conn.total_changes
@@ -60,10 +63,25 @@ def load(db_path, snapshot, *, actor="ingest:registry_db.loader", reason=None, s
                             ON CONFLICT(asset_id) DO UPDATE SET revision_kind=excluded.revision_kind, revision=excluded.revision, digest_sha256=excluded.digest_sha256, digest_filename=excluded.digest_filename,
                               observed_at=excluded.observed_at, evidence_path=excluded.evidence_path, run_id=excluded.run_id""",
                          (a["asset_id"], r["kind"], r["revision"], r["digest_sha256"], r["digest_filename"], a["observed_at"], a["evidence_path"], run_id))
-        # assets of a covered type that vanished: mark absent, never delete
-        for (aid, atype) in conn.execute("SELECT asset_id, asset_type FROM assets WHERE lifecycle='present'").fetchall():
+        # assets of a covered type that vanished: ABSENT only after an authoritative listing (fix #3).
+        # Visibility is last-observed (ruling: ABSENT rows carry Nov 19 / prior visibility, never a default).
+        # Alignment of an ABSENT asset is UNKNOWN (ruling (a)); a COVERAGE_GAP is also not comparable as missing.
+        for (aid, atype) in conn.execute("SELECT asset_id, asset_type FROM assets WHERE lifecycle IN ('PRESENT','COVERAGE_GAP','present')").fetchall():
             if atype in types_in_snapshot and aid not in seen:
-                conn.execute("UPDATE assets SET lifecycle='absent', observed_at=?, run_id=? WHERE asset_id=?", (obs_max, run_id, aid)); stats["assets_absent"] += 1
+                life = alignment.vanished_lifecycle(atype, coverage_by_type)
+                conn.execute("UPDATE assets SET lifecycle=?, observed_at=?, run_id=? WHERE asset_id=?", (life, obs_max, run_id, aid))
+                if life == "ABSENT":
+                    stats["assets_absent"] += 1
+                    a_reason = "ABSENT: no current revision; last known from prior observation"
+                    a_state = "UNKNOWN"
+                else:
+                    stats["assets_coverage_gap"] += 1
+                    a_reason = "COVERAGE_GAP: listing was not authoritative; not marked ABSENT"
+                    a_state = "UNKNOWN"
+                conn.execute("""INSERT INTO asset_alignment (asset_id, alignment_state, alignment_reason, best_upstream_id, observed_at, evidence_path, run_id) VALUES (?,?,?,?,?,?,?)
+                                ON CONFLICT(asset_id) DO UPDATE SET alignment_state=excluded.alignment_state, alignment_reason=excluded.alignment_reason, best_upstream_id=excluded.best_upstream_id,
+                                  observed_at=excluded.observed_at, evidence_path=excluded.evidence_path, run_id=excluded.run_id""",
+                             (aid, a_state, a_reason, None, obs_max, "ingest:vanished", run_id))
         # bindings + classification
         conn.execute("DELETE FROM source_bindings")      # derived table: rebuilt from the snapshot each run
         by_asset = {}
@@ -80,14 +98,17 @@ def load(db_path, snapshot, *, actor="ingest:registry_db.loader", reason=None, s
             pin_found = not (cs == "not_found")
             state, reason = alignment.classify_binding(b["grade"], pin if b["kind"] != "pyproject_in_repo" else None, b["upstream_head"], cmpv, pin_found)
             if b["kind"] == "pyproject_in_repo":
-                state, reason = "unknown", f"declared via pyproject name in repo; version pin {pin} vs PyPI latest: {cmpv}"
-            conn.execute("""INSERT INTO source_bindings (asset_id, upstream_asset_id, binding_kind, binding_grade, pinned_ref, upstream_head, pin_comparison, alignment_state, alignment_reason, observed_at, evidence_path, run_id)
-                            VALUES (?,?,?,?,?,?,?,?,?,?,?,?)""",
-                         (b["asset_id"], b["upstream_asset_id"], b["kind"], b["grade"], pin, b["upstream_head"], cmpv, state, reason, b["observed_at"], b["evidence_path"], run_id))
+                state, reason = "UNKNOWN", f"declared via pyproject name in repo; version pin {pin} vs PyPI latest: {cmpv}"
+            pin_digests = b.get("pin_asset_digests")
+            pin_digests_json = canon(pin_digests) if pin_digests is not None else None
+            conn.execute("""INSERT INTO source_bindings (asset_id, upstream_asset_id, binding_kind, binding_grade, pinned_ref, upstream_head, pin_comparison, alignment_state, alignment_reason, observed_at, evidence_path, run_id, pin_repository, pin_revision, pin_asset_digests, pin_target)
+                            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                         (b["asset_id"], b["upstream_asset_id"], b["kind"], b["grade"], pin, b["upstream_head"], cmpv, state, reason, b["observed_at"], b["evidence_path"], run_id,
+                          b.get("pin_repository"), b.get("pin_revision") or pin, pin_digests_json, b.get("pin_target")))
             by_asset.setdefault(b["asset_id"], []).append({"grade": b["grade"], "alignment_state": state, "alignment_reason": reason, "upstream_asset_id": b["upstream_asset_id"]})
         counts = {}
         for a in snapshot["assets"]:
-            state, reason, best = alignment.classify_asset(a["asset_type"], by_asset.get(a["asset_id"], []))
+            state, reason, best = alignment.classify_asset(a["asset_type"], by_asset.get(a["asset_id"], []), lifecycle=alignment.norm_lifecycle(a.get("lifecycle") or "PRESENT"))
             conn.execute("""INSERT INTO asset_alignment (asset_id, alignment_state, alignment_reason, best_upstream_id, observed_at, evidence_path, run_id) VALUES (?,?,?,?,?,?,?)
                             ON CONFLICT(asset_id) DO UPDATE SET alignment_state=excluded.alignment_state, alignment_reason=excluded.alignment_reason, best_upstream_id=excluded.best_upstream_id,
                               observed_at=excluded.observed_at, evidence_path=excluded.evidence_path, run_id=excluded.run_id""",

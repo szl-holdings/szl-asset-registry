@@ -6,8 +6,8 @@ import argparse, json, sys
 from . import api, __version__
 
 TOOLS = [
-    {"name": "registry_query", "description": "List registry assets. Filters: asset_type, alignment_state (aligned|behind|untraceable|unknown), visibility, name_like, limit<=500, offset.",
-     "inputSchema": {"type": "object", "properties": {"asset_type": {"type": "string"}, "alignment_state": {"type": "string", "enum": ["aligned", "behind", "untraceable", "unknown"]}, "visibility": {"type": "string"}, "name_like": {"type": "string"}, "limit": {"type": "integer"}, "offset": {"type": "integer"}}}},
+    {"name": "registry_query", "description": "List registry assets. Filters: asset_type, alignment_state (ALIGNED|BEHIND|DRIFTED|UNTRACEABLE|UNKNOWN), visibility, name_like, limit<=500, offset.",
+     "inputSchema": {"type": "object", "properties": {"asset_type": {"type": "string"}, "alignment_state": {"type": "string", "enum": ["ALIGNED", "BEHIND", "DRIFTED", "UNTRACEABLE", "UNKNOWN"]}, "visibility": {"type": "string"}, "name_like": {"type": "string"}, "limit": {"type": "integer"}, "offset": {"type": "integer"}}}},
     {"name": "registry_get_asset", "description": "One asset with facts (each with observed_at + evidence_path), own revision, source bindings, fact history and proposals.",
      "inputSchema": {"type": "object", "properties": {"asset_id": {"type": "string"}}, "required": ["asset_id"]}},
     {"name": "registry_alignment_summary", "description": "Counts of alignment_state per asset_type.", "inputSchema": {"type": "object", "properties": {}}},

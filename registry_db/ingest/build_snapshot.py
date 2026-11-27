@@ -2,6 +2,8 @@
 Pure function of the raw files (no network). snapshot sha256 is the idempotency key for loading."""
 import os, sys, json, hashlib, glob
 from .common import utcnow, RAW_ROOT
+from ..alignment import norm_visibility, pep503_name
+from ..source_binding import parse as parse_source_binding
 RAW = RAW_ROOT
 TOOL_VERSION = "0.1.0"
 ORG, HFORG = "szl-holdings", "SZLHOLDINGS"
@@ -17,6 +19,7 @@ def main(out_path, quiet=False):
     facts_f = jl("github/repo_facts.json"); refs = jl("github/candidate_bindings.json")["refs"]
     hf = jl("hf/hf_inventory.json"); hfc = jl("hf/hf_commits.json")["items"]
     cards = jl("hf/hf_card_pins.json")["items"] if os.path.exists(f"{RAW}/hf/hf_card_pins.json") else {}
+    sbinds = jl("hf/hf_source_bindings.json")["items"] if os.path.exists(f"{RAW}/hf/hf_source_bindings.json") else {}
     py = jl("pypi/pypi_inventory.json"); cf = jl("cloudflare/cf_inventory.json")
     cmp_ = jl("github/compare.json")["pairs"] if os.path.exists(f"{RAW}/github/compare.json") else {}
     amap = {a["id"]: a for a in jl("github/asset_map_szl-asset-registry.json")["assets"]}
@@ -24,8 +27,9 @@ def main(out_path, quiet=False):
     heads = {n: r["gql"]["defaultBranchRef"]["target"]["oid"] for n, r in gh["repos"].items()}
     assets = {}; bindings = []; crefs = []
 
-    def add(aid, atype, ns, name, ext, vis, obs, ev, facts, rev=None):
-        assets[aid] = {"asset_id": aid, "asset_type": atype, "namespace": ns, "name": name, "external_id": ext, "visibility": vis,
+    def add(aid, atype, ns, name, ext, vis, obs, ev, facts, rev=None, lifecycle="PRESENT"):
+        assets[aid] = {"asset_id": aid, "asset_type": atype, "namespace": ns, "name": name, "external_id": ext, "visibility": norm_visibility(vis),
+                       "lifecycle": lifecycle,
                        "observed_at": obs, "evidence_path": ev, "facts": {k: v for k, v in facts.items() if v is not None},
                        "revision": rev or {"kind": "none", "revision": None, "digest_sha256": None, "digest_filename": None}}
 
@@ -87,20 +91,60 @@ def main(out_path, quiet=False):
                 bindings.append({"asset_id": aid, "upstream_asset_id": f"github_repo:{ORG}/{am['source_repo']}", "kind": "declared_map", "grade": "declared", "pinned_ref": None, "upstream_head": heads.get(am["source_repo"]),
                                  "compare_status": None, "observed_at": hf_obs, "evidence_path": f"github/asset_map_szl-asset-registry.json#assets[{hid}](method={am.get('method')})"})
 
+    for key, rec in (sbinds or {}).items():
+        parsed = parse_source_binding(rec.get("doc") or rec)
+        if not parsed:
+            continue
+        hid = key.split(":", 1)[1] if ":" in key else key
+        name = hid.split("/", 1)[1] if "/" in hid else hid
+        kind = key.split(":", 1)[0] if ":" in key else "model"
+        atype = HF_TYPE.get(kind, "hf_model")
+        aid = f"{atype}:{HFORG}/{name}"
+        if aid not in assets:
+            continue
+        up = parsed["upstream_repo"]
+        if up not in heads:
+            continue
+        head = heads[up]
+        pin = parsed["pin_revision"]
+        cmp_key = f"{up}@{pin}...{head}"
+        status = "identical" if pin == head else (cmp_.get(cmp_key) or {}).get("status")
+        bindings.append({"asset_id": aid, "upstream_asset_id": f"github_repo:{ORG}/{up}", "kind": "source_binding_json", "grade": parsed["grade"],
+                         "pinned_ref": pin, "upstream_head": head, "compare_status": status,
+                         "pin_repository": parsed["pin_repository"], "pin_revision": pin,
+                         "pin_asset_digests": parsed["pin_asset_digests"], "pin_target": parsed["pin_target"],
+                         "observed_at": rec.get("observed_at") or hf_obs,
+                         "evidence_path": rec.get("evidence_path") or f"hf/hf_source_bindings.json#items.{key}"})
+
     # --- PyPI
+    # Leave out anatomy, ollm and the-grid (exist, not org-linked, no SZL attestation).
+    # Off-org packages published from szl-holdings repos: COVERAGE_GAP, ownership UNKNOWN.
+    # Ruling (c): BEHIND/ALIGNED only from a verified PEP 740 source-commit compare; else UNKNOWN.
+    PYPI_EXCLUDED = {"anatomy", "ollm", "the-grid"}
     py_obs = py.get("completed_at") or utcnow()
+    pypi_cmp = jl("github/pypi_pin_compare.json") if os.path.exists(os.path.join(RAW, "github/pypi_pin_compare.json")) else {}
+    pypi_align = {}
+    if os.path.exists(os.path.join(RAW, "pypi/pypi_alignment_v3.json")):
+        for pkg in (jl("pypi/pypi_alignment_v3.json").get("packages") or []):
+            if pkg.get("name"):
+                pypi_align[pkg["name"]] = pkg
     for name, p in sorted(py["projects"].items()):
         if not p.get("exists"): continue
+        if name in PYPI_EXCLUDED: continue
         szl_declared = [r for r in refs if r["kind"] == "pypi" and r["target_type"] == "project" and r["target_id"] == name and "#project.name" in r["evidence_path"]]
-        if not (p.get("org_linked") or szl_declared): continue   # third-party names mentioned in docs are not registry assets
+        if not (p.get("org_linked") or szl_declared or name in pypi_align): continue   # third-party names mentioned in docs are not registry assets
         files = p.get("files") or []
         sd = [f for f in files if f["filename"].endswith(".tar.gz")]; wh = [f for f in files if f["filename"].endswith(".whl")]
         pick = (sd or sorted(wh, key=lambda f: f["filename"]) or [None])[0]
+        in_org = bool(p.get("org_linked"))
+        life = "PRESENT" if in_org else "COVERAGE_GAP"
         facts = {"latest": p["latest"], "n_releases": p["n_releases"], "recent_versions": p.get("versions"), "summary": p.get("summary"), "license": p.get("license"), "author": p.get("author"),
-                 "project_urls": p.get("project_urls"), "org_linked": p.get("org_linked"), "files": [{"filename": f["filename"], "sha256": f["sha256"], "upload_time": f.get("upload_time")} for f in files], "yanked": p.get("yanked")}
+                 "project_urls": p.get("project_urls"), "org_linked": in_org, "ownership": "szl-holdings" if in_org else "UNKNOWN",
+                 "files": [{"filename": f["filename"], "sha256": f["sha256"], "upload_time": f.get("upload_time")} for f in files], "yanked": p.get("yanked")}
         aid = f"pypi_project:pypi/{name}"
-        add(aid, "pypi_project", "pypi", name, None, "public", p["observed_at"], f"pypi/pypi_inventory.json#projects.{name}", facts,
-            {"kind": "pypi_release", "revision": f"{name}=={p['latest']}", "digest_sha256": pick["sha256"] if pick else None, "digest_filename": pick["filename"] if pick else None})
+        add(aid, "pypi_project", "pypi", name, pep503_name(name), "public", p["observed_at"], f"pypi/pypi_inventory.json#projects.{name}", facts,
+            {"kind": "pypi_release", "revision": f"{name}=={p['latest']}", "digest_sha256": pick["sha256"] if pick else None, "digest_filename": pick["filename"] if pick else None},
+            lifecycle=life)
         for r in szl_declared:
             repo = r["repo"]
             if f"github_repo:{ORG}/{repo}" not in assets: continue
@@ -113,16 +157,54 @@ def main(out_path, quiet=False):
                 real = next((n for n in heads if n.lower() == repo), None)
                 if real: bindings.append({"asset_id": aid, "upstream_asset_id": f"github_repo:{ORG}/{real}", "kind": "reference_only", "grade": "referenced", "pinned_ref": None, "upstream_head": heads[real],
                                           "compare_status": None, "observed_at": p["observed_at"], "evidence_path": f"pypi/pypi_inventory.json#projects.{name}.project_urls.{k}"})
+        # PEP 740 attested source commit (ruling (c))
+        att = pypi_align.get(name) or {}
+        att_repo = att.get("attested_source_repo")
+        att_sha = att.get("attested_source_digest")
+        att_status = att.get("compare_status")
+        if not att_sha:
+            # fall back: match pypi_pin_compare keys to a known upstream repo for this package
+            candidates = []
+            if p.get("project_urls"):
+                for u in (p.get("project_urls") or {}).values():
+                    if u and f"github.com/{ORG}/" in u.lower():
+                        repo = u.lower().split(f"github.com/{ORG}/", 1)[1].split("/")[0].split("#")[0]
+                        real = next((n for n in heads if n.lower() == repo), None)
+                        if real: candidates.append(real)
+            for r in szl_declared:
+                if r["repo"] in heads: candidates.append(r["repo"])
+            for repo in dict.fromkeys(candidates):
+                prefix = f"{ORG}/{repo}@"
+                hits = [k for k in pypi_cmp if k.startswith(prefix)]
+                if hits:
+                    att_repo = f"{ORG}/{repo}"; att_sha = hits[0].split("@", 1)[1]
+                    rec = pypi_cmp[hits[0]]
+                    att_status = (rec.get("result") or {}).get("status") or rec.get("status")
+                    break
+        if att_sha and att_repo:
+            repo = att_repo.split("/")[-1]
+            if f"github_repo:{ORG}/{repo}" in assets:
+                head = heads.get(repo)
+                rec = pypi_cmp.get(f"{ORG}/{repo}@{att_sha}") or pypi_cmp.get(att.get("compare_key") or "") or {}
+                status = att_status or (rec.get("result") or {}).get("status") or rec.get("status")
+                if att_sha == head: status = "identical"
+                bindings.append({"asset_id": aid, "upstream_asset_id": f"github_repo:{ORG}/{repo}", "kind": "pep740_attestation", "grade": "verified_pin",
+                                 "pinned_ref": att_sha, "upstream_head": head, "compare_status": status,
+                                 "pin_repository": att_repo, "pin_revision": att_sha, "pin_target": name,
+                                 "observed_at": rec.get("observed_at") or att.get("observed_at") or py_obs,
+                                 "evidence_path": att.get("compare_key") and f"github/pypi_pin_compare.json#{att.get('compare_key')}" or f"github/pypi_pin_compare.json#{ORG}/{repo}@{att_sha}"})
 
     # --- Cloudflare
     cf_obs = cf["observed_at"]; acct = cf["accounts"][0]["id"] if cf["accounts"] else "unknown"
     pa = cf["per_account"].get(acct, {})
     for w in pa.get("workers_scripts", []):
+        # Ruling (d)/(e): name stays the script name; external_id is the immutable script tag; revision is the etag.
         aid = f"cf_worker:cloudflare/{w['id']}"
-        add(aid, "cf_worker", "cloudflare", w["id"], w["id"], "unknown", cf_obs, f"cloudflare/cf_inventory.json#per_account.workers_scripts[{w['id']}]",
-            {"etag": w.get("etag"), "modified_on": w.get("modified_on"), "created_on": w.get("created_on"), "handlers": w.get("handlers"), "compatibility_date": w.get("compatibility_date"),
+        etag = w.get("etag")
+        add(aid, "cf_worker", "cloudflare", w["id"], w.get("tag"), "UNKNOWN", cf_obs, f"cloudflare/cf_inventory.json#per_account.workers_scripts[{w['id']}]",
+            {"etag": etag, "script_tag": w.get("tag"), "modified_on": w.get("modified_on"), "created_on": w.get("created_on"), "handlers": w.get("handlers"), "compatibility_date": w.get("compatibility_date"),
              "last_deployed_from": w.get("last_deployed_from"), "has_assets": w.get("has_assets"), "usage_model": w.get("usage_model")},
-            {"kind": "worker_etag", "revision": w["id"], "digest_sha256": w.get("etag") if w.get("etag") and len(w["etag"]) == 64 else None, "digest_filename": "deployed-etag"})
+            {"kind": "worker_etag", "revision": etag, "digest_sha256": etag if etag and len(str(etag)) == 64 else None, "digest_filename": "deployed-etag"})
     def simple(items, atype, namer, extra, ev_key):
         for x in items:
             nm = namer(x)
@@ -133,6 +215,7 @@ def main(out_path, quiet=False):
     simple(pa.get("tunnels", []), "cf_tunnel", lambda x: x["name"], lambda x: {"status": x.get("status"), "created_at": x.get("created_at"), "conns_active_at": x.get("conns_active_at"), "tun_type": x.get("tun_type")}, "tunnels")
     simple(pa.get("access_apps", []), "cf_access_app", lambda x: f"{x.get('name')}:{x['id'][:8]}", lambda x: {"domain": x.get("domain"), "type": x.get("type"), "session_duration": x.get("session_duration")}, "access_apps")
     simple(pa.get("workers_domains", []), "cf_worker_domain", lambda x: x["hostname"], lambda x: {"service": x.get("service"), "zone_name": x.get("zone_name"), "environment": x.get("environment")}, "workers_domains")
+    simple(pa.get("pages_projects", []), "cf_pages_project", lambda x: x.get("name") or x["id"], lambda x: {"created_on": x.get("created_on"), "subdomain": x.get("subdomain"), "production_branch": x.get("production_branch")}, "pages_projects")
     for z in cf["zones"]:
         add(f"cf_zone:cloudflare/{z['name']}", "cf_zone", "cloudflare", z["name"], z["id"], "unknown", cf_obs, f"cloudflare/cf_inventory.json#zones[{z['name']}]", {"status": z.get("status"), "plan": z.get("plan")})
         pz = cf["per_zone"].get(z["id"], {})
@@ -173,9 +256,47 @@ def main(out_path, quiet=False):
         if k not in best or (b["pinned_ref"] and not best[k]["pinned_ref"]): best[k] = b
     bindings = [best[k] for k in sorted(best)]
 
+    # --- ABSENT HF models: last-known visibility and sha from the Nov 19 inventory (ruling (a))
+    # Only after a successful authoritative listing + direct GET 404. Never invent ABSENT from a failed listing.
+    gone_p = os.path.join(RAW, "hf/gone_probes.json")
+    nov19_p = os.environ.get("REGISTRY_NOV19_HF_INVENTORY") or os.path.join(RAW, "hf/nov19_hf_inventory.json")
+    if os.path.exists(gone_p) and os.path.exists(nov19_p):
+        gone = json.load(open(gone_p))
+        nov19 = json.load(open(nov19_p))
+        nov_items = {}
+        for kind, blk in (nov19.get("kinds") or {}).items():
+            for it in (blk.get("items") or []):
+                hid = it["id"] if kind != "collection" else it.get("slug") or it.get("id")
+                nov_items[f"{kind}:{hid}"] = (kind, it)
+        live_ids = {a["asset_id"] for a in assets.values()}
+        for key, probe in (gone.get("probes") or {}).items():
+            if probe.get("http") != 404:
+                continue
+            rec = nov_items.get(key)
+            if not rec:
+                continue
+            kind, it = rec
+            atype = HF_TYPE.get(kind)
+            if not atype:
+                continue
+            hid = it["id"]
+            name = hid.split("/", 1)[1] if "/" in hid else hid
+            aid = f"{atype}:{HFORG}/{name}"
+            if aid in live_ids:
+                continue
+            private = bool(it.get("private"))
+            vis = "private" if private else "public"
+            facts = {"sha": it.get("sha"), "last_modified": it.get("lastModified") or it.get("updatedAt"),
+                     "last_known_from": "nov19_hf_inventory", "gone_http": 404, "tags": sorted(it.get("tags") or []) or None,
+                     "license": (it.get("cardData") or {}).get("license")}
+            rev = {"kind": "hf_revision", "revision": it.get("sha"), "digest_sha256": None, "digest_filename": None} if it.get("sha") else None
+            add(aid, atype, HFORG, name, it.get("_id") or it.get("id"), vis, gone.get("observed_at") or hf_obs,
+                f"hf/gone_probes.json#probes.{key};hf/nov19_hf_inventory.json#kinds.{kind}.items[{hid}]", facts, rev, lifecycle="ABSENT")
+
     # --- coverage
     from collections import Counter
-    cnt = Counter(a["asset_type"] for a in assets.values())
+    # ABSENT historical rows are not part of the current listing; coverage ingested counts live rows only.
+    cnt = Counter(a["asset_type"] for a in assets.values() if a.get("lifecycle") != "ABSENT")
     cand_py = set(py["projects"]); exist_py = {n for n, p in py["projects"].items() if p.get("exists")}
     cov = [{"source": "github", "asset_type": "github_repo", "expected": gq["totalCount"], "ingested": cnt["github_repo"], "detail": {"rest": len(enum["repos"]), "graphql_totalCount": gq["totalCount"], "gh_repo_list": len(jl("github/enum_ghcli.json")["repos"]),
             "ls_remote_heads_match": sum(1 for r in gh["repos"].values() if (r["ls_remote"] or {}).get("HEAD") == r["gql"]["defaultBranchRef"]["target"]["oid"]), "private_content_not_scanned": sorted(n for n, r in gh["repos"].items() if r["gql"]["isPrivate"]), "visibility_gaps": []},
@@ -187,12 +308,27 @@ def main(out_path, quiet=False):
     cov.append({"source": "pypi", "asset_type": "pypi_project", "expected": len(cand_py), "ingested": cnt["pypi_project"], "detail": {"candidates": len(cand_py), "exist_on_pypi": len(exist_py), "not_found_404": sorted(n for n, p in py["projects"].items() if p.get("exists") is False)[:200],
             "missing_reason": "not registry assets: 404 on PyPI (unpublished/private/never-published) or third-party names mentioned in repo text", "third_party_existing_excluded": sorted(n for n in exist_py if f"pypi_project:pypi/{n}" not in assets),
             "discovery": "candidate names from szl-holdings repo text/pyproject; PyPI HTML/maintainer pages are behind a bot challenge and were not used"}, "evidence": "pypi/pypi_inventory.json"})
-    for atype, key in (("cf_worker", "workers_scripts"), ("cf_d1", "d1"), ("cf_r2", "r2_buckets"), ("cf_kv", "kv"), ("cf_tunnel", "tunnels"), ("cf_access_app", "access_apps"), ("cf_worker_domain", "workers_domains")):
+    for atype, key in (("cf_worker", "workers_scripts"), ("cf_d1", "d1"), ("cf_r2", "r2_buckets"), ("cf_kv", "kv"), ("cf_tunnel", "tunnels"), ("cf_access_app", "access_apps"), ("cf_worker_domain", "workers_domains"), ("cf_pages_project", "pages_projects")):
         cov.append({"source": "cloudflare", "asset_type": atype, "expected": len(pa.get(key, [])), "ingested": cnt[atype], "detail": {}, "evidence": f"cloudflare/cf_inventory.json#per_account.{key}"})
     cov.append({"source": "cloudflare", "asset_type": "cf_zone", "expected": len(cf["zones"]), "ingested": cnt["cf_zone"], "detail": {"gaps": cf["gaps"]}, "evidence": "cloudflare/cf_inventory.json#zones"})
     cov.append({"source": "cloudflare", "asset_type": "cf_dns_record", "expected": sum(len(v.get("dns_records", [])) for v in cf["per_zone"].values()), "ingested": cnt["cf_dns_record"], "detail": {}, "evidence": "cloudflare/cf_inventory.json#per_zone"})
     cov.append({"source": "cloudflare", "asset_type": "cf_route", "expected": sum(len(v.get("worker_routes", [])) for v in cf["per_zone"].values()), "ingested": cnt["cf_route"], "detail": {}, "evidence": "cloudflare/cf_inventory.json#per_zone"})
-    for c in cov: c["missing"] = max(0, c["expected"] - c["ingested"]) if c["asset_type"] != "pypi_project" else len(cand_py) - len(exist_py) + len([n for n in exist_py if f"pypi_project:pypi/{n}" not in assets])
+    for c in cov:
+        c["missing"] = max(0, c["expected"] - c["ingested"]) if c["asset_type"] != "pypi_project" else len(cand_py) - len(exist_py) + len([n for n in exist_py if f"pypi_project:pypi/{n}" not in assets])
+        if c["asset_type"] == "pypi_project":
+            c["listing_authoritative"] = False
+            c.setdefault("detail", {})["listing_authoritative"] = False
+            c["detail"]["listing_note"] = "PyPI discovery is a bounded candidate list, not an authoritative org inventory"
+        elif c["source"] == "github":
+            d = c.get("detail") or {}
+            c["listing_authoritative"] = (c["expected"] == c["ingested"] and c["missing"] == 0
+                and d.get("rest") == d.get("graphql_totalCount") == d.get("gh_repo_list") == c["expected"]
+                and not d.get("visibility_gaps"))
+        elif c["source"] == "cloudflare":
+            c["listing_authoritative"] = (c["expected"] == c["ingested"] and c["missing"] == 0 and not (cf.get("gaps") or []))
+        else:
+            c["listing_authoritative"] = c["expected"] == c["ingested"] and c["missing"] == 0
+        c.setdefault("detail", {})["listing_authoritative"] = c["listing_authoritative"]
 
     snap = {"meta": {"schema_version": 1, "tool_version": TOOL_VERSION, "observed": {"github": gh.get("completed_at"), "hf": hf_obs, "pypi": py_obs, "cloudflare": cf_obs},
                      "raw_sha256": {p: sha_file(p) for p in sorted(os.path.relpath(x, RAW) for x in glob.glob(f"{RAW}/*/*.json"))}},

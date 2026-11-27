@@ -1,7 +1,7 @@
-# SZL asset registry — design (v0.1, local candidate)
+# SZL asset registry — design (v0.1 + additive 0004)
 
-Status: **proposal + locally tested code. Not deployed. No remote D1 database exists for it.**
-Owner: Qullqa (database). Architecture review: Chakana. Approval needed before any remote create/migrate/write.
+Status: **locally tested schema, migrations and ingest. Remote D1 create is a separate approved step, not performed by this document.**
+Owner: Qullqa (database). Architecture review: Chakana (fixes 1–3). Census alignment: Yachay schema delta + Qullqa rulings a–e.
 
 ## 1. Purpose
 One registry that ties every asset in the estate to its source and says how sure we are:
@@ -23,6 +23,7 @@ Creating the D1 database and any remote migration need Stephen's separate yes. N
 `0001_core` journal `registry_migrations`, `ingest_runs`, `assets`, `candidate_refs`
 `0002_facts_bindings` `asset_facts` (+ append-only `asset_fact_history` via trigger), `asset_revisions`, `source_bindings`, `asset_alignment`, `coverage_reports`
 `0003_receipts_proposals` hash-chained `receipts`, `proposals`, delete guard, views
+`0004_chakana_alignment_lifecycle` (additive; 0001–0003 files are unchanged) adds `cf_pages_project`, uppercase alignment including `DRIFTED`, lifecycle `PRESENT|ABSENT|COVERAGE_GAP`, visibility token `UNKNOWN`, `source_binding_json` + `pep740_attestation` binding kinds, and `pin_*` columns on `source_bindings`.
 
 **Stable ids.** `asset_id = "<asset_type>:<namespace>/<name>"` (`github_repo:szl-holdings/a11oy`, `hf_space:SZLHOLDINGS/killinchu`,
 `pypi_project:pypi/szl-guardrail-receipt`, `cf_worker:cloudflare/szl-alert-relay`). `external_id` keeps the provider id (GitHub databaseId, HF `_id`, CF uuid) so a rename is detectable.
@@ -34,26 +35,31 @@ Upserts are `INSERT ... ON CONFLICT DO UPDATE` on those keys; re-ingesting the s
 | GitHub repo | `git_sha` | default-branch head sha (GraphQL, cross-checked with `git ls-remote`) | — |
 | HF repo | `hf_revision` | Hub repo sha | — |
 | PyPI project | `pypi_release` | `name==version` | sha256 of the sdist (else first wheel) + filename |
-| Cloudflare Worker | `worker_etag` | script id | deployed etag |
+| Cloudflare Worker | `worker_etag` | deployed etag (ruling (e)) | etag; `external_id` is the immutable script tag (ruling (d)), name stays the script name |
 
 **Downstream → upstream binding (`source_bindings`)**, one row per (asset, upstream repo, kind), with a *grade*:
-- `verified_pin`: HF sync/publish commit title `szl-holdings/<repo>@<40-hex>` (machine-written by the publisher)
-- `declared`: card text pin, `asset_map.json` (this repo), pyproject name in a repo, wrangler `name`/`database_name` in a repo
+- `verified_pin`: HF sync/publish commit title `szl-holdings/<repo>@<40-hex>`; `szl-source-binding.json` with a 40-hex `source.revision` (`binding_kind=source_binding_json`, Chakana fix #1); PEP 740 attested source commit compared to default-branch HEAD (`pep740_attestation`, ruling (c))
+- `declared`: card text pin, `asset_map.json` (this repo), pyproject name in a repo, wrangler `name`/`database_name` in a repo, or a source-binding file whose revision is not 40-hex
 - `referenced`: a repo's text mentions the asset
 `pin_comparison` (identical / upstream_ahead / pin_ahead / diverged / not_compared / no_pin) comes from the GitHub compare API (`pin...head`).
+Pin columns from `szl-source-binding.json`: `pin_repository` ← `source.repository`, `pin_revision` ← `source.revision`, `pin_asset_digests` ← `source.assets.*.sha256`, `pin_target` ← `target.repo_id` / `destination.repoId`.
 
-**Alignment (`asset_alignment`, never NULL; `UNKNOWN` is explicit)** — strict on purpose:
+**Alignment (`asset_alignment`, never NULL; values uppercase `ALIGNED|BEHIND|DRIFTED|UNTRACEABLE|UNKNOWN`)** — strict on purpose:
 | situation | state |
 |---|---|
-| GitHub repo | `aligned` (authority) |
-| verified pin == head | `aligned` |
-| verified pin is an ancestor of head | `behind` |
-| verified pin ahead / diverged / not compared | `unknown` |
-| verified pin sha not found upstream | `untraceable` |
-| only declared / referenced evidence | `unknown` (reason records what was compared) |
-| built artifact (HF model/dataset/space/kernel, PyPI, Worker) with no binding at all | `untraceable` |
-| bucket, collection, zone, DNS, route, D1, R2, KV, tunnel, Access app | `unknown` ("no source build by design") |
-Only a machine-verifiable pin can yield `aligned`/`behind`. A card claiming a source does not.
+| GitHub repo | `ALIGNED` (authority) |
+| verified pin == head | `ALIGNED` |
+| verified pin is an ancestor of head | `BEHIND` |
+| verified pin ahead of head / diverged | `DRIFTED` (Chakana fix #2) |
+| verified pin not compared | `UNKNOWN` |
+| verified pin sha not found upstream | `UNTRACEABLE` |
+| only declared / referenced evidence, including a card that names a source but was not verified | `UNKNOWN` (ruling (b)) |
+| built artifact (HF model/dataset/space/kernel, PyPI, Worker, Pages) checked and found to have no source anywhere (pin, card, config, reference) | `UNTRACEABLE` (ruling (b)) |
+| bucket, collection, zone, DNS, route, D1, R2, KV, tunnel, Access app, worker domain | `UNKNOWN` ("no source build by design") |
+| `lifecycle=ABSENT` (asset no longer exists) | `UNKNOWN` — cannot be compared (ruling (a)); visibility is the last observed value, never a default |
+Only a machine-verifiable pin can yield `ALIGNED` / `BEHIND` / `DRIFTED`. A card claiming a source does not.
+
+**Lifecycle (Chakana fix #3):** `PRESENT` / `ABSENT` / `COVERAGE_GAP`. `ABSENT` only after a successful authoritative listing of that type (for HF models: listing + direct GET 404). Private/unreadable, or a listing that did not complete, is `COVERAGE_GAP`, never `ABSENT`. Off-org PyPI packages published from `szl-holdings` repos are `COVERAGE_GAP` with `ownership=UNKNOWN` until membership is confirmed. `anatomy`, `ollm` and `the-grid` are excluded (no org membership, no SZL attestation). Visibility token `UNKNOWN` is uppercase when the provider has no flag; `public` / `private` / `internal` stay lowercase.
 
 **Facts** (`asset_facts`, PK asset+key): `value_json`, `observed_at`, `evidence_path` (a path into the evidence bundle, e.g.
 `github/repo_details.json#repos.a11oy`), `run_id`. A changed value writes `asset_fact_history` (trigger). Agent-supplied facts live under `agent.*` and are never removed by ingest.
@@ -72,7 +78,7 @@ contiguous `seq`, `prev_hash == previous entry_hash` (genesis = 64 zeros), no UP
 **What it does not prove:** that the claim was true, or who held the key (no signature yet; signing needs Stephen's approval per the mandate).
 
 Actions: `ingest.run`, `proposal.create|accept|reject`, `asset.tombstone`, `asset.delete`, `chain.verify`.
-**Never delete without a receipt:** `DELETE FROM assets` aborts unless the newest receipt is `asset.delete` for exactly that asset (trigger). Normal disappearance = `lifecycle='absent'`.
+**Never delete without a receipt:** `DELETE FROM assets` aborts unless the newest receipt is `asset.delete` for exactly that asset (trigger). Normal disappearance = `lifecycle='ABSENT'` (or `COVERAGE_GAP` if the listing was not authoritative).
 
 ## 6. Read API and MCP (read-only binding)
 `registry_db/api.py` (read-only SQLite handle) and `registry_db/mcp_server.py` (JSON-RPC over stdio, stdlib):
@@ -98,10 +104,16 @@ Remote runbook (**not executed**; each step needs approval): (1) `wrangler d1 ex
 `szl-holdings/szl-asset-registry` (existing, public, Apache-2.0, Python, default branch `main`): it already holds the file-based predecessor — `asset_map.json` (HF asset → GitHub source repo, fail-closed) and `tools/build_asset_map.py`. The registry is the database form of the same contract and consumes `asset_map.json` as a `declared` input.
 Not `agents-studio` (private-turned-public product repo with an unrelated D1), not `a11oy`/`platform` (product/runtime repos). The PR adds only a new `registry_db/` package and `tests/test_registry_db_*.py`; it adds no workflow, secret or deploy path and changes no existing file. A new repo is not needed.
 
-## 10. Known limits (v0.1)
-- Alignment of PyPI/Workers is `unknown` for lack of provenance: PyPI JSON gives no commit pin; Worker deployments report an etag, not a git sha. Closing this needs publisher attestations (PEP 740) / `SOURCE_REVISION` vars read back — a future ingest source.
-- HF README card pins are claims at write time; they are `declared`, never `aligned`.
+## 10. Known limits (v0.1) and v0.2 leftovers
+Closed in 0004 / this ingest: `DRIFTED`; `COVERAGE_GAP`; `szl-source-binding.json` pins; uppercase `UNKNOWN`; PEP 740 attested commits as `verified_pin` when a compare is available; Worker `external_id` = script tag and revision = etag.
+
+Still v0.2 (not in this change):
+- Worker `SOURCE_REVISION` (or similar) as a verified git pin — today the revision is the deployed etag only.
+- Receipt signing (Tinkuy / DC IN lane; needs Stephen).
+- Deployed read API / MCP Worker, scheduled ingest, or any remote snapshot load.
+- Complete GitHub audit-log pagination (first page of 100 `repo.*` events only).
+- PyPI maintainer-page discovery (HTML is behind a bot challenge; not bypassed).
+- HF README card pins remain `declared`, never `ALIGNED`.
 - Facts removed upstream are deleted from `asset_facts` with a history row (except `agent.*`).
 - `source_bindings` and `candidate_refs` are derived and rebuilt each run; accepted agent proposals persist as `agent.*` facts, not as bindings.
-- GitHub audit-log events are first page only (100 newest `repo.*`). Org repo visibility history beyond that is not complete.
-- No signature on receipts; no deployed Worker; no scheduler. Not operational.
+- Not operational until a remote restore drill is measured.

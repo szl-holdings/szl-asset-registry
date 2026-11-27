@@ -47,12 +47,12 @@ class MigrationGuardTest(unittest.TestCase):
 
     def test_failed_migration_rolls_back_and_leaves_journal_unchanged(self):
         d = self.mig_copy()
-        open(os.path.join(d, "0004_bad.sql"), "w").write("CREATE TABLE ok_t (a INTEGER);\nINSERT INTO nonexistent_table VALUES (1);\n")
+        open(os.path.join(d, "0005_bad.sql"), "w").write("CREATE TABLE ok_t (a INTEGER);\nINSERT INTO nonexistent_table VALUES (1);\n")
         open(os.path.join(d, "MANIFEST.sha256"), "w").write(migrate.manifest_text(migrate.load_files(d)))
         with self.assertRaises(sqlite3.Error):
             migrate.apply(self.db, mig_dir=d)
         c = sqlite3.connect(self.db)
-        self.assertEqual(c.execute("SELECT MAX(id) FROM registry_migrations").fetchone()[0], 3)
+        self.assertEqual(c.execute("SELECT MAX(id) FROM registry_migrations").fetchone()[0], 4)
         self.assertIsNone(c.execute("SELECT 1 FROM sqlite_master WHERE name='ok_t'").fetchone())
 
     def test_sql_is_d1_portable(self):
@@ -61,6 +61,31 @@ class MigrationGuardTest(unittest.TestCase):
             low = "\n".join(l.split("--")[0] for l in f["sql"].lower().splitlines())
             for bad in ("sha256(", "attach ", "vacuum", "load_extension"):
                 self.assertNotIn(bad, low, f["name"])
+
+
+    def test_0001_0003_checksums_are_frozen(self):
+        want = {
+            "0001_core.sql": "ba9e8fa1900519f858cf73830d4f0495a882632f4879bfec080a47433a250eae",
+            "0002_facts_bindings.sql": "60ddc615f7d00b6ad0c2329c71bf3e1856f6eeb95cd6ddb9527fb922d919f70a",
+            "0003_receipts_proposals.sql": "1355266c57e79a3316f045fca452cc143cef0a3c859c09279f656b9ce0e44331",
+        }
+        by = {f["name"]: f["sha256"] for f in migrate.load_files()}
+        for name, sha in want.items():
+            self.assertEqual(by[name], sha, name)
+        self.assertIn("0004_chakana_alignment_lifecycle.sql", by)
+
+    def test_0004_adds_pages_drifted_gap_and_pin_columns(self):
+        migrate.apply(self.db)
+        c = sqlite3.connect(self.db)
+        sql = c.execute("SELECT sql FROM sqlite_master WHERE name='assets'").fetchone()[0]
+        self.assertIn("cf_pages_project", sql)
+        self.assertIn("COVERAGE_GAP", sql)
+        self.assertIn("UNKNOWN", sql)
+        sql = c.execute("SELECT sql FROM sqlite_master WHERE name='asset_alignment'").fetchone()[0]
+        self.assertIn("DRIFTED", sql)
+        cols = [r[1] for r in c.execute("PRAGMA table_info(source_bindings)")]
+        for col in ("pin_repository", "pin_revision", "pin_asset_digests", "pin_target"):
+            self.assertIn(col, cols)
 
 if __name__ == "__main__":
     unittest.main()

@@ -64,7 +64,9 @@ def apply(db_path, mig_dir=MIG_DIR, now=None):
     files = load_files(mig_dir); check_manifest(files, mig_dir)
     conn = sqlite3.connect(db_path, isolation_level=None)
     try:
-        conn.execute("PRAGMA foreign_keys = ON")
+        # Foreign keys are off while applying: 0004 rebuilds tables to replace CHECK
+        # constraints, and SQLite ignores PRAGMA foreign_keys changes inside a transaction.
+        conn.execute("PRAGMA foreign_keys = OFF")
         k = verify(conn, files)
         for f in files[k:]:
             ts = now or datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -76,6 +78,10 @@ def apply(db_path, mig_dir=MIG_DIR, now=None):
             except Exception:
                 if conn.in_transaction: conn.execute("ROLLBACK")
                 raise
+        conn.execute("PRAGMA foreign_keys = ON")
+        violations = conn.execute("PRAGMA foreign_key_check").fetchall()
+        if violations:
+            raise MigrationError(f"foreign key check failed after apply: {violations[:5]}")
         return verify(conn, files)
     finally:
         conn.close()
