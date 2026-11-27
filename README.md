@@ -2,14 +2,15 @@
 
 Machine-readable **legacy source-hint** map for Hugging Face assets in the SZLHOLDINGS org. A matching repo name, shared README URL, or curated override is discovery metadata; it does **not** independently establish the GitHub checkout that produced an asset's model weights, dataset, or deployed Space. Source binding requires independently verified immutable revisions and artifact digests. The separate [producer-evidence audit](docs/PRODUCER_PROVENANCE_VS_CARD_LINKS.md) preserves that distinction before any production claim.
 
-## Status (committed asset_map.json snapshot, reconciled 2026-11-22)
+## Status (committed asset_map.json snapshot, reconciled 2026-11-27)
 
-- 666 HF assets censused (414 models, 173 datasets, 79 spaces; includes private)
-- 653 with **legacy repository-link mappings**, not verified producing-source identities (66 by repo-name match, 513 by GitHub link/card, 74 by override). Of these, 491 point to the `estate-cards` card generator and require producer-specific review.
-- 13 UNMAPPED - declared honestly, never guessed; queue with reasons in data/unresolved_assets.json
+- 397 HF assets censused (134 models, 183 datasets, 80 spaces; includes private; census snapshot data/hf_census_20261127.json)
+- 356 with **legacy repository-link mappings**, not verified producing-source identities (61 by repo-name match, 146 by GitHub link/card, 149 by override). Of these, 120 point to the `estate-cards` card generator and require producer-specific review.
+- 41 UNMAPPED - declared honestly, never guessed; queue with reasons in data/unresolved_assets.json
 - Historical 2026-11-20 evidence sweep: 73 backlog assets re-audited against their README cards; 63 case-cards carry an explicit canonical generator URL (github.com/szl-holdings/estate-cards weaver v0.1.0) and were mapped via evidence-cited overrides; 10 remain fail-closed (no unique canonical source URL).
+- 2026-11-27 OUROBOROS pass-1 rebuild: fresh org census (397 assets; 280 repos retired since 2026-11-20 are no longer censused), 149 evidence-cited overrides (75 new), 66 census-gap models wired to canonical source repos; reasons ledger refreshed fail-closed; 2 stale receipts retired with their deleted repos.
 
-**Evidence scope:** These are the counts of the committed metadata file `asset_map.json` (SHA-256 `a0622be6cf6bb6b24f9c400a467ec779de56b8d8468c901c2e25fdeba93951ec`), not a live authenticated Hugging Face census. Legacy repository links are **not** verified producer lineage. The historical November 20 sweep describes a past intake, not the current unmapped denominator.
+**Evidence scope:** These are the counts of the committed metadata file `asset_map.json` (SHA-256 `018000f44f5ecaab31068c7bac3195b9abd7658fc62dae7338454465918bbceb`), not a live authenticated Hugging Face census. Legacy repository links are **not** verified producer lineage. The historical November 20 sweep describes a past intake, not the current unmapped denominator.
 
 ## Source-binding evidence qualification (2026-11-20)
 
@@ -27,7 +28,7 @@ The output is exclusive-create and should be retained with the source map commit
 2. Card evidence: the asset's own README.md on the Hub is fetched and scanned for github.com/szl-holdings/ links; a link to an existing repo is accepted.
 3. Otherwise the asset is recorded UNMAPPED with a family tag. This prevents unsupported hint generation; it does not certify a found link as the actual producer.
 
-## Historical unmapped gap ledger (129, prior sweep; superseded by the 13-row current unmapped count)
+## Historical unmapped gap ledger (129, prior sweep; superseded by the 41-row current unmapped count)
 
 | Family | Count | Meaning |
 | --- | --- | --- |

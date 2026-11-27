@@ -560,14 +560,14 @@ class DriftGateTests(unittest.TestCase):
             self.skipTest("real seed not present yet")
         exit_code, verdict = self.run_gate_real()
         self.assertEqual(exit_code, 0)
-        self.assertEqual(verdict["asset_total"], 666)
+        self.assertEqual(verdict["asset_total"], 397)
         self.assertEqual(verdict["pins_total"], 42)
         self.assertEqual(verdict["pins_valid"], 42)
-        self.assertEqual(verdict["backlog_total"], 624)
+        self.assertEqual(verdict["backlog_total"], 355)
         self.assertEqual(verdict["defects"], [])
 
     def test_real_map_all_six_twin_keys_pinnable(self):
-        """Kimi vector 16: all three real twin pairs pin independently."""
+        """Kimi vector 16: both real cross-type twin pairs pin independently."""
         if not REAL_PINS.exists():
             self.skipTest("real seed not present yet")
         assets = json.loads(REAL_MAP.read_text(encoding="utf-8"))["assets"]
@@ -576,8 +576,6 @@ class DriftGateTests(unittest.TestCase):
         }
         doc = json.loads(REAL_PINS.read_text(encoding="utf-8"))
         twin_keys = [
-            "models/SZLHOLDINGS/SZLHOLDINGS",
-            "datasets/SZLHOLDINGS/SZLHOLDINGS",
             "models/SZLHOLDINGS/szl-khipu",
             "spaces/SZLHOLDINGS/szl-khipu",
             "datasets/SZLHOLDINGS/governed-agent-bench",
