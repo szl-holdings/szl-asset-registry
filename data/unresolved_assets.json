@@ -1,83 +1,293 @@
 {
-  "generated": "2026-11-20",
-  "policy": "map only with explicit canonical szl-holdings repo URL or unique exact match; everything else stays unmapped (fail-closed)",
-  "unresolved": [
-    {
-      "id": "SZLHOLDINGS/salad-flagship55-v1",
-      "type": "models",
-      "urls": [],
-      "reason": "no unique canonical szl-holdings source URL; fail-closed",
-      "quotes": [
-        "frontier-55-runs",
-        "frontier-55-runs",
-        "frontier-54-runs",
-        "frontier-54-runs",
-        "szl-holdings.github.io",
-        "a11oy"
-      ]
-    },
-    {
-      "id": "SZLHOLDINGS/salad-ring-ouro-l12",
-      "type": "models",
-      "urls": [],
-      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
-      "quotes": []
-    },
-    {
-      "id": "SZLHOLDINGS/salad-ring-ouro-l13",
-      "type": "models",
-      "urls": [],
-      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
-      "quotes": []
-    },
-    {
-      "id": "SZLHOLDINGS/salad-ring-ouro-l15",
-      "type": "models",
-      "urls": [],
-      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
-      "quotes": []
-    },
-    {
-      "id": "SZLHOLDINGS/salad-ring-ouro-l16",
-      "type": "models",
-      "urls": [],
-      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
-      "quotes": []
-    },
-    {
-      "id": "SZLHOLDINGS/salad-ring-ouro-l17",
-      "type": "models",
-      "urls": [],
-      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
-      "quotes": []
-    },
-    {
-      "id": "SZLHOLDINGS/salad-ring-ouro-l18",
-      "type": "models",
-      "urls": [],
-      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
-      "quotes": []
-    },
-    {
-      "id": "SZLHOLDINGS/salad-governed-distill-27b-qlora-r1",
-      "type": "models",
-      "urls": [],
-      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
-      "quotes": []
-    },
-    {
-      "id": "SZLHOLDINGS/salad-ring-ouro-l13b",
-      "type": "models",
-      "urls": [],
-      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
-      "quotes": []
-    },
-    {
-      "id": "SZLHOLDINGS/szl-agentic-reflex-v1",
-      "type": "datasets",
-      "urls": [],
-      "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
-      "quotes": []
-    }
-  ]
+ "generated": "2026-11-27",
+ "policy": "map only with explicit canonical szl-holdings repo URL or unique exact match; everything else stays unmapped (fail-closed)",
+ "unresolved": [
+  {
+   "id": "SZLHOLDINGS/SZL-Acoustic-Governance-1.7B",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Doctrine-Abstain-1.7B",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Lean-Invariants-1.7B",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Math-Honesty-1.7B",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Measurement-Honesty-1.7B",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Ouroboros-Auditor-1.7B",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Paper-Reader-1.7B",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Puzzle-Reasoner-1.7B",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Quant-Research-1.7B",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-ScienceQA-1.7B",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/a11oy-code-sft-v1-q6-split-private",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/absrl-reward-pool-v2",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/estate-receipts-index",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/frontier-mix-v5-all-estates",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-scholar-runs",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/khipu-scholars-sft-v1",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/lean-math-sft-v1",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/nan-navigator-sft-v1-private",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/proving-ground-54h-mesh",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/rikchaq-embed-pairs-v1-private",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/salad-ring-ouro-l12",
+   "quotes": [],
+   "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/salad-ring-ouro-l13b",
+   "quotes": [],
+   "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/salad-ring-ouro-l15",
+   "quotes": [],
+   "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/salad-ring-ouro-l16",
+   "quotes": [],
+   "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/salad-ring-ouro-l17",
+   "quotes": [],
+   "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/salad-ring-ouro-l18",
+   "quotes": [],
+   "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/salad-ring-serve-gemma1",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/salad-ring-serve-llama1",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/salad-ring-serve-mistral1",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/salad-ring-v2",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/salad-ring-v3",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/stack400-runs",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/szl-agentic-reflex-v1",
+   "quotes": [],
+   "reason": "no card evidence at all (empty or unfetchable README); fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/szl-chaski-heldout-private",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/szl-chaski-heldout-results-private",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/szl-heldout-rotation-private",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/szl-private-fleet-curricula",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/szl-receipt-constellation",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "spaces",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/szl-runs",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/szl-scratch-frontier-canary-r4",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "models",
+   "urls": []
+  },
+  {
+   "id": "SZLHOLDINGS/x402-protocol-sft-v1",
+   "quotes": [],
+   "reason": "no unique canonical szl-holdings source URL; fail-closed",
+   "type": "datasets",
+   "urls": []
+  }
+ ]
 }

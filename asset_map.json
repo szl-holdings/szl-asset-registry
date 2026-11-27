@@ -1,184 +1,42 @@
 {
- "generated": "2026-11-20",
+ "generated": "2026-11-27",
  "stats": {
-  "name": 66,
-  "card": 513,
-  "override": 74,
-  "unmapped": 13
+  "name": 61,
+  "card": 146,
+  "override": 149,
+  "unmapped": 41
  },
  "coverage": {
-  "total": 666,
-  "mapped": 653,
-  "unmapped": 13
+  "total": 397,
+  "mapped": 356,
+  "unmapped": 41
  },
  "unmapped_family_counts": {
-  "other": 13
+  "other": 36,
+  "corpus-benchmark": 3,
+  "run-artifact-store": 2
  },
  "assets": [
   {
-   "id": "SZLHOLDINGS/WILLAY",
+   "id": "SZLHOLDINGS/SZL-Acoustic-Governance-1.7B",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
-   "id": "SZLHOLDINGS/szl-khipu-kernels",
+   "id": "SZLHOLDINGS/SZL-Lean-Invariants-1.7B",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/MiniEmbed-Nano",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/freeenergy-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/ouroboros-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/papers-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/receiptagent-1.5b-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "run-artifact-store"
-  },
-  {
-   "id": "SZLHOLDINGS/ouroboros-r2-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/a11oy-v19-substrate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-governed-norm",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-governed-norm",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-lambda-gate",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-lambda-gate",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/governed-inference-meter",
-   "type": "models",
-   "private": false,
-   "source_repo": "governed-inference-meter",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-kernels",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-kernels",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-blocked",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-blocked",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-govsign",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-govsign",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-provctl",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-provctl",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-nemo",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-nemo",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-invariants",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-invariants",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-ouroboros",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-ouroboros",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-formulas",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-formulas",
-   "method": "name",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "corpus-benchmark"
   },
   {
    "id": "SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent",
    "type": "models",
-   "private": false,
+   "private": true,
    "source_repo": "szl-forge",
    "method": "override",
    "family": "run-artifact-store"
@@ -186,7 +44,7 @@
   {
    "id": "SZLHOLDINGS/SZL-Khipu-1.5B",
    "type": "models",
-   "private": false,
+   "private": true,
    "source_repo": "szl-khipu",
    "method": "name",
    "family": "other"
@@ -195,191 +53,71 @@
    "id": "SZLHOLDINGS/SZL-Khipu-1.5B-GGUF",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": "szl-khipu",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v2",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": "szl-receipt",
+   "method": "override",
    "family": "run-artifact-store"
   },
   {
-   "id": "SZLHOLDINGS/SZLHOLDINGS",
+   "id": "SZLHOLDINGS/khipu-abstain-retrain-1.5b-r2",
    "type": "models",
    "private": false,
-   "source_repo": "szlholdings.com",
-   "method": "name",
+   "source_repo": "szl-khipu",
+   "method": "override",
    "family": "other"
   },
   {
-   "id": "SZLHOLDINGS/KHIPU-R2",
+   "id": "SZLHOLDINGS/willay-r1",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/KILLINCHU-EYE",
-   "type": "models",
-   "private": false,
-   "source_repo": "killinchu",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/YARQA-ATTN",
-   "type": "models",
-   "private": false,
-   "source_repo": "YARQA-ATTN",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/A11OY-MINI",
-   "type": "models",
-   "private": false,
-   "source_repo": "a11oy",
-   "method": "name",
+   "source_repo": "nexus",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/chaski",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
+   "source_repo": "szl-forge",
    "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/qantu",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/waman",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/chakana",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/tinku",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-receipt-attn",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-receipt-attn",
-   "method": "name",
-   "family": "run-artifact-store"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-maskmod",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-maskmod",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-block-kv",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-block-kv",
-   "method": "name",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/SZL-Khipu-1.5B-abstain",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": "szl-khipu",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/chaski-5050",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": "szl-forge",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/chaski-r2",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-training-scripts",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-khipu",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-khipu",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/TinyKhipu-Nano",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/ReceiptAgent-Nano",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "run-artifact-store"
-  },
-  {
-   "id": "SZLHOLDINGS/Moons-Nano",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": "szl-forge",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/brain-navigator-r2",
    "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
+   "private": true,
+   "source_repo": "szl-forge",
    "method": "card",
    "family": "other"
   },
@@ -387,1384 +125,72 @@
    "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v3",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": "szl-receipt",
+   "method": "override",
    "family": "run-artifact-store"
   },
   {
    "id": "SZLHOLDINGS/khipu-r3",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-energy-attest",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-energy-attest",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/oac-clinical-transport-health-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/oac-system-health-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v2-merged",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "run-artifact-store"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-triage-qwen3.5-0.8b-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-triage-qwen3.5-0.8b-lora-study5",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-triage-linear-development-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": "szl-khipu",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/chaski-r4",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
+   "source_repo": "szl-forge",
    "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-triage-retrain",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v3-authenticated",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "run-artifact-store"
-  },
-  {
-   "id": "SZLHOLDINGS/oac-ops-health-v2",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/qwen2.5-0.5b-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/receiptagent-v3-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/brain-navigator-r2-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/chaski-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/chaski-5050-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/chaski-r2-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/chaski-r4-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/khipu-r3-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Khipu-1.5B-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v2-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v2-merged-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v3-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-triage-qwen3.5-0.8b-lora-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-triage-qwen3.5-0.8b-lora-study5-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/WILLAY-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Khipu-1.5B-abstain-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Khipu-1.5B-GGUF-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/KHIPU-R2-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/A11OY-MINI-laptop-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/forge-v3",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/ChaskaLLM",
-   "type": "models",
-   "private": false,
-   "source_repo": "ChaskaLLM",
-   "method": "name",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v3-candidate",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-triage-qwen3.5-0.8b-nemo-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": "szl-receipt",
+   "method": "override",
    "family": "candidate-eval-20261104"
   },
   {
    "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v3-nemo-candidate",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/szl1-experimental-massed-20261104",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": "szl-receipt",
+   "method": "override",
    "family": "candidate-eval-20261104"
   },
   {
    "id": "SZLHOLDINGS/szl-receiptagent-qwen25-1.5b-experimental-20261104",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/navigator-candidate_enterprise_20261104",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/receiptagent_v1-candidate_enterprise_20261104",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/receiptagent_v3-candidate_enterprise_20261104",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-specdecode",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-specdecode",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/khipu-abstain-r3-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/chakana-r1-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-sft-v3",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "run-artifact-store"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Khipu-1.5B-sft-v2",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-dpo-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "run-artifact-store"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Khipu-1.5B-estate-sft-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-dpo-v2",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "run-artifact-store"
-  },
-  {
-   "id": "SZLHOLDINGS/KHIPU-R2-estate-sft-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent-estate-sft-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "run-artifact-store"
-  },
-  {
-   "id": "SZLHOLDINGS/chaski-estate-sft-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v2m-estate-sft-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "run-artifact-store"
-  },
-  {
-   "id": "SZLHOLDINGS/chaski-5050-estate-sft-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/chaski-r2-estate-sft-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/brain-navigator-r2-estate-sft-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/WILLAY-estate-sft-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v3-estate-sft-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "run-artifact-store"
-  },
-  {
-   "id": "SZLHOLDINGS/khipu-r3-estate-sft-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl1-experimental-estate-sft-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/Nemotron-Mini-4B-Instruct-st",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Estate-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Estate-DPO-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Specialized-Domains-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Showcase-Systems-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "marketing-surface"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Doctrine-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "corpus-benchmark"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Reasoning-0.8B-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Estate-DPO-v2",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-FreeEnergy-0.8B-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-AncientMath-0.8B-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-AcousticGovernance-0.8B-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-FreeEnergy-0.8B-DPO-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-GovernedDistill-0.8B-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-brain",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/hatun-24-doctrine-math-r1-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": "szl-receipt",
+   "method": "override",
    "family": "candidate-eval-20261104"
   },
   {
    "id": "SZLHOLDINGS/a11oy-code-r1-candidate",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": "a11oy",
+   "method": "override",
    "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/abstention-v2-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/physics-master-v1-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/quant-master-v1-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/code-master-v2-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/code-master-v3-fresh",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/doctrine-master-v1-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/measurement-master-v1-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/reasoning-master-v1-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/quant-master-4b-v1-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/quant-master-4b-500step-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/quant-master-1.7b-500step-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Khipu-1.5B-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/chaski-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/willay-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/khipu-r2-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/brain-navigator-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/chakana-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/doctrine-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "corpus-benchmark"
-  },
-  {
-   "id": "SZLHOLDINGS/miniembed-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/hatun-24-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/ancient-math-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/acoustic-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/lean-invariants-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "corpus-benchmark"
-  },
-  {
-   "id": "SZLHOLDINGS/creativity-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/triage-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/receiptagent-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "run-artifact-store"
-  },
-  {
-   "id": "SZLHOLDINGS/forge-1.5b-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/khipu-abstain-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-receiptagent-0.8b-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "run-artifact-store"
-  },
-  {
-   "id": "SZLHOLDINGS/chaski-r4-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/chaski-r2-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/chaski-5050-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/triage-0.8b-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/khipu-abstain-1.5b-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/khipu-r3-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/willay-r2-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/willay-r1-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/miniembed-nano-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/chakana-r1-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/doctrine-v2-r2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "corpus-benchmark"
-  },
-  {
-   "id": "SZLHOLDINGS/freeenergy-r1-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/doctrine1-r1-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "corpus-benchmark"
-  },
-  {
-   "id": "SZLHOLDINGS/governed-norm-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/ancient-math-r1-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/acoustic-r1-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/lean-inv-r1-v2-trained",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "corpus-benchmark"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-khipu-r2-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-brain-navigator-r2-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-chaski-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-chaski-r4-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-chaski-r2-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-a11oy-mini-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-chaski-5050-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-willay-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/doctrine-math-r1-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/abstention-doctrine-r1-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-prime-principle-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-formula-proving-ground-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "corpus-benchmark"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-lean-invariants-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "corpus-benchmark"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-lean-math-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "corpus-benchmark"
-  },
-  {
-   "id": "SZLHOLDINGS/absrl-grpo-r1-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-verticals-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-papers-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-puzzles-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-frontier-v4-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-frontier-qwen-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-kamachikuna-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-anatomy-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-secondbrain-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-flagship54-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-frontier",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/absrl-grpo-r2-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/absrl-grpo-r3-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/absrl-grpo-r4-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/absrl-grpo-r5-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-provenance-native-v1-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
   },
   {
    "id": "SZLHOLDINGS/salad-x402-frontier-v1",
    "type": "models",
-   "private": false,
-   "source_repo": "szl-frontier",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-frontier-v5-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/absrl-grpo-r5b-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-provenance-native-v2-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-quant-abstention-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-measurement-honesty-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "private": true,
+   "source_repo": "szl-billing",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/salad-axiom-invariants-r2",
    "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-x402-frontier-v2",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-frontier",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-doctrine-dpo-r2",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "corpus-benchmark"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-lora-mistral7b-quant-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-lean-math-v2-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "corpus-benchmark"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-chaski-r4-r2",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/doctrine-math-r2-pilot",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "corpus-benchmark"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-abstention-sft-v1-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-distill-sft-v1-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-brain-v35",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-abstain-doctrine",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "corpus-benchmark"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-worldscience",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-hatun24",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-quant",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "private": true,
+   "source_repo": "szl-invariants",
+   "method": "override",
    "family": "other"
   },
   {
@@ -1786,49 +212,9 @@
   {
    "id": "SZLHOLDINGS/salad-ring-v2",
    "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-provenance-native-v3-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-flagship54-khipu-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-khipu-scholar-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-khipu-scholar",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-khipu-scholar-4b-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-khipu-structure-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
@@ -1838,46 +224,6 @@
    "source_repo": null,
    "method": "unmapped",
    "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-vgl-puzzles-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l2",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/frontier-54-doctrine-math-r1-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-frontier",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-provenance-native-v4-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
   },
   {
    "id": "SZLHOLDINGS/salad-ring-serve-llama1",
@@ -1896,211 +242,19 @@
    "family": "other"
   },
   {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l3",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
    "id": "SZLHOLDINGS/salad-flagship54-v2",
    "type": "models",
-   "private": true,
+   "private": false,
    "source_repo": "szl-frontier",
    "method": "override",
    "family": "other"
   },
   {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l4",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-flagship55-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": null,
-   "method": "unmapped",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l5",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-cram",
-   "type": "models",
-   "private": false,
-   "source_repo": "szl-cram",
-   "method": "name",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-provenance-native-v5-lora",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "laptop-lora-training"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l6",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l7",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l8",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l9",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l10",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-axiom-invariants-r3",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-clinical-abstention-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-killinchu-eye-detector-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-physics-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-quant-curriculum-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-acoustic-governance-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ancient-math-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-free-energy-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-x402-protocol-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-rag-corpus-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "corpus-benchmark"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-muhu-methodology-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
    "id": "SZLHOLDINGS/salad-ring-v3",
    "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/oac-system-health-v3-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l11",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
@@ -2109,118 +263,6 @@
    "private": true,
    "source_repo": null,
    "method": "unmapped",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-chaski-r4-r3",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-pg54-yachay-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-pg54-khipu-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-pg54-lutar-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-pg54-hatun-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-pg54-codex-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-lutar-axioms-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-szl-quant-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-provenance-native-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-world-science-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-physics-tutor-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/forge-v3-candidate",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "candidate-eval-20261104"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l13",
-   "type": "models",
-   "private": false,
-   "source_repo": null,
-   "method": "unmapped",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l14",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
    "family": "other"
   },
   {
@@ -2256,1067 +298,35 @@
    "family": "other"
   },
   {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l19",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l20",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l21",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l22",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l23",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l24",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l25",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l26",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l27",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l28",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l29",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l30",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l31",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l32",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l33",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l34",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l35",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l36",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l37",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l38",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l39",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l40",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l41",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l42",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l43",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l44",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l45",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l46",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l47",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l48",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l49",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l50",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l51",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l52",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l53",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l54",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l55",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l56",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l57",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l58",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l59",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l60",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l61",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l62",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l63",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l64",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l65",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l66",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l67",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l68",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l69",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l70",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l71",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l72",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l73",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l74",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l75",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l76",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l77",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l78",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l79",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l80",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l81",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l82",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l83",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l84",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l85",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l86",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l87",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l88",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l89",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l90",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l91",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l92",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l93",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l94",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l95",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l96",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l97",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l98",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l99",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l100",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l101",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l102",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l103",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l104",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l105",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l106",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l107",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l108",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l109",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l110",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l111",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l112",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l113",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l114",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l115",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l116",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l117",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l118",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l119",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l120",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l121",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l122",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l123",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l124",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l125",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l126",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l127",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l128",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l129",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l130",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l131",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l132",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l133",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-ouro-l134",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/SZL-Khipu-Yachay-Nano",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
    "id": "SZLHOLDINGS/salad-chaski-r4-mix1",
    "type": "models",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-ring-v4",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-abst-curriculum-v2-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-cram-sudoku-ext-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/backup-salad-flagship54-v2",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/backup-salad-physics-tutor-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/backup-salad-world-science-r1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-canary-lora-20261119",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-chaski-calib-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/salad-chaski-frontier-4b-op1",
    "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "private": true,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1",
    "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "private": true,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
    "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/khipu-structure-v2-work",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/salad-governed-grounded-1p7b-canary",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/dream-learner-v1",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "other"
-  },
-  {
-   "id": "SZLHOLDINGS/szl-run-receipts",
-   "type": "models",
-   "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
-   "family": "run-artifact-store"
   },
   {
    "id": "SZLHOLDINGS/salad-governed-distill-27b-qlora-r1",
    "type": "models",
    "private": true,
-   "source_repo": null,
-   "method": "unmapped",
+   "source_repo": "szl-gov",
+   "method": "override",
    "family": "other"
   },
   {
@@ -3328,12 +338,756 @@
    "family": "other"
   },
   {
-   "id": "SZLHOLDINGS/killinchu-osint-corpus",
-   "type": "datasets",
+   "id": "SZLHOLDINGS/szl-scratch-frontier-canary-r4",
+   "type": "models",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-khipu-scholar-4b-v2",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-khipu-scholar",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1-r2",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1-r9",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1-r3",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1-r11",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-best-khipu-r4",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-khipu",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1-r12",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-chaski-frontier-4b-narrow1",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-chaski-frontier-9b-narrow1",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/a11oy-r1",
+   "type": "models",
+   "private": false,
+   "source_repo": "a11oy",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1-r13",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/terra-r1",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-vertical-forge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/killinchu-r1",
+   "type": "models",
    "private": false,
    "source_repo": "killinchu",
-   "method": "card",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/sentra-r1",
+   "type": "models",
+   "private": false,
+   "source_repo": "sentra",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/lyte-r1",
+   "type": "models",
+   "private": false,
+   "source_repo": "lyte-services",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/finance-r1",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-vertical-forge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/counsel-r1",
+   "type": "models",
+   "private": false,
+   "source_repo": "counsel",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-governed-grounded-0p8b-p1",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-gov",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Quant-Research-1.7B",
+   "type": "models",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Doctrine-Abstain-1.7B",
+   "type": "models",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
    "family": "corpus-benchmark"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Math-Honesty-1.7B",
+   "type": "models",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Ouroboros-Auditor-1.7B",
+   "type": "models",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-ScienceQA-1.7B",
+   "type": "models",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Paper-Reader-1.7B",
+   "type": "models",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Creative-1.7B",
+   "type": "models",
+   "private": false,
+   "source_repo": "nexus",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Measurement-Honesty-1.7B",
+   "type": "models",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Puzzle-Reasoner-1.7B",
+   "type": "models",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-MiniEmbed-0.8B",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-forge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Triage-0.8B",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-typesafe-triage",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-kernels",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-kernels",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/A11OY-MINI",
+   "type": "models",
+   "private": false,
+   "source_repo": "a11oy",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/KHIPU-R2",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-khipu",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/MiniEmbed-Nano",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-khipu",
+   "method": "card",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/Moons-Nano",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-khipu",
+   "method": "card",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/ReceiptAgent-Nano",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-khipu",
+   "method": "card",
+   "family": "run-artifact-store"
+  },
+  {
+   "id": "SZLHOLDINGS/TinyKhipu-Nano",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-khipu",
+   "method": "card",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/WILLAY",
+   "type": "models",
+   "private": true,
+   "source_repo": "estate-cards",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/YARQA-ATTN",
+   "type": "models",
+   "private": false,
+   "source_repo": "YARQA-ATTN",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/a11oy-v19-substrate",
+   "type": "models",
+   "private": false,
+   "source_repo": "a11oy",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/governed-inference-meter",
+   "type": "models",
+   "private": false,
+   "source_repo": "governed-inference-meter",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-block-kv",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-block-kv",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-blocked",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-blocked",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-energy-attest",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-energy-attest",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-formulas",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-formulas",
+   "method": "name",
+   "family": "corpus-benchmark"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-governed-norm",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-governed-norm",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-govsign",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-govsign",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-khipu",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-khipu",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-invariants",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-invariants",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-lambda-gate",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-lambda-gate",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-khipu-kernels",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-khipu",
+   "method": "card",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-ouroboros",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-ouroboros",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-maskmod",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-maskmod",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-nemo",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-nemo",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-receipt-attn",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-receipt-attn",
+   "method": "name",
+   "family": "run-artifact-store"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-provctl",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-provctl",
+   "method": "name",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-receiptagent-qwen35-0.8b-v2-merged",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-receipt",
+   "method": "override",
+   "family": "run-artifact-store"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-triage-qwen3.5-0.8b-lora",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-typesafe-triage",
+   "method": "override",
+   "family": "laptop-lora-training"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-triage-qwen3.5-0.8b-lora-study5",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-typesafe-triage",
+   "method": "override",
+   "family": "laptop-lora-training"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1-r14",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/a11oy-r2",
+   "type": "models",
+   "private": false,
+   "source_repo": "a11oy",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/terra-r2",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-vertical-forge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/killinchu-r2",
+   "type": "models",
+   "private": false,
+   "source_repo": "killinchu",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/sentra-r2",
+   "type": "models",
+   "private": false,
+   "source_repo": "sentra",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/lyte-r2",
+   "type": "models",
+   "private": false,
+   "source_repo": "lyte-services",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/finance-r2",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-vertical-forge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/counsel-r2",
+   "type": "models",
+   "private": false,
+   "source_repo": "counsel",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1-r15",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/chakana-r1-candidate",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "override",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/KHIPU-R2-estate-sft-v1",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-khipu",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/Nemotron-Mini-4B-Instruct-st",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-nemo",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl1-experimental-estate-sft-v1",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl1-experimental-massed-20261104",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "override",
+   "family": "candidate-eval-20261104"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent-estate-sft-v1",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "override",
+   "family": "run-artifact-store"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Khipu-1.5B-estate-sft-v1",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-khipu",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Khipu-1.5B-sft-v2",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-khipu",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Doctrine-v1",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-nemo",
+   "method": "override",
+   "family": "corpus-benchmark"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Estate-DPO-v1",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-nemo",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Estate-DPO-v2",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-nemo",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Estate-v1",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-nemo",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/WILLAY-estate-sft-v1",
+   "type": "models",
+   "private": true,
+   "source_repo": "estate-cards",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/SZL-Qwen2.5-7B-Instruct-GGUF",
+   "type": "models",
+   "private": false,
+   "source_repo": "szl-ouroboros",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/salad-chaski-frontier-9b-op1-r16",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-gpu-bridge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/ReceiptAgent-Nano-v2",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-receipt",
+   "method": "card",
+   "family": "run-artifact-store"
+  },
+  {
+   "id": "SZLHOLDINGS/hamutaq-0p8b-y2-sft-localonly",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/Khipu-Nano-v2",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-khipu",
+   "method": "card",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/ReceiptAgent-Qwen35-0.8B-v3",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-receipt",
+   "method": "card",
+   "family": "run-artifact-store"
+  },
+  {
+   "id": "SZLHOLDINGS/ReceiptAgent-Qwen35-0.8B-v2",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-receipt",
+   "method": "card",
+   "family": "run-artifact-store"
+  },
+  {
+   "id": "SZLHOLDINGS/ReceiptAgent-Qwen35-0.8B-v2-merged",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-receipt",
+   "method": "card",
+   "family": "run-artifact-store"
+  },
+  {
+   "id": "SZLHOLDINGS/hamutaq-0p8b-y4-sft-localonly",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/hamutaq-0p8b-y5-sft-localonly",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/hamutaq-0p8b-y6-sft-localonly",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/hamutaq-0p8b-y3-sft-localonly",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-forge",
+   "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/ReceiptAgent-Qwen35-0.8B-v3c",
+   "type": "models",
+   "private": true,
+   "source_repo": "szl-receipt",
+   "method": "card",
+   "family": "run-artifact-store"
   },
   {
    "id": "SZLHOLDINGS/thesis-v18-formal-verification",
@@ -3508,6 +1262,14 @@
    "type": "datasets",
    "private": false,
    "source_repo": ".github",
+   "method": "card",
+   "family": "corpus-benchmark"
+  },
+  {
+   "id": "SZLHOLDINGS/killinchu-osint-corpus",
+   "type": "datasets",
+   "private": false,
+   "source_repo": "killinchu",
    "method": "card",
    "family": "corpus-benchmark"
   },
@@ -3746,7 +1508,7 @@
   {
    "id": "SZLHOLDINGS/wave-logs",
    "type": "datasets",
-   "private": false,
+   "private": true,
    "source_repo": "szl-gpu-bridge",
    "method": "card",
    "family": "run-artifact-store"
@@ -4131,8 +1893,8 @@
    "id": "SZLHOLDINGS/lean-math-sft-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "corpus-benchmark"
   },
   {
@@ -4147,8 +1909,8 @@
    "id": "SZLHOLDINGS/frontier-mix-v5-all-estates",
    "type": "datasets",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
@@ -4163,8 +1925,8 @@
    "id": "SZLHOLDINGS/x402-protocol-sft-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
@@ -4219,8 +1981,8 @@
    "id": "SZLHOLDINGS/absrl-reward-pool-v2",
    "type": "datasets",
    "private": false,
-   "source_repo": "estate-cards",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
@@ -4427,16 +2189,16 @@
    "id": "SZLHOLDINGS/khipu-scholar-runs",
    "type": "datasets",
    "private": false,
-   "source_repo": "szl-khipu-scholar",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
    "id": "SZLHOLDINGS/khipu-scholars-sft-v1",
    "type": "datasets",
    "private": false,
-   "source_repo": "szl-khipu-scholar",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
@@ -4595,8 +2357,8 @@
    "id": "SZLHOLDINGS/proving-ground-54h-mesh",
    "type": "datasets",
    "private": false,
-   "source_repo": "szl-frontier",
-   "method": "card",
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
@@ -4709,6 +2471,86 @@
    "private": false,
    "source_repo": "estate-cards",
    "method": "override",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/stack400-runs",
+   "type": "datasets",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/estate-receipts-index",
+   "type": "datasets",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "run-artifact-store"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-runs",
+   "type": "datasets",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-private-fleet-curricula",
+   "type": "datasets",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-chaski-heldout-private",
+   "type": "datasets",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-chaski-heldout-results-private",
+   "type": "datasets",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-heldout-rotation-private",
+   "type": "datasets",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/a11oy-code-sft-v1-q6-split-private",
+   "type": "datasets",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/rikchaq-embed-pairs-v1-private",
+   "type": "datasets",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/nan-navigator-sft-v1-private",
+   "type": "datasets",
+   "private": true,
+   "source_repo": null,
+   "method": "unmapped",
    "family": "other"
   },
   {
@@ -4858,7 +2700,7 @@
   {
    "id": "SZLHOLDINGS/immune-lattice",
    "type": "spaces",
-   "private": false,
+   "private": true,
    "source_repo": "immune-lattice",
    "method": "name",
    "family": "other"
@@ -4866,7 +2708,7 @@
   {
    "id": "SZLHOLDINGS/immune",
    "type": "spaces",
-   "private": false,
+   "private": true,
    "source_repo": "immune",
    "method": "name",
    "family": "other"
@@ -4930,7 +2772,7 @@
   {
    "id": "SZLHOLDINGS/szl-safe-stack",
    "type": "spaces",
-   "private": false,
+   "private": true,
    "source_repo": "szl-safe-stack",
    "method": "name",
    "family": "other"
@@ -4938,7 +2780,7 @@
   {
    "id": "SZLHOLDINGS/szl-constellation-staging",
    "type": "spaces",
-   "private": false,
+   "private": true,
    "source_repo": "szl-constellation",
    "method": "card",
    "family": "other"
@@ -5051,7 +2893,7 @@
    "id": "SZLHOLDINGS/szl-router-control",
    "type": "spaces",
    "private": false,
-   "source_repo": "szl-router",
+   "source_repo": "szl-brand",
    "method": "card",
    "family": "other"
   },
@@ -5067,7 +2909,7 @@
    "id": "SZLHOLDINGS/governed-agent-bench",
    "type": "spaces",
    "private": false,
-   "source_repo": "szl-brand",
+   "source_repo": "a11oy",
    "method": "card",
    "family": "corpus-benchmark"
   },
@@ -5342,6 +3184,14 @@
    "source_repo": "estate-cards",
    "method": "override",
    "family": "other"
+  },
+  {
+   "id": "SZLHOLDINGS/szl-receipt-constellation",
+   "type": "spaces",
+   "private": false,
+   "source_repo": null,
+   "method": "unmapped",
+   "family": "run-artifact-store"
   }
  ]
 }

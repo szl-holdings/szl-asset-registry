@@ -35,7 +35,7 @@ ID_PREFIX = "SZLHOLDINGS/"
 SOURCE_REPO_EXEMPT = frozenset()
 
 ASSET_MAP_RELPATH = "asset_map.json"
-CENSUS_RELPATH = "data/hf_census_20261120.json"
+CENSUS_RELPATH = "data/hf_census_20261127.json"
 AUDIT_RELPATH = "data/gh_org_audit_20261120.json"
 UNRESOLVED_RELPATH = "data/unresolved_assets.json"
 REASONS_RELPATH = "data/asset_map_unmapped_reasons_20261120.json"

@@ -16,7 +16,7 @@ import coverage_check  # noqa: E402
 REAL_ROOT = Path(__file__).resolve().parents[1]
 FILES = {
     "asset_map": "asset_map.json",
-    "census": "data/hf_census_20261120.json",
+    "census": "data/hf_census_20261127.json",
     "audit": "data/gh_org_audit_20261120.json",
     "unresolved": "data/unresolved_assets.json",
     "reasons": "data/asset_map_unmapped_reasons_20261120.json",
@@ -146,10 +146,10 @@ class CoverageCheckTest(unittest.TestCase):
         }
         self.assertEqual(asset_map["coverage"], expected_coverage)
         unresolved = json.loads((REAL_ROOT / FILES["unresolved"]).read_text(encoding="utf-8"))
-        self.assertEqual(len(unresolved["unresolved"]), 10)
+        self.assertEqual(len(unresolved["unresolved"]), 41)
         rc, payload = self.captured_main(REAL_ROOT)
         self.assertEqual(rc, 0)
-        self.assertEqual(payload["reconciliation"]["unresolved_inside_unmapped"], 10)
+        self.assertEqual(payload["reconciliation"]["unresolved_inside_unmapped"], 41)
         self.assertEqual(payload["reconciliation"]["unmapped_without_reason"], 0)
 
     def test_cov002_coverage_count_mismatch(self):
@@ -216,7 +216,7 @@ class CoverageCheckTest(unittest.TestCase):
         self.assertEqual(rc, 2)
         self.assertFalse(payload["clean"])
         self.assertEqual(payload["violations"], [])
-        self.assertIn("hf_census_20261120.json", payload["error"])
+        self.assertIn("hf_census_20261127.json", payload["error"])
 
     def test_input_error_malformed(self):
         root = self.fresh()

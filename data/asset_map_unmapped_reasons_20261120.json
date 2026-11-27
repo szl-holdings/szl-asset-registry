@@ -1,9 +1,21 @@
 {
- "_comment": "Fail-closed reason codes for unmapped assets. Identity-only evidence; identity_verified is false by design (never 'verified'). Card-issuer links (estate-cards provenance) are explicitly NOT source-identity evidence.",
+ "_comment": "Retained 2026-11-20 sweep receipts (fail-closed) refreshed 2026-11-27 for the pass-1 asset_map rebuild: 2 receipts retired with their deleted repos, 31 new NO_MATCH fail-closed entries added for the rebuild's unmapped set.",
  "_contract": "KIMI_K3.1_CONDITIONAL_GO / MISTRAL_LARGE4_3ACTION_PLAN, hands-on consult 2026-11-20, receipts in estate-cards workdir",
  "class": "MEASURED",
- "generated_utc": "2026-11-20T10:58:53Z",
+ "generated_utc": "2026-11-27T23:59:00Z",
  "reasons": {
+  "SZLHOLDINGS/SZL-Acoustic-Governance-1.7B": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: no canonical szl-holdings source URL found (asset created by unattributed 2026-11-26 wave); pass-2 wiring queue, fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/SZL-Doctrine-Abstain-1.7B": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: no canonical szl-holdings source URL found (asset created by unattributed 2026-11-26 wave); pass-2 wiring queue, fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
   "SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent": {
    "candidates": {
     "szl-holdings/a11oy": "model_release/hf-promotion/README.md; payloads/hf_align.py (marked STALE, weights not source of truth)",
@@ -12,6 +24,60 @@
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 2 competing source claims found in org code index (szl-forge forge/card provenance vs a11oy promotion-and-STALE marking); unique canonical source not adjudicated fail-closed",
    "identity_verified": false,
    "reason_code": "AMBIGUOUS"
+  },
+  "SZLHOLDINGS/SZL-Lean-Invariants-1.7B": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: no canonical szl-holdings source URL found (asset created by unattributed 2026-11-26 wave); pass-2 wiring queue, fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/SZL-Math-Honesty-1.7B": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: no canonical szl-holdings source URL found (asset created by unattributed 2026-11-26 wave); pass-2 wiring queue, fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/SZL-Measurement-Honesty-1.7B": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: no canonical szl-holdings source URL found (asset created by unattributed 2026-11-26 wave); pass-2 wiring queue, fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/SZL-Ouroboros-Auditor-1.7B": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: no canonical szl-holdings source URL found (asset created by unattributed 2026-11-26 wave); pass-2 wiring queue, fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/SZL-Paper-Reader-1.7B": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: no canonical szl-holdings source URL found (asset created by unattributed 2026-11-26 wave); pass-2 wiring queue, fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/SZL-Puzzle-Reasoner-1.7B": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: no canonical szl-holdings source URL found (asset created by unattributed 2026-11-26 wave); pass-2 wiring queue, fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/SZL-Quant-Research-1.7B": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: no canonical szl-holdings source URL found (asset created by unattributed 2026-11-26 wave); pass-2 wiring queue, fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/SZL-ScienceQA-1.7B": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: no canonical szl-holdings source URL found (asset created by unattributed 2026-11-26 wave); pass-2 wiring queue, fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/a11oy-code-sft-v1-q6-split-private": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
   },
   "SZLHOLDINGS/a11oy-state": {
    "candidates": {
@@ -24,6 +90,12 @@
   "SZLHOLDINGS/absrl-doubt-claude-v1": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/absrl-reward-pool-v2": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
@@ -69,6 +141,12 @@
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
+  "SZLHOLDINGS/estate-receipts-index": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
   "SZLHOLDINGS/estate-telemetry": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
@@ -84,6 +162,12 @@
   "SZLHOLDINGS/frontier-54-v2-receipts": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/frontier-mix-v5-all-estates": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
@@ -135,9 +219,21 @@
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
+  "SZLHOLDINGS/khipu-scholar-runs": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
   "SZLHOLDINGS/khipu-scholars-corpus-v1": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/khipu-scholars-sft-v1": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
@@ -183,6 +279,12 @@
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
+  "SZLHOLDINGS/lean-math-sft-v1": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
   "SZLHOLDINGS/lean-math-sft-v2": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
@@ -207,15 +309,33 @@
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
+  "SZLHOLDINGS/nan-navigator-sft-v1-private": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
   "SZLHOLDINGS/newton-trust-upgrade": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
+  "SZLHOLDINGS/proving-ground-54h-mesh": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
   "SZLHOLDINGS/rag-corpus-v2": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/rikchaq-embed-pairs-v1-private": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
@@ -254,12 +374,6 @@
    "identity_verified": false,
    "reason_code": "AMBIGUOUS"
   },
-  "SZLHOLDINGS/salad-flagship55-v1": {
-   "candidates": {},
-   "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
-   "identity_verified": false,
-   "reason_code": "NO_MATCH"
-  },
   "SZLHOLDINGS/salad-governed-distill-27b-qlora-r1": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
@@ -267,12 +381,6 @@
    "reason_code": "NO_MATCH"
   },
   "SZLHOLDINGS/salad-ring-ouro-l12": {
-   "candidates": {},
-   "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
-   "identity_verified": false,
-   "reason_code": "NO_MATCH"
-  },
-  "SZLHOLDINGS/salad-ring-ouro-l13": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
    "identity_verified": false,
@@ -342,9 +450,39 @@
    "identity_verified": false,
    "reason_code": "EXACT"
   },
+  "SZLHOLDINGS/salad-ring-v2": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/salad-ring-v3": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/stack400-runs": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
   "SZLHOLDINGS/szl-agentic-reflex-v1": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/szl-chaski-heldout-private": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/szl-chaski-heldout-results-private": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
@@ -396,6 +534,12 @@
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
+  "SZLHOLDINGS/szl-heldout-rotation-private": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
   "SZLHOLDINGS/szl-infra-warden": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
@@ -408,9 +552,21 @@
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
+  "SZLHOLDINGS/szl-private-fleet-curricula": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
   "SZLHOLDINGS/szl-provenance-pitch": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/szl-receipt-constellation": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
@@ -423,6 +579,18 @@
   "SZLHOLDINGS/szl-research-council": {
    "candidates": {},
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/szl-runs": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/szl-scratch-frontier-canary-r4": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
    "identity_verified": false,
    "reason_code": "NO_MATCH"
   },
@@ -503,12 +671,18 @@
    "evidence": "gh search code org:szl-holdings provenance sweep 2026-11-20 (infra repos excluded); 0 candidate source repos found in org code index",
    "identity_verified": false,
    "reason_code": "NO_MATCH"
+  },
+  "SZLHOLDINGS/x402-protocol-sft-v1": {
+   "candidates": {},
+   "evidence": "2026-11-27 OUROBOROS pass-1 registry rebuild: census card scan found no unique canonical szl-holdings source URL; fail-closed",
+   "identity_verified": false,
+   "reason_code": "NO_MATCH"
   }
  },
  "sweep_counts": {
   "ambiguous": 2,
   "exact": 3,
-  "nomatch": 76,
-  "total": 81
+  "nomatch": 105,
+  "total": 110
  }
 }

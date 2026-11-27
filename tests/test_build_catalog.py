@@ -47,7 +47,7 @@ def make_registry(root, mapped_bump=0):
         "unmapped_family_counts": {"other": 1},
         "assets": ASSETS,
     })
-    write_json(root / "data" / "hf_census_20261120.json", {
+    write_json(root / "data" / "hf_census_20261127.json", {
         "models": [{"id": "SZLHOLDINGS/MODELA", "lastModified": "x", "private": False}, {"id": "SZLHOLDINGS/MODELB", "lastModified": "x", "private": True}],
         "datasets": [{"id": "SZLHOLDINGS/DATA1", "lastModified": "x", "private": False}],
         "spaces": [{"id": "SZLHOLDINGS/SPACE1", "lastModified": "x", "private": False}, {"id": "SZLHOLDINGS/UNM1", "lastModified": "x", "private": False}],
